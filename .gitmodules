@@ -1,0 +1,3 @@
+[submodule "HotelManagementAutomation"]
+	path = HotelManagementAutomation
+	url = https://zubeyirkaan@bitbucket.org/eul_comp/hotel-reception-automation.git
