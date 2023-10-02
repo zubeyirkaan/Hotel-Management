@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2066e07d83d14fdc8eefd094837487ba" Name="Diagram1">
+        <EntityTypeShape EntityType="DbHotelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblCashRegister" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblCountry" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblDepartment" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblExchangeRate" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblGuest" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblMission" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblPhone" Width="1.5" PointX="3" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblProduct" Width="1.5" PointX="5.25" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblProductGroup" Width="1.5" PointX="3" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblRoom" Width="1.5" PointX="3" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblStaff" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblStatu" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblStockUnit" Width="1.5" PointX="3" PointY="31.375" IsExpanded="true" />
+        <AssociationConnector Association="DbHotelModel.FK_TblCashRegister_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblDepartment_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblMission_TblDepartment" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblStaff_TblDepartment" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblExchangeRate_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblGuest_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblMission_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblStaff_TblMission" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblPhone_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblProduct_TblProductGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblProduct_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblProduct_TblStockUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblProductGroup_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblRoom_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblStaff_TblStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="DbHotelModel.FK_TblStockUnit_TblStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
