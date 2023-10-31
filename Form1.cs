@@ -27,5 +27,11 @@ namespace HotelManagementAutomation
             Forms.Definitions.FrmStatus fr = new Forms.Definitions.FrmStatus();
             fr.Show();
         }
+
+        private void BtnStockUnitDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmStockUnit fr = new Forms.Definitions.FrmStockUnit();
+            fr.Show();
+        }
     }
 }

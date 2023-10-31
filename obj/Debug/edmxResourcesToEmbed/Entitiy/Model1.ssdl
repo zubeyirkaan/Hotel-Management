@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TblCashRegister">
+    <Key>
+      <PropertyRef Name="CashRegisterID" />
+    </Key>
+    <Property Name="CashRegisterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CashRegisterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Income" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Expense" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblCountry">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="int" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="char" MaxLength="4" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblExchangeRate">
+    <Key>
+      <PropertyRef Name="RateID" />
+    </Key>
+    <Property Name="RateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Symbol" Type="nvarchar" MaxLength="1" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblGuest">
+    <Key>
+      <PropertyRef Name="GuestID" />
+    </Key>
+    <Property Name="GuestID" Type="int" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="TC" Type="char" MaxLength="11" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+    <Property Name="IDPhoto1" Type="nvarchar" MaxLength="100" />
+    <Property Name="IDPhoto2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblMission">
+    <Key>
+      <PropertyRef Name="MissionID" />
+    </Key>
+    <Property Name="MissionID" Type="int" Nullable="false" />
+    <Property Name="MissionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Department" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblPhone">
+    <Key>
+      <PropertyRef Name="PhoneID" />
+    </Key>
+    <Property Name="PhoneID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductGroup" Type="int" />
+    <Property Name="Unit" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Tax" Type="tinyint" />
+    <Property Name="Staff" Type="int" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblProductGroup">
+    <Key>
+      <PropertyRef Name="ProductGroupID" />
+    </Key>
+    <Property Name="ProductGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductGroupName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblRoom">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoomNo" Type="char" MaxLength="3" />
+    <Property Name="Floor" Type="varchar" MaxLength="2" />
+    <Property Name="Capacity" Type="char" MaxLength="1" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="char" MaxLength="4" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblStaff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="varchar" MaxLength="50" />
+    <Property Name="TC" Type="char" MaxLength="11" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDateOfWork" Type="date" />
+    <Property Name="TerminationDate" Type="date" />
+    <Property Name="Department" Type="int" />
+    <Property Name="Mission" Type="int" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblStatus">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblStockUnit">
+    <Key>
+      <PropertyRef Name="StockUnitID" />
+    </Key>
+    <Property Name="StockUnitID" Type="int" Nullable="false" />
+    <Property Name="StockUnitName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <Association Name="FK_TblCashRegister_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblCashRegister" Type="Self.TblCashRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblCashRegister">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblDepartment_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblDepartment">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblExchangeRate_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblExchangeRate" Type="Self.TblExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblExchangeRate">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblGuest_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblGuest">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblMission_TblDepartment">
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="0..1" />
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDepartment">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="TblMission">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblMission_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblMission">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblPhone_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblPhone" Type="Self.TblPhone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblPhone">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblProductGroup">
+    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TblProductGroup">
+        <PropertyRef Name="ProductGroupID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblStockUnit">
+    <End Role="TblStockUnit" Type="Self.TblStockUnit" Multiplicity="0..1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStockUnit">
+        <PropertyRef Name="StockUnitID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="Unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProductGroup_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblProductGroup">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblRoom_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblRoom" Type="Self.TblRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblRoom">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblDepartment">
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDepartment">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblMission">
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMission">
+        <PropertyRef Name="MissionID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Mission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStockUnit_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblStockUnit" Type="Self.TblStockUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblStockUnit">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbHotelModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblExchangeRate" EntityType="Self.TblExchangeRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblGuest" EntityType="Self.TblGuest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMission" EntityType="Self.TblMission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblPhone" EntityType="Self.TblPhone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProduct" EntityType="Self.TblProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProductGroup" EntityType="Self.TblProductGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblRoom" EntityType="Self.TblRoom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblStaff" EntityType="Self.TblStaff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblStatus" EntityType="Self.TblStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblStockUnit" EntityType="Self.TblStockUnit" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TblCashRegister_TblStatus" Association="Self.FK_TblCashRegister_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblCashRegister" EntitySet="TblCashRegister" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblDepartment_TblStatus" Association="Self.FK_TblDepartment_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblDepartment" EntitySet="TblDepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblExchangeRate_TblStatus" Association="Self.FK_TblExchangeRate_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblExchangeRate" EntitySet="TblExchangeRate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblGuest_TblStatus" Association="Self.FK_TblGuest_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblGuest" EntitySet="TblGuest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblMission_TblDepartment" Association="Self.FK_TblMission_TblDepartment">
+      <End Role="TblDepartment" EntitySet="TblDepartment" />
+      <End Role="TblMission" EntitySet="TblMission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblMission_TblStatus" Association="Self.FK_TblMission_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblMission" EntitySet="TblMission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblPhone_TblStatus" Association="Self.FK_TblPhone_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblPhone" EntitySet="TblPhone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblProductGroup" Association="Self.FK_TblProduct_TblProductGroup">
+      <End Role="TblProductGroup" EntitySet="TblProductGroup" />
+      <End Role="TblProduct" EntitySet="TblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblStatus" Association="Self.FK_TblProduct_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblProduct" EntitySet="TblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblStockUnit" Association="Self.FK_TblProduct_TblStockUnit">
+      <End Role="TblStockUnit" EntitySet="TblStockUnit" />
+      <End Role="TblProduct" EntitySet="TblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProductGroup_TblStatus" Association="Self.FK_TblProductGroup_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblProductGroup" EntitySet="TblProductGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblRoom_TblStatus" Association="Self.FK_TblRoom_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblRoom" EntitySet="TblRoom" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblDepartment" Association="Self.FK_TblStaff_TblDepartment">
+      <End Role="TblDepartment" EntitySet="TblDepartment" />
+      <End Role="TblStaff" EntitySet="TblStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblMission" Association="Self.FK_TblStaff_TblMission">
+      <End Role="TblMission" EntitySet="TblMission" />
+      <End Role="TblStaff" EntitySet="TblStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblStatus" Association="Self.FK_TblStaff_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblStaff" EntitySet="TblStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStockUnit_TblStatus" Association="Self.FK_TblStockUnit_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblStockUnit" EntitySet="TblStockUnit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

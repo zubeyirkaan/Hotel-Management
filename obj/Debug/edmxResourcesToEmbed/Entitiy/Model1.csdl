@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbHotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblCashRegister">
+    <Key>
+      <PropertyRef Name="CashRegisterID" />
+    </Key>
+    <Property Name="CashRegisterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CashRegisterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Income" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Expense" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblCashRegister_TblStatus" FromRole="TblCashRegister" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblCountry">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblDepartment_TblStatus" FromRole="TblDepartment" ToRole="TblStatus" />
+    <NavigationProperty Name="TblMissions" Relationship="Self.FK_TblMission_TblDepartment" FromRole="TblDepartment" ToRole="TblMission" />
+    <NavigationProperty Name="TblStaffs" Relationship="Self.FK_TblStaff_TblDepartment" FromRole="TblDepartment" ToRole="TblStaff" />
+  </EntityType>
+  <EntityType Name="TblExchangeRate">
+    <Key>
+      <PropertyRef Name="RateID" />
+    </Key>
+    <Property Name="RateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Symbol" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblExchangeRate_TblStatus" FromRole="TblExchangeRate" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblGuest">
+    <Key>
+      <PropertyRef Name="GuestID" />
+    </Key>
+    <Property Name="GuestID" Type="Int32" Nullable="false" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Statement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IDPhoto1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IDPhoto2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblGuest_TblStatus" FromRole="TblGuest" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblMission">
+    <Key>
+      <PropertyRef Name="MissionID" />
+    </Key>
+    <Property Name="MissionID" Type="Int32" Nullable="false" />
+    <Property Name="MissionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Department" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblDepartment" Relationship="Self.FK_TblMission_TblDepartment" FromRole="TblMission" ToRole="TblDepartment" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblMission_TblStatus" FromRole="TblMission" ToRole="TblStatus" />
+    <NavigationProperty Name="TblStaffs" Relationship="Self.FK_TblStaff_TblMission" FromRole="TblMission" ToRole="TblStaff" />
+  </EntityType>
+  <EntityType Name="TblPhone">
+    <Key>
+      <PropertyRef Name="PhoneID" />
+    </Key>
+    <Property Name="PhoneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Statement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblPhone_TblStatus" FromRole="TblPhone" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblProduct">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductGroup" Type="Int32" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Tax" Type="Byte" />
+    <Property Name="Staff" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblProductGroup" Relationship="Self.FK_TblProduct_TblProductGroup" FromRole="TblProduct" ToRole="TblProductGroup" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblProduct_TblStatus" FromRole="TblProduct" ToRole="TblStatus" />
+    <NavigationProperty Name="TblStockUnit" Relationship="Self.FK_TblProduct_TblStockUnit" FromRole="TblProduct" ToRole="TblStockUnit" />
+  </EntityType>
+  <EntityType Name="TblProductGroup">
+    <Key>
+      <PropertyRef Name="ProductGroupID" />
+    </Key>
+    <Property Name="ProductGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblProduct" Relationship="Self.FK_TblProduct_TblProductGroup" FromRole="TblProductGroup" ToRole="TblProduct" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblProductGroup_TblStatus" FromRole="TblProductGroup" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblRoom">
+    <Key>
+      <PropertyRef Name="RoomID" />
+    </Key>
+    <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoomNo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="Floor" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Capacity" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Statement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblRoom_TblStatus" FromRole="TblRoom" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblStaff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDateOfWork" Type="DateTime" Precision="0" />
+    <Property Name="TerminationDate" Type="DateTime" Precision="0" />
+    <Property Name="Department" Type="Int32" />
+    <Property Name="Mission" Type="Int32" />
+    <Property Name="Statement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblDepartment" Relationship="Self.FK_TblStaff_TblDepartment" FromRole="TblStaff" ToRole="TblDepartment" />
+    <NavigationProperty Name="TblMission" Relationship="Self.FK_TblStaff_TblMission" FromRole="TblStaff" ToRole="TblMission" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblStaff_TblStatus" FromRole="TblStaff" ToRole="TblStatus" />
+  </EntityType>
+  <EntityType Name="TblStatu">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblCashRegisters" Relationship="Self.FK_TblCashRegister_TblStatus" FromRole="TblStatus" ToRole="TblCashRegister" />
+    <NavigationProperty Name="TblDepartments" Relationship="Self.FK_TblDepartment_TblStatus" FromRole="TblStatus" ToRole="TblDepartment" />
+    <NavigationProperty Name="TblExchangeRates" Relationship="Self.FK_TblExchangeRate_TblStatus" FromRole="TblStatus" ToRole="TblExchangeRate" />
+    <NavigationProperty Name="TblGuests" Relationship="Self.FK_TblGuest_TblStatus" FromRole="TblStatus" ToRole="TblGuest" />
+    <NavigationProperty Name="TblMissions" Relationship="Self.FK_TblMission_TblStatus" FromRole="TblStatus" ToRole="TblMission" />
+    <NavigationProperty Name="TblPhones" Relationship="Self.FK_TblPhone_TblStatus" FromRole="TblStatus" ToRole="TblPhone" />
+    <NavigationProperty Name="TblProducts" Relationship="Self.FK_TblProduct_TblStatus" FromRole="TblStatus" ToRole="TblProduct" />
+    <NavigationProperty Name="TblProductGroups" Relationship="Self.FK_TblProductGroup_TblStatus" FromRole="TblStatus" ToRole="TblProductGroup" />
+    <NavigationProperty Name="TblRooms" Relationship="Self.FK_TblRoom_TblStatus" FromRole="TblStatus" ToRole="TblRoom" />
+    <NavigationProperty Name="TblStaffs" Relationship="Self.FK_TblStaff_TblStatus" FromRole="TblStatus" ToRole="TblStaff" />
+    <NavigationProperty Name="TblStockUnits" Relationship="Self.FK_TblStockUnit_TblStatus" FromRole="TblStatus" ToRole="TblStockUnit" />
+  </EntityType>
+  <EntityType Name="TblStockUnit">
+    <Key>
+      <PropertyRef Name="StockUnitID" />
+    </Key>
+    <Property Name="StockUnitID" Type="Int32" Nullable="false" />
+    <Property Name="StockUnitName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblProducts" Relationship="Self.FK_TblProduct_TblStockUnit" FromRole="TblStockUnit" ToRole="TblProduct" />
+    <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblStockUnit_TblStatus" FromRole="TblStockUnit" ToRole="TblStatus" />
+  </EntityType>
+  <Association Name="FK_TblCashRegister_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblCashRegister" Type="Self.TblCashRegister" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblCashRegister">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblDepartment_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblDepartment">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblMission_TblDepartment">
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="0..1" />
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDepartment">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="TblMission">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblDepartment">
+    <End Role="TblDepartment" Type="Self.TblDepartment" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDepartment">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Department" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblExchangeRate_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblExchangeRate" Type="Self.TblExchangeRate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblExchangeRate">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblGuest_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblGuest">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblMission_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblMission">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblMission">
+    <End Role="TblMission" Type="Self.TblMission" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMission">
+        <PropertyRef Name="MissionID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Mission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblPhone_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblPhone" Type="Self.TblPhone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblPhone">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblProductGroup">
+    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TblProductGroup">
+        <PropertyRef Name="ProductGroupID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblStockUnit">
+    <End Role="TblStockUnit" Type="Self.TblStockUnit" Multiplicity="0..1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStockUnit">
+        <PropertyRef Name="StockUnitID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="Unit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProductGroup_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblProductGroup">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblRoom_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblRoom" Type="Self.TblRoom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblRoom">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStaff_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblStaff" Type="Self.TblStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblStaff">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblStockUnit_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
+    <End Role="TblStockUnit" Type="Self.TblStockUnit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblStockUnit">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbHotelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TblCashRegisters" EntityType="Self.TblCashRegister" />
+    <EntitySet Name="TblCountries" EntityType="Self.TblCountry" />
+    <EntitySet Name="TblDepartments" EntityType="Self.TblDepartment" />
+    <EntitySet Name="TblExchangeRates" EntityType="Self.TblExchangeRate" />
+    <EntitySet Name="TblGuests" EntityType="Self.TblGuest" />
+    <EntitySet Name="TblMissions" EntityType="Self.TblMission" />
+    <EntitySet Name="TblPhones" EntityType="Self.TblPhone" />
+    <EntitySet Name="TblProducts" EntityType="Self.TblProduct" />
+    <EntitySet Name="TblProductGroups" EntityType="Self.TblProductGroup" />
+    <EntitySet Name="TblRooms" EntityType="Self.TblRoom" />
+    <EntitySet Name="TblStaffs" EntityType="Self.TblStaff" />
+    <EntitySet Name="TblStatus" EntityType="Self.TblStatu" />
+    <EntitySet Name="TblStockUnits" EntityType="Self.TblStockUnit" />
+    <AssociationSet Name="FK_TblCashRegister_TblStatus" Association="Self.FK_TblCashRegister_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblCashRegister" EntitySet="TblCashRegisters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblDepartment_TblStatus" Association="Self.FK_TblDepartment_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblDepartment" EntitySet="TblDepartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblMission_TblDepartment" Association="Self.FK_TblMission_TblDepartment">
+      <End Role="TblDepartment" EntitySet="TblDepartments" />
+      <End Role="TblMission" EntitySet="TblMissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblDepartment" Association="Self.FK_TblStaff_TblDepartment">
+      <End Role="TblDepartment" EntitySet="TblDepartments" />
+      <End Role="TblStaff" EntitySet="TblStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblExchangeRate_TblStatus" Association="Self.FK_TblExchangeRate_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblExchangeRate" EntitySet="TblExchangeRates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblGuest_TblStatus" Association="Self.FK_TblGuest_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblGuest" EntitySet="TblGuests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblMission_TblStatus" Association="Self.FK_TblMission_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblMission" EntitySet="TblMissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblMission" Association="Self.FK_TblStaff_TblMission">
+      <End Role="TblMission" EntitySet="TblMissions" />
+      <End Role="TblStaff" EntitySet="TblStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblPhone_TblStatus" Association="Self.FK_TblPhone_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblPhone" EntitySet="TblPhones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblProductGroup" Association="Self.FK_TblProduct_TblProductGroup">
+      <End Role="TblProductGroup" EntitySet="TblProductGroups" />
+      <End Role="TblProduct" EntitySet="TblProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblStatus" Association="Self.FK_TblProduct_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblProduct" EntitySet="TblProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblStockUnit" Association="Self.FK_TblProduct_TblStockUnit">
+      <End Role="TblStockUnit" EntitySet="TblStockUnits" />
+      <End Role="TblProduct" EntitySet="TblProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProductGroup_TblStatus" Association="Self.FK_TblProductGroup_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblProductGroup" EntitySet="TblProductGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblRoom_TblStatus" Association="Self.FK_TblRoom_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblRoom" EntitySet="TblRooms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStaff_TblStatus" Association="Self.FK_TblStaff_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblStaff" EntitySet="TblStaffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblStockUnit_TblStatus" Association="Self.FK_TblStockUnit_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblStockUnit" EntitySet="TblStockUnits" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
