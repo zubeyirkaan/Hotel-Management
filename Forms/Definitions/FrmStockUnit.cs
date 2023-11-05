@@ -25,6 +25,13 @@ namespace HotelManagementAutomation.Forms.Definitions
         {
             db.TblStockUnits.Load();
             bindingSource1.DataSource = db.TblStockUnits.Local;
+
+            repositoryItemLookUpEditStatus.DataSource = (from x in db.TblStatus
+                                                         select new
+                                                         {
+                                                             x.StatusID,
+                                                             x.StatusName
+                                                         }).ToList();
         }
     }
 }

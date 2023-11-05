@@ -35,16 +35,16 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemLookUpEditStatus = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditStatus)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,9 +131,12 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.repositoryItemLookUpEditStatus.AutoHeight = false;
             this.repositoryItemLookUpEditStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditStatus.DisplayMember = "StatusName";
             this.repositoryItemLookUpEditStatus.Name = "repositoryItemLookUpEditStatus";
+            this.repositoryItemLookUpEditStatus.NullText = "Select the status";
+            this.repositoryItemLookUpEditStatus.ValueMember = "StatusId";
             // 
-            // TblStockUnit
+            // FrmStockUnit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -142,14 +145,14 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.Controls.Add(this.gridControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TblStockUnit";
+            this.Name = "FrmStockUnit";
             this.Text = "Stock Unit Status";
             this.Load += new System.EventHandler(this.TblStockUnit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditStatus)).EndInit();
             this.ResumeLayout(false);
 
