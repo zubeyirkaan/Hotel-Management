@@ -157,7 +157,7 @@
       <PropertyRef Name="StatusID" />
     </Key>
     <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TblCashRegisters" Relationship="Self.FK_TblCashRegister_TblStatus" FromRole="TblStatus" ToRole="TblCashRegister" />
     <NavigationProperty Name="TblDepartments" Relationship="Self.FK_TblDepartment_TblStatus" FromRole="TblStatus" ToRole="TblDepartment" />
     <NavigationProperty Name="TblExchangeRates" Relationship="Self.FK_TblExchangeRate_TblStatus" FromRole="TblStatus" ToRole="TblExchangeRate" />

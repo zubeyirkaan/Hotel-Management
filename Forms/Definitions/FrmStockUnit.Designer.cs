@@ -68,6 +68,7 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
             // gridColumn1
             // 
@@ -87,8 +88,10 @@ namespace HotelManagementAutomation.Forms.Definitions
             // 
             // gridControl2
             // 
+            this.gridControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl2.DataSource = this.bindingSource1;
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
@@ -108,10 +111,11 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView2_CellValueChanged);
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "StockUnitName";
+            this.gridColumn3.Caption = "Stock Unit Name";
             this.gridColumn3.FieldName = "StockUnitName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -134,7 +138,7 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.repositoryItemLookUpEditStatus.DisplayMember = "StatusName";
             this.repositoryItemLookUpEditStatus.Name = "repositoryItemLookUpEditStatus";
             this.repositoryItemLookUpEditStatus.NullText = "Select the status";
-            this.repositoryItemLookUpEditStatus.ValueMember = "StatusId";
+            this.repositoryItemLookUpEditStatus.ValueMember = "StatusID";
             // 
             // FrmStockUnit
             // 
@@ -146,6 +150,7 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStockUnit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Unit Status";
             this.Load += new System.EventHandler(this.TblStockUnit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

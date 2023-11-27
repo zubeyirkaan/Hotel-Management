@@ -138,13 +138,13 @@
       <PropertyRef Name="StatusID" />
     </Key>
     <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="TblStockUnit">
     <Key>
       <PropertyRef Name="StockUnitID" />
     </Key>
-    <Property Name="StockUnitID" Type="int" Nullable="false" />
+    <Property Name="StockUnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StockUnitName" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="int" />
   </EntityType>

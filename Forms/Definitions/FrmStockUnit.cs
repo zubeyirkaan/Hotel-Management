@@ -33,5 +33,11 @@ namespace HotelManagementAutomation.Forms.Definitions
                                                              x.StatusName
                                                          }).ToList();
         }
+
+
+        private void gridView2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            db.SaveChanges();
+        }
     }
 }
