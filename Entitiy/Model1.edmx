@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="DepartmentID" />
           </Key>
-          <Property Name="DepartmentID" Type="int" Nullable="false" />
+          <Property Name="DepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
           <Property Name="Phone" Type="char" MaxLength="4" />
           <Property Name="Status" Type="int" />
@@ -73,7 +73,7 @@
           <Key>
             <PropertyRef Name="MissionID" />
           </Key>
-          <Property Name="MissionID" Type="int" Nullable="false" />
+          <Property Name="MissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MissionName" Type="nvarchar" MaxLength="50" />
           <Property Name="Department" Type="int" />
           <Property Name="Status" Type="int" />

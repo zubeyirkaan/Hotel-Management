@@ -33,6 +33,12 @@ namespace HotelManagementAutomation
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStatusDefinition = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnStockUnitDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnDepartmentDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnMissionDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCashRegisterDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnExchangerateDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnRoomDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -45,7 +51,7 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BtnStockUnitDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +63,15 @@ namespace HotelManagementAutomation
             this.ribbonControl1.SearchEditItem,
             this.barButtonItem1,
             this.BtnStatusDefinition,
-            this.BtnStockUnitDefinitions});
+            this.BtnStockUnitDefinitions,
+            this.BtnDepartmentDefinitions,
+            this.BtnMissionDefinitions,
+            this.BtnCashRegisterDefinitions,
+            this.BtnExchangerateDefinitions,
+            this.BtnRoomDefinitions,
+            this.barButtonItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 5;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -87,6 +99,60 @@ namespace HotelManagementAutomation
             this.BtnStatusDefinition.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnStatusDefinition.ImageOptions.LargeImage")));
             this.BtnStatusDefinition.Name = "BtnStatusDefinition";
             this.BtnStatusDefinition.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStatusDefinition_ItemClick);
+            // 
+            // BtnStockUnitDefinitions
+            // 
+            this.BtnStockUnitDefinitions.Caption = "Stock Unit Definitions";
+            this.BtnStockUnitDefinitions.Id = 4;
+            this.BtnStockUnitDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnStockUnitDefinitions.ImageOptions.Image")));
+            this.BtnStockUnitDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnStockUnitDefinitions.ImageOptions.LargeImage")));
+            this.BtnStockUnitDefinitions.Name = "BtnStockUnitDefinitions";
+            this.BtnStockUnitDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStockUnitDefinitions_ItemClick);
+            // 
+            // BtnDepartmentDefinitions
+            // 
+            this.BtnDepartmentDefinitions.Caption = "Department Definitions";
+            this.BtnDepartmentDefinitions.Id = 5;
+            this.BtnDepartmentDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnDepartmentDefinitions.ImageOptions.Image")));
+            this.BtnDepartmentDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnDepartmentDefinitions.ImageOptions.LargeImage")));
+            this.BtnDepartmentDefinitions.Name = "BtnDepartmentDefinitions";
+            this.BtnDepartmentDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnDepartmentDefinitions_ItemClick);
+            // 
+            // BtnMissionDefinitions
+            // 
+            this.BtnMissionDefinitions.Caption = "Mission Definitions";
+            this.BtnMissionDefinitions.Id = 6;
+            this.BtnMissionDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMissionDefinitions.ImageOptions.Image")));
+            this.BtnMissionDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnMissionDefinitions.ImageOptions.LargeImage")));
+            this.BtnMissionDefinitions.Name = "BtnMissionDefinitions";
+            this.BtnMissionDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMissionDefinitions_ItemClick);
+            // 
+            // BtnCashRegisterDefinitions
+            // 
+            this.BtnCashRegisterDefinitions.Caption = "Cash Register Definitions";
+            this.BtnCashRegisterDefinitions.Id = 7;
+            this.BtnCashRegisterDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCashRegisterDefinitions.ImageOptions.Image")));
+            this.BtnCashRegisterDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCashRegisterDefinitions.ImageOptions.LargeImage")));
+            this.BtnCashRegisterDefinitions.Name = "BtnCashRegisterDefinitions";
+            this.BtnCashRegisterDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
+            // BtnExchangerateDefinitions
+            // 
+            this.BtnExchangerateDefinitions.Caption = "Exchange Rate Definitions";
+            this.BtnExchangerateDefinitions.Id = 8;
+            this.BtnExchangerateDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnExchangerateDefinitions.ImageOptions.Image")));
+            this.BtnExchangerateDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnExchangerateDefinitions.ImageOptions.LargeImage")));
+            this.BtnExchangerateDefinitions.Name = "BtnExchangerateDefinitions";
+            this.BtnExchangerateDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnExchangerateDefinitions_ItemClick);
+            // 
+            // BtnRoomDefinitions
+            // 
+            this.BtnRoomDefinitions.Caption = "Room Definitions";
+            this.BtnRoomDefinitions.Id = 9;
+            this.BtnRoomDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnRoomDefinitions.ImageOptions.Image")));
+            this.BtnRoomDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnRoomDefinitions.ImageOptions.LargeImage")));
+            this.BtnRoomDefinitions.Name = "BtnRoomDefinitions";
+            this.BtnRoomDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRoomDefinitions_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -159,17 +225,23 @@ namespace HotelManagementAutomation
             // 
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnStatusDefinition);
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnStockUnitDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnDepartmentDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnMissionDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnCashRegisterDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnExchangerateDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnRoomDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
-            // BtnStockUnitDefinitions
+            // barButtonItem2
             // 
-            this.BtnStockUnitDefinitions.Caption = "Stock Unit Definitions";
-            this.BtnStockUnitDefinitions.Id = 4;
-            this.BtnStockUnitDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.BtnStockUnitDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.BtnStockUnitDefinitions.Name = "BtnStockUnitDefinitions";
-            this.BtnStockUnitDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStockUnitDefinitions_ItemClick);
+            this.barButtonItem2.Caption = "Phone Definitions";
+            this.barButtonItem2.Id = 10;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick_1);
             // 
             // Form1
             // 
@@ -206,6 +278,12 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem BtnStatusDefinition;
         private DevExpress.XtraBars.BarButtonItem BtnStockUnitDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnDepartmentDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnMissionDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnCashRegisterDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnExchangerateDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnRoomDefinitions;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
 

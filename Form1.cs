@@ -33,5 +33,41 @@ namespace HotelManagementAutomation
             Forms.Definitions.FrmStockUnit fr = new Forms.Definitions.FrmStockUnit();
             fr.Show();
         }
+
+        private void BtnDepartmentDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmDepartment fr = new Forms.Definitions.FrmDepartment();
+            fr.Show();
+        }
+
+        private void BtnMissionDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmMission fr = new Forms.Definitions.FrmMission();
+            fr.Show();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmCashRegister fr = new Forms.Definitions.FrmCashRegister();
+            fr.Show();
+        }
+
+        private void BtnExchangerateDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmExchangeRate fr = new Forms.Definitions.FrmExchangeRate();
+            fr.Show();
+        }
+
+        private void BtnRoomDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmRoom fr = new Forms.Definitions.FrmRoom();
+            fr.Show();
+        }
+
+        private void barButtonItem2_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.frm fr = new Forms.Definitions.FrmPhone();
+            fr.Show();
+        }
     }
 }

@@ -128,6 +128,42 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Definitions\FrmCashRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmCashRegister.Designer.cs">
+      <DependentUpon>FrmCashRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmExchangeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmExchangeRate.Designer.cs">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmMission.Designer.cs">
+      <DependentUpon>FrmMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmPhone.Designer.cs">
+      <DependentUpon>FrmPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmRoom.Designer.cs">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmStatus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +180,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmCashRegister.resx">
+      <DependentUpon>FrmCashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmExchangeRate.resx">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmMission.resx">
+      <DependentUpon>FrmMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmPhone.resx">
+      <DependentUpon>FrmPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmRoom.resx">
+      <DependentUpon>FrmRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmStatus.resx">
       <DependentUpon>FrmStatus.cs</DependentUpon>

@@ -47,3 +47,9 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\bin\Debug\DevExpress
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\bin\Debug\DevExpress.Office.v22.2.Core.xml
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmStatus.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmStockUnit.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmDepartment.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmMission.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmCashRegister.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmExchangeRate.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmRoom.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Definitions.FrmPhone.resources
