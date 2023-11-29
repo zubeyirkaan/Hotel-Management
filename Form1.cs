@@ -66,7 +66,13 @@ namespace HotelManagementAutomation
 
         private void barButtonItem2_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Definitions.frm fr = new Forms.Definitions.FrmPhone();
+            Forms.Definitions.FrmPhone fr = new Forms.Definitions.FrmPhone();
+            fr.Show();
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmCountry fr = new Forms.Definitions.FrmCountry();
             fr.Show();
         }
     }

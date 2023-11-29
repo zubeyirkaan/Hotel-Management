@@ -134,6 +134,12 @@
     <Compile Include="Forms\Definitions\FrmCashRegister.Designer.cs">
       <DependentUpon>FrmCashRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Definitions\FrmCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmCountry.Designer.cs">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmDepartment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmCashRegister.resx">
       <DependentUpon>FrmCashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmCountry.resx">
+      <DependentUpon>FrmCountry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmDepartment.resx">
       <DependentUpon>FrmDepartment.cs</DependentUpon>
