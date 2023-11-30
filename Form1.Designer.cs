@@ -41,6 +41,9 @@ namespace HotelManagementAutomation
             this.BtnRoomDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnCountryDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnProductGroupDefinitions = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnStaffCard = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -71,9 +74,12 @@ namespace HotelManagementAutomation
             this.BtnExchangerateDefinitions,
             this.BtnRoomDefinitions,
             this.barButtonItem2,
-            this.BtnCountryDefinitions});
+            this.BtnCountryDefinitions,
+            this.BtnProductGroupDefinitions,
+            this.barButtonItem3,
+            this.BtnStaffCard});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 12;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -169,10 +175,36 @@ namespace HotelManagementAutomation
             // 
             this.BtnCountryDefinitions.Caption = "Country Definitions";
             this.BtnCountryDefinitions.Id = 11;
-            this.BtnCountryDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnCountryDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnCountryDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCountryDefinitions.ImageOptions.Image")));
+            this.BtnCountryDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCountryDefinitions.ImageOptions.LargeImage")));
             this.BtnCountryDefinitions.Name = "BtnCountryDefinitions";
             this.BtnCountryDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // BtnProductGroupDefinitions
+            // 
+            this.BtnProductGroupDefinitions.Caption = "Product Group Definitions";
+            this.BtnProductGroupDefinitions.Id = 12;
+            this.BtnProductGroupDefinitions.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductGroupDefinitions.ImageOptions.Image")));
+            this.BtnProductGroupDefinitions.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnProductGroupDefinitions.ImageOptions.LargeImage")));
+            this.BtnProductGroupDefinitions.Name = "BtnProductGroupDefinitions";
+            this.BtnProductGroupDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick_1);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Staff List";
+            this.barButtonItem3.Id = 13;
+            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // BtnStaffCard
+            // 
+            this.BtnStaffCard.Caption = "Staff Card";
+            this.BtnStaffCard.Id = 14;
+            this.BtnStaffCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.BtnStaffCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.BtnStaffCard.Name = "BtnStaffCard";
+            this.BtnStaffCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStaffCard_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -207,8 +239,9 @@ namespace HotelManagementAutomation
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup3.ItemLinks.Add(this.BtnStaffCard);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // ribbonPage5
             // 
@@ -252,6 +285,7 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnRoomDefinitions);
             this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnCountryDefinitions);
+            this.ribbonPageGroup6.ItemLinks.Add(this.BtnProductGroupDefinitions);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
@@ -297,6 +331,9 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnRoomDefinitions;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem BtnCountryDefinitions;
+        private DevExpress.XtraBars.BarButtonItem BtnProductGroupDefinitions;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem BtnStaffCard;
     }
 }
 

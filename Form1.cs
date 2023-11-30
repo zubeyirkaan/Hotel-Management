@@ -75,5 +75,17 @@ namespace HotelManagementAutomation
             Forms.Definitions.FrmCountry fr = new Forms.Definitions.FrmCountry();
             fr.Show();
         }
+
+        private void barButtonItem3_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmProductGroup fr = new Forms.Definitions.FrmProductGroup();
+            fr.Show();
+        }
+
+        private void BtnStaffCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Staff.FrmStaffCard fr = new Forms.Staff.FrmStaffCard();
+            fr.Show();
+        }
     }
 }

@@ -164,6 +164,12 @@
     <Compile Include="Forms\Definitions\FrmPhone.Designer.cs">
       <DependentUpon>FrmPhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Definitions\FrmProductGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Definitions\FrmProductGroup.Designer.cs">
+      <DependentUpon>FrmProductGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,12 @@
     </Compile>
     <Compile Include="Forms\Definitions\FrmStockUnit.Designer.cs">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Staff\FrmStaffCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staff\FrmStaffCard.Designer.cs">
+      <DependentUpon>FrmStaffCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,6 +217,9 @@
     <EmbeddedResource Include="Forms\Definitions\FrmPhone.resx">
       <DependentUpon>FrmPhone.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Definitions\FrmProductGroup.resx">
+      <DependentUpon>FrmProductGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmRoom.resx">
       <DependentUpon>FrmRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmStockUnit.resx">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staff\FrmStaffCard.resx">
+      <DependentUpon>FrmStaffCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
