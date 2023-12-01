@@ -87,5 +87,12 @@ namespace HotelManagementAutomation
             Forms.Staff.FrmStaffCard fr = new Forms.Staff.FrmStaffCard();
             fr.Show();
         }
+
+        private void BtnStaffList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Staff.FrmStaffList fr = new Forms.Staff.FrmStaffList();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

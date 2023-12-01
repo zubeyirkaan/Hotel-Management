@@ -26,6 +26,10 @@ namespace HotelManagementAutomation.Entitiy
         public Nullable<int> Mission { get; set; }
         public string Statement { get; set; }
         public Nullable<int> Status { get; set; }
+        public string IDFront { get; set; }
+        public string IDBack { get; set; }
+        public string Password { get; set; }
+        public string Authority { get; set; }
     
         public virtual TblDepartment TblDepartment { get; set; }
         public virtual TblMission TblMission { get; set; }

@@ -131,6 +131,10 @@
     <Property Name="Department" Type="int" />
     <Property Name="Mission" Type="int" />
     <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+    <Property Name="IDFront" Type="nvarchar" MaxLength="250" />
+    <Property Name="IDBack" Type="nvarchar" MaxLength="250" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="Authority" Type="char" MaxLength="1" />
     <Property Name="Status" Type="int" />
   </EntityType>
   <EntityType Name="TblStatus">

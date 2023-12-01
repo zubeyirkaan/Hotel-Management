@@ -29,6 +29,7 @@ namespace HotelManagementAutomation
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -42,8 +43,9 @@ namespace HotelManagementAutomation
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnCountryDefinitions = new DevExpress.XtraBars.BarButtonItem();
             this.BtnProductGroupDefinitions = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnStaffList = new DevExpress.XtraBars.BarButtonItem();
             this.BtnStaffCard = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -56,7 +58,9 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -76,10 +80,11 @@ namespace HotelManagementAutomation
             this.barButtonItem2,
             this.BtnCountryDefinitions,
             this.BtnProductGroupDefinitions,
-            this.barButtonItem3,
-            this.BtnStaffCard});
+            this.BtnStaffList,
+            this.BtnStaffCard,
+            this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.MaxItemId = 16;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -88,7 +93,7 @@ namespace HotelManagementAutomation
             this.ribbonPage5,
             this.ribbonPage4,
             this.ribbonPage6});
-            this.ribbonControl1.Size = new System.Drawing.Size(1084, 150);
+            this.ribbonControl1.Size = new System.Drawing.Size(884, 150);
             // 
             // barButtonItem1
             // 
@@ -189,22 +194,29 @@ namespace HotelManagementAutomation
             this.BtnProductGroupDefinitions.Name = "BtnProductGroupDefinitions";
             this.BtnProductGroupDefinitions.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick_1);
             // 
-            // barButtonItem3
+            // BtnStaffList
             // 
-            this.barButtonItem3.Caption = "Staff List";
-            this.barButtonItem3.Id = 13;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.BtnStaffList.Caption = "Staff List";
+            this.BtnStaffList.Id = 13;
+            this.BtnStaffList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnStaffList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnStaffList.Name = "BtnStaffList";
+            this.BtnStaffList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStaffList_ItemClick);
             // 
             // BtnStaffCard
             // 
             this.BtnStaffCard.Caption = "Staff Card";
             this.BtnStaffCard.Id = 14;
-            this.BtnStaffCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.BtnStaffCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.BtnStaffCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnStaffCard.ImageOptions.Image")));
+            this.BtnStaffCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnStaffCard.ImageOptions.LargeImage")));
             this.BtnStaffCard.Name = "BtnStaffCard";
             this.BtnStaffCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStaffCard_ItemClick);
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 15;
+            this.barButtonItem4.Name = "barButtonItem4";
             // 
             // ribbonPage1
             // 
@@ -215,6 +227,7 @@ namespace HotelManagementAutomation
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -239,7 +252,7 @@ namespace HotelManagementAutomation
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup3.ItemLinks.Add(this.BtnStaffList);
             this.ribbonPageGroup3.ItemLinks.Add(this.BtnStaffCard);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -289,11 +302,15 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "ribbonPageGroup6";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.ribbonControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -301,6 +318,7 @@ namespace HotelManagementAutomation
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Management";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,8 +350,10 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem BtnCountryDefinitions;
         private DevExpress.XtraBars.BarButtonItem BtnProductGroupDefinitions;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem BtnStaffList;
         private DevExpress.XtraBars.BarButtonItem BtnStaffCard;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

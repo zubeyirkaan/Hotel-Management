@@ -136,6 +136,10 @@
           <Property Name="Department" Type="int" />
           <Property Name="Mission" Type="int" />
           <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+          <Property Name="IDFront" Type="nvarchar" MaxLength="250" />
+          <Property Name="IDBack" Type="nvarchar" MaxLength="250" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="Authority" Type="char" MaxLength="1" />
           <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="TblStatus">
@@ -580,6 +584,10 @@
           <NavigationProperty Name="TblDepartment" Relationship="Self.FK_TblStaff_TblDepartment" FromRole="TblStaff" ToRole="TblDepartment" />
           <NavigationProperty Name="TblMission" Relationship="Self.FK_TblStaff_TblMission" FromRole="TblStaff" ToRole="TblMission" />
           <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblStaff_TblStatus" FromRole="TblStaff" ToRole="TblStatus" />
+          <Property Name="IDFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IDBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="TblStatu">
           <Key>
@@ -1017,6 +1025,10 @@
           <EntitySetMapping Name="TblStaffs">
             <EntityTypeMapping TypeName="DbHotelModel.TblStaff">
               <MappingFragment StoreEntitySet="TblStaff">
+                <ScalarProperty Name="Authority" ColumnName="Authority" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IDBack" ColumnName="IDBack" />
+                <ScalarProperty Name="IDFront" ColumnName="IDFront" />
                 <ScalarProperty Name="StaffID" ColumnName="StaffID" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="TC" ColumnName="TC" />

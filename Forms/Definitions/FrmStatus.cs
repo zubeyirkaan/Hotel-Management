@@ -52,5 +52,10 @@ namespace HotelManagementAutomation.Forms.Definitions
         {
             this.Close();
         }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            db.SaveChanges();
+        }
     }
 }

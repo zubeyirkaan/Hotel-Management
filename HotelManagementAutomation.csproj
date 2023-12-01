@@ -194,8 +194,15 @@
     <Compile Include="Forms\Staff\FrmStaffCard.Designer.cs">
       <DependentUpon>FrmStaffCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Staff\FrmStaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staff\FrmStaffList.Designer.cs">
+      <DependentUpon>FrmStaffList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Repository.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\FrmStaffCard.resx">
       <DependentUpon>FrmStaffCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staff\FrmStaffList.resx">
+      <DependentUpon>FrmStaffList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

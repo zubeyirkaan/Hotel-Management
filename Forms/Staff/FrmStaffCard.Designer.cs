@@ -35,6 +35,8 @@ namespace HotelManagementAutomation.Forms.Staff
             this.TxtNameSurname = new DevExpress.XtraEditors.TextEdit();
             this.lookUpEditDepartment = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.DateEditterminationDate = new DevExpress.XtraEditors.DateEdit();
+            this.DateEditStartDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -55,6 +57,7 @@ namespace HotelManagementAutomation.Forms.Staff
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
@@ -89,13 +92,17 @@ namespace HotelManagementAutomation.Forms.Staff
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.DateEditStartDate = new DevExpress.XtraEditors.DateEdit();
-            this.DateEditterminationDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).BeginInit();
@@ -140,10 +147,6 @@ namespace HotelManagementAutomation.Forms.Staff
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureEdit1
@@ -207,6 +210,30 @@ namespace HotelManagementAutomation.Forms.Staff
             this.groupControl1.Size = new System.Drawing.Size(487, 125);
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // DateEditterminationDate
+            // 
+            this.DateEditterminationDate.EditValue = null;
+            this.DateEditterminationDate.Location = new System.Drawing.Point(354, 89);
+            this.DateEditterminationDate.Name = "DateEditterminationDate";
+            this.DateEditterminationDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateEditterminationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateEditterminationDate.Size = new System.Drawing.Size(127, 20);
+            this.DateEditterminationDate.TabIndex = 23;
+            // 
+            // DateEditStartDate
+            // 
+            this.DateEditStartDate.EditValue = null;
+            this.DateEditStartDate.Location = new System.Drawing.Point(354, 63);
+            this.DateEditStartDate.Name = "DateEditStartDate";
+            this.DateEditStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateEditStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateEditStartDate.Size = new System.Drawing.Size(127, 20);
+            this.DateEditStartDate.TabIndex = 22;
             // 
             // labelControl7
             // 
@@ -396,6 +423,7 @@ namespace HotelManagementAutomation.Forms.Staff
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.BtnUpdate);
             this.groupControl2.Controls.Add(this.BtnCancel);
             this.groupControl2.Controls.Add(this.BtnSave);
             this.groupControl2.Location = new System.Drawing.Point(0, 201);
@@ -405,10 +433,20 @@ namespace HotelManagementAutomation.Forms.Staff
             this.groupControl2.TabIndex = 6;
             this.groupControl2.Text = "groupControl2";
             // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
+            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
+            this.BtnUpdate.TabIndex = 2;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(229, 5);
+            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
@@ -417,12 +455,13 @@ namespace HotelManagementAutomation.Forms.Staff
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
             this.BtnSave.Location = new System.Drawing.Point(358, 5);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(123, 39);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Save";
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // groupControl4
             // 
@@ -566,6 +605,7 @@ namespace HotelManagementAutomation.Forms.Staff
             this.pictureEditIDBack.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditIDBack.Size = new System.Drawing.Size(232, 101);
             this.pictureEditIDBack.TabIndex = 1;
+            this.pictureEditIDBack.EditValueChanged += new System.EventHandler(this.pictureEditIDBack_EditValueChanged);
             // 
             // pictureEditIDFront
             // 
@@ -575,9 +615,12 @@ namespace HotelManagementAutomation.Forms.Staff
             this.pictureEditIDFront.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditIDFront.Size = new System.Drawing.Size(232, 101);
             this.pictureEditIDFront.TabIndex = 0;
+            this.pictureEditIDFront.EditValueChanged += new System.EventHandler(this.pictureEditIDFront_EditValueChanged);
             // 
             // groupControl5
             // 
+            this.groupControl5.Controls.Add(this.labelControl16);
+            this.groupControl5.Controls.Add(this.labelControl15);
             this.groupControl5.Controls.Add(this.TxtStatement);
             this.groupControl5.Controls.Add(this.labelControl11);
             this.groupControl5.Controls.Add(this.pictureEdit11);
@@ -592,7 +635,7 @@ namespace HotelManagementAutomation.Forms.Staff
             // 
             this.TxtStatement.Location = new System.Drawing.Point(84, 7);
             this.TxtStatement.Name = "TxtStatement";
-            this.TxtStatement.Size = new System.Drawing.Size(393, 119);
+            this.TxtStatement.Size = new System.Drawing.Size(393, 94);
             this.TxtStatement.TabIndex = 25;
             // 
             // labelControl11
@@ -767,29 +810,23 @@ namespace HotelManagementAutomation.Forms.Staff
             this.radioButton1.Text = "Authority 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // DateEditStartDate
+            // labelControl15
             // 
-            this.DateEditStartDate.EditValue = null;
-            this.DateEditStartDate.Location = new System.Drawing.Point(354, 63);
-            this.DateEditStartDate.Name = "DateEditStartDate";
-            this.DateEditStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateEditStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateEditStartDate.Size = new System.Drawing.Size(127, 20);
-            this.DateEditStartDate.TabIndex = 22;
+            this.labelControl15.Location = new System.Drawing.Point(9, 113);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(69, 13);
+            this.labelControl15.TabIndex = 26;
+            this.labelControl15.Text = "labelControl15";
+            this.labelControl15.Visible = false;
             // 
-            // DateEditterminationDate
+            // labelControl16
             // 
-            this.DateEditterminationDate.EditValue = null;
-            this.DateEditterminationDate.Location = new System.Drawing.Point(354, 89);
-            this.DateEditterminationDate.Name = "DateEditterminationDate";
-            this.DateEditterminationDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateEditterminationDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateEditterminationDate.Size = new System.Drawing.Size(127, 20);
-            this.DateEditterminationDate.TabIndex = 23;
+            this.labelControl16.Location = new System.Drawing.Point(249, 113);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(69, 13);
+            this.labelControl16.TabIndex = 27;
+            this.labelControl16.Text = "labelControl16";
+            this.labelControl16.Visible = false;
             // 
             // FrmStaffCard
             // 
@@ -811,6 +848,10 @@ namespace HotelManagementAutomation.Forms.Staff
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).EndInit();
@@ -861,10 +902,6 @@ namespace HotelManagementAutomation.Forms.Staff
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditStartDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DateEditterminationDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -931,5 +968,8 @@ namespace HotelManagementAutomation.Forms.Staff
         private System.Windows.Forms.RadioButton radioButton1;
         private DevExpress.XtraEditors.DateEdit DateEditterminationDate;
         private DevExpress.XtraEditors.DateEdit DateEditStartDate;
+        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl16;
     }
 }

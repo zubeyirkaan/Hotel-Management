@@ -151,6 +151,10 @@
     <NavigationProperty Name="TblDepartment" Relationship="Self.FK_TblStaff_TblDepartment" FromRole="TblStaff" ToRole="TblDepartment" />
     <NavigationProperty Name="TblMission" Relationship="Self.FK_TblStaff_TblMission" FromRole="TblStaff" ToRole="TblMission" />
     <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblStaff_TblStatus" FromRole="TblStaff" ToRole="TblStatus" />
+    <Property Name="IDFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IDBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="TblStatu">
     <Key>
