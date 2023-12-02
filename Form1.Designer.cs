@@ -59,6 +59,7 @@ namespace HotelManagementAutomation
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.BtnGuestCard = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -82,9 +83,10 @@ namespace HotelManagementAutomation
             this.BtnProductGroupDefinitions,
             this.BtnStaffList,
             this.BtnStaffCard,
-            this.barButtonItem4});
+            this.barButtonItem4,
+            this.BtnGuestCard});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -198,8 +200,8 @@ namespace HotelManagementAutomation
             // 
             this.BtnStaffList.Caption = "Staff List";
             this.BtnStaffList.Id = 13;
-            this.BtnStaffList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnStaffList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnStaffList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnStaffList.ImageOptions.Image")));
+            this.BtnStaffList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnStaffList.ImageOptions.LargeImage")));
             this.BtnStaffList.Name = "BtnStaffList";
             this.BtnStaffList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnStaffList_ItemClick);
             // 
@@ -241,6 +243,7 @@ namespace HotelManagementAutomation
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.BtnGuestCard);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // ribbonPage3
@@ -306,12 +309,22 @@ namespace HotelManagementAutomation
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // BtnGuestCard
+            // 
+            this.BtnGuestCard.Caption = "New Guest Card";
+            this.BtnGuestCard.Id = 16;
+            this.BtnGuestCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnGuestCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnGuestCard.Name = "BtnGuestCard";
+            this.BtnGuestCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGuestCard_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.ribbonControl1);
+            this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -354,6 +367,7 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnStaffCard;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraBars.BarButtonItem BtnGuestCard;
     }
 }
 

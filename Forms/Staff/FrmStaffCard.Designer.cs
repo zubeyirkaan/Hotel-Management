@@ -76,6 +76,8 @@ namespace HotelManagementAutomation.Forms.Staff
             this.pictureEditIDBack = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEditIDFront = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.TxtStatement = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
@@ -92,8 +94,6 @@ namespace HotelManagementAutomation.Forms.Staff
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditDepartment.Properties)).BeginInit();
@@ -171,14 +171,14 @@ namespace HotelManagementAutomation.Forms.Staff
             // 
             // lookUpEditDepartment
             // 
-            this.lookUpEditDepartment.Location = new System.Drawing.Point(108, 63);
+            this.lookUpEditDepartment.Location = new System.Drawing.Point(111, 63);
             this.lookUpEditDepartment.Name = "lookUpEditDepartment";
             this.lookUpEditDepartment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditDepartment.Properties.DisplayMember = "DepartmentName";
             this.lookUpEditDepartment.Properties.NullText = "Select Department";
             this.lookUpEditDepartment.Properties.ValueMember = "DepartmentID";
-            this.lookUpEditDepartment.Size = new System.Drawing.Size(128, 20);
+            this.lookUpEditDepartment.Size = new System.Drawing.Size(125, 20);
             this.lookUpEditDepartment.TabIndex = 2;
             // 
             // groupControl1
@@ -631,6 +631,24 @@ namespace HotelManagementAutomation.Forms.Staff
             this.groupControl5.TabIndex = 1;
             this.groupControl5.Text = "groupControl5";
             // 
+            // labelControl16
+            // 
+            this.labelControl16.Location = new System.Drawing.Point(249, 113);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(69, 13);
+            this.labelControl16.TabIndex = 27;
+            this.labelControl16.Text = "labelControl16";
+            this.labelControl16.Visible = false;
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Location = new System.Drawing.Point(9, 113);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(69, 13);
+            this.labelControl15.TabIndex = 26;
+            this.labelControl15.Text = "labelControl15";
+            this.labelControl15.Visible = false;
+            // 
             // TxtStatement
             // 
             this.TxtStatement.Location = new System.Drawing.Point(84, 7);
@@ -809,24 +827,6 @@ namespace HotelManagementAutomation.Forms.Staff
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Authority 1";
             this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Location = new System.Drawing.Point(9, 113);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(69, 13);
-            this.labelControl15.TabIndex = 26;
-            this.labelControl15.Text = "labelControl15";
-            this.labelControl15.Visible = false;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Location = new System.Drawing.Point(249, 113);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(69, 13);
-            this.labelControl16.TabIndex = 27;
-            this.labelControl16.Text = "labelControl16";
-            this.labelControl16.Visible = false;
             // 
             // FrmStaffCard
             // 

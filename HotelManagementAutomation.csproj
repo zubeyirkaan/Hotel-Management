@@ -188,6 +188,12 @@
     <Compile Include="Forms\Definitions\FrmStockUnit.Designer.cs">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Guest\FrmGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Guest\FrmGuest.Designer.cs">
+      <DependentUpon>FrmGuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Staff\FrmStaffCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmStockUnit.resx">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Guest\FrmGuest.resx">
+      <DependentUpon>FrmGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\FrmStaffCard.resx">
       <DependentUpon>FrmStaffCard.cs</DependentUpon>

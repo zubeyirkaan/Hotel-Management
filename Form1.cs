@@ -94,5 +94,11 @@ namespace HotelManagementAutomation
             fr.MdiParent = this;
             fr.Show();
         }
+
+        private void BtnGuestCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Guest.FrmGuest fr = new Forms.Guest.FrmGuest();
+            fr.Show();
+        }
     }
 }
