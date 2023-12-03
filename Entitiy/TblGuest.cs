@@ -25,7 +25,11 @@ namespace HotelManagementAutomation.Entitiy
         public string IDPhoto2 { get; set; }
         public Nullable<int> Country { get; set; }
         public Nullable<int> Status { get; set; }
+        public Nullable<int> sehir { get; set; }
+        public Nullable<int> ilce { get; set; }
     
         public virtual TblStatu TblStatu { get; set; }
+        public virtual ilceler ilceler { get; set; }
+        public virtual iller iller { get; set; }
     }
 }

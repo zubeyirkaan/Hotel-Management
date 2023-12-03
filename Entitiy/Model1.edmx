@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DbHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="ilce" Type="nvarchar" MaxLength="255" />
+          <Property Name="sehir" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sehir" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -57,7 +72,7 @@
           <Key>
             <PropertyRef Name="GuestID" />
           </Key>
-          <Property Name="GuestID" Type="int" Nullable="false" />
+          <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
           <Property Name="TC" Type="char" MaxLength="11" />
           <Property Name="Mail" Type="nvarchar" MaxLength="50" />
@@ -67,6 +82,8 @@
           <Property Name="IDPhoto1" Type="nvarchar" MaxLength="100" />
           <Property Name="IDPhoto2" Type="nvarchar" MaxLength="100" />
           <Property Name="Country" Type="int" />
+          <Property Name="sehir" Type="int" />
+          <Property Name="ilce" Type="int" />
           <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="TblMission">
@@ -157,6 +174,18 @@
           <Property Name="StockUnitName" Type="nvarchar" MaxLength="50" />
           <Property Name="Status" Type="int" />
         </EntityType>
+        <Association Name="FK_ilceler_iller">
+          <End Role="iller" Type="Self.iller" Multiplicity="1" />
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TblCashRegister_TblStatus">
           <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
           <End Role="TblCashRegister" Type="Self.TblCashRegister" Multiplicity="*" />
@@ -190,6 +219,30 @@
             </Principal>
             <Dependent Role="TblExchangeRate">
               <PropertyRef Name="Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGuest_ilceler">
+          <End Role="ilceler" Type="Self.ilceler" Multiplicity="0..1" />
+          <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilceler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TblGuest">
+              <PropertyRef Name="ilce" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGuest_iller">
+          <End Role="iller" Type="Self.iller" Multiplicity="0..1" />
+          <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TblGuest">
+              <PropertyRef Name="sehir" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -350,6 +403,8 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DbHotelModelStoreContainer">
+          <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
@@ -364,6 +419,10 @@
           <EntitySet Name="TblStaff" EntityType="Self.TblStaff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblStatus" EntityType="Self.TblStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblStockUnit" EntityType="Self.TblStockUnit" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ilceler_iller" Association="Self.FK_ilceler_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
           <AssociationSet Name="FK_TblCashRegister_TblStatus" Association="Self.FK_TblCashRegister_TblStatus">
             <End Role="TblStatus" EntitySet="TblStatus" />
             <End Role="TblCashRegister" EntitySet="TblCashRegister" />
@@ -375,6 +434,14 @@
           <AssociationSet Name="FK_TblExchangeRate_TblStatus" Association="Self.FK_TblExchangeRate_TblStatus">
             <End Role="TblStatus" EntitySet="TblStatus" />
             <End Role="TblExchangeRate" EntitySet="TblExchangeRate" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGuest_ilceler" Association="Self.FK_TblGuest_ilceler">
+            <End Role="ilceler" EntitySet="ilceler" />
+            <End Role="TblGuest" EntitySet="TblGuest" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGuest_iller" Association="Self.FK_TblGuest_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TblGuest" EntitySet="TblGuest" />
           </AssociationSet>
           <AssociationSet Name="FK_TblGuest_TblStatus" Association="Self.FK_TblGuest_TblStatus">
             <End Role="TblStatus" EntitySet="TblStatus" />
@@ -502,6 +569,10 @@
           <Property Name="Country" Type="Int32" />
           <Property Name="Status" Type="Int32" />
           <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblGuest_TblStatus" FromRole="TblGuest" ToRole="TblStatus" />
+          <Property Name="sehir" Type="Int32" />
+          <Property Name="ilce" Type="Int32" />
+          <NavigationProperty Name="ilceler" Relationship="DbHotelModel.FK_TblGuest_ilceler" FromRole="TblGuest" ToRole="ilceler" />
+          <NavigationProperty Name="iller" Relationship="DbHotelModel.FK_TblGuest_iller" FromRole="TblGuest" ToRole="iller" />
         </EntityType>
         <EntityType Name="TblMission">
           <Key>
@@ -888,7 +959,76 @@
             <End Role="TblStatus" EntitySet="TblStatus" />
             <End Role="TblStockUnit" EntitySet="TblStockUnits" />
           </AssociationSet>
+          <EntitySet Name="ilceler" EntityType="DbHotelModel.ilceler" />
+          <EntitySet Name="iller" EntityType="DbHotelModel.iller" />
+          <AssociationSet Name="FK_ilceler_iller" Association="DbHotelModel.FK_ilceler_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="ilceler" EntitySet="ilceler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGuest_ilceler" Association="DbHotelModel.FK_TblGuest_ilceler">
+            <End Role="ilceler" EntitySet="ilceler" />
+            <End Role="TblGuest" EntitySet="TblGuests" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblGuest_iller" Association="DbHotelModel.FK_TblGuest_iller">
+            <End Role="iller" EntitySet="iller" />
+            <End Role="TblGuest" EntitySet="TblGuests" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="ilceler">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="iller" Relationship="DbHotelModel.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
+          <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblGuest_ilceler" FromRole="ilceler" ToRole="TblGuest" />
+        </EntityType>
+        <EntityType Name="iller">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ilceler" Relationship="DbHotelModel.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
+          <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblGuest_iller" FromRole="iller" ToRole="TblGuest" />
+        </EntityType>
+        <Association Name="FK_ilceler_iller">
+          <End Type="DbHotelModel.iller" Role="iller" Multiplicity="1" />
+          <End Type="DbHotelModel.ilceler" Role="ilceler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ilceler">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGuest_ilceler">
+          <End Type="DbHotelModel.ilceler" Role="ilceler" Multiplicity="0..1" />
+          <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ilceler">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TblGuest">
+              <PropertyRef Name="ilce" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TblGuest_iller">
+          <End Type="DbHotelModel.iller" Role="iller" Multiplicity="0..1" />
+          <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="iller">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TblGuest">
+              <PropertyRef Name="sehir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -951,6 +1091,8 @@
           <EntitySetMapping Name="TblGuests">
             <EntityTypeMapping TypeName="DbHotelModel.TblGuest">
               <MappingFragment StoreEntitySet="TblGuest">
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
                 <ScalarProperty Name="GuestID" ColumnName="GuestID" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="TC" ColumnName="TC" />
@@ -1058,6 +1200,23 @@
                 <ScalarProperty Name="StockUnitID" ColumnName="StockUnitID" />
                 <ScalarProperty Name="StockUnitName" ColumnName="StockUnitName" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ilceler">
+            <EntityTypeMapping TypeName="DbHotelModel.ilceler">
+              <MappingFragment StoreEntitySet="ilceler">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="iller">
+            <EntityTypeMapping TypeName="DbHotelModel.iller">
+              <MappingFragment StoreEntitySet="iller">
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

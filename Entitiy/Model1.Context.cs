@@ -39,5 +39,7 @@ namespace HotelManagementAutomation.Entitiy
         public virtual DbSet<TblStaff> TblStaffs { get; set; }
         public virtual DbSet<TblStatu> TblStatus { get; set; }
         public virtual DbSet<TblStockUnit> TblStockUnits { get; set; }
+        public virtual DbSet<ilceler> ilceler { get; set; }
+        public virtual DbSet<iller> iller { get; set; }
     }
 }

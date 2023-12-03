@@ -69,6 +69,10 @@
     <Property Name="Country" Type="Int32" />
     <Property Name="Status" Type="Int32" />
     <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblGuest_TblStatus" FromRole="TblGuest" ToRole="TblStatus" />
+    <Property Name="sehir" Type="Int32" />
+    <Property Name="ilce" Type="Int32" />
+    <NavigationProperty Name="ilceler" Relationship="DbHotelModel.FK_TblGuest_ilceler" FromRole="TblGuest" ToRole="ilceler" />
+    <NavigationProperty Name="iller" Relationship="DbHotelModel.FK_TblGuest_iller" FromRole="TblGuest" ToRole="iller" />
   </EntityType>
   <EntityType Name="TblMission">
     <Key>
@@ -455,5 +459,74 @@
       <End Role="TblStatus" EntitySet="TblStatus" />
       <End Role="TblStockUnit" EntitySet="TblStockUnits" />
     </AssociationSet>
+    <EntitySet Name="ilceler" EntityType="DbHotelModel.ilceler" />
+    <EntitySet Name="iller" EntityType="DbHotelModel.iller" />
+    <AssociationSet Name="FK_ilceler_iller" Association="DbHotelModel.FK_ilceler_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="ilceler" EntitySet="ilceler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblGuest_ilceler" Association="DbHotelModel.FK_TblGuest_ilceler">
+      <End Role="ilceler" EntitySet="ilceler" />
+      <End Role="TblGuest" EntitySet="TblGuests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblGuest_iller" Association="DbHotelModel.FK_TblGuest_iller">
+      <End Role="iller" EntitySet="iller" />
+      <End Role="TblGuest" EntitySet="TblGuests" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="ilceler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ilce" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="sehir" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="iller" Relationship="DbHotelModel.FK_ilceler_iller" FromRole="ilceler" ToRole="iller" />
+    <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblGuest_ilceler" FromRole="ilceler" ToRole="TblGuest" />
+  </EntityType>
+  <EntityType Name="iller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sehir" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ilceler" Relationship="DbHotelModel.FK_ilceler_iller" FromRole="iller" ToRole="ilceler" />
+    <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblGuest_iller" FromRole="iller" ToRole="TblGuest" />
+  </EntityType>
+  <Association Name="FK_ilceler_iller">
+    <End Type="DbHotelModel.iller" Role="iller" Multiplicity="1" />
+    <End Type="DbHotelModel.ilceler" Role="ilceler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ilceler">
+        <PropertyRef Name="sehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblGuest_ilceler">
+    <End Type="DbHotelModel.ilceler" Role="ilceler" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ilceler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TblGuest">
+        <PropertyRef Name="ilce" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblGuest_iller">
+    <End Type="DbHotelModel.iller" Role="iller" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="iller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="TblGuest">
+        <PropertyRef Name="sehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

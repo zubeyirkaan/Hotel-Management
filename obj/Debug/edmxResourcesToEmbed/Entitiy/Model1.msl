@@ -57,6 +57,8 @@
     <EntitySetMapping Name="TblGuests">
       <EntityTypeMapping TypeName="DbHotelModel.TblGuest">
         <MappingFragment StoreEntitySet="TblGuest">
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="sehir" ColumnName="sehir" />
           <ScalarProperty Name="GuestID" ColumnName="GuestID" />
           <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
           <ScalarProperty Name="TC" ColumnName="TC" />
@@ -164,6 +166,23 @@
           <ScalarProperty Name="StockUnitID" ColumnName="StockUnitID" />
           <ScalarProperty Name="StockUnitName" ColumnName="StockUnitName" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ilceler">
+      <EntityTypeMapping TypeName="DbHotelModel.ilceler">
+        <MappingFragment StoreEntitySet="ilceler">
+          <ScalarProperty Name="sehir" ColumnName="sehir" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="iller">
+      <EntityTypeMapping TypeName="DbHotelModel.iller">
+        <MappingFragment StoreEntitySet="iller">
+          <ScalarProperty Name="sehir" ColumnName="sehir" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

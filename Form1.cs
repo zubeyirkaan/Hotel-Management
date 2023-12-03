@@ -17,11 +17,6 @@ namespace HotelManagementAutomation
             InitializeComponent();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
         private void BtnStatusDefinition_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmStatus fr = new Forms.Definitions.FrmStatus();
@@ -98,6 +93,13 @@ namespace HotelManagementAutomation
         private void BtnGuestCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Guest.FrmGuest fr = new Forms.Guest.FrmGuest();
+            fr.Show();
+        }
+
+        private void BtnCustomerList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Guest.FrmGuestList fr = new Forms.Guest.FrmGuestList();
+            fr.MdiParent = this;
             fr.Show();
         }
     }

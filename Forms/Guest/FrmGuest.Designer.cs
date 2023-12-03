@@ -59,7 +59,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEditMission = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEditCity = new DevExpress.XtraEditors.LookUpEdit();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.lookUpEditCountry = new DevExpress.XtraEditors.LookUpEdit();
@@ -67,14 +67,14 @@ namespace HotelManagementAutomation.Forms.Guest
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtTC = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEditCounty = new DevExpress.XtraEditors.LookUpEdit();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtNameSurname = new DevExpress.XtraEditors.TextEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAddres.Properties)).BeginInit();
@@ -99,7 +99,7 @@ namespace HotelManagementAutomation.Forms.Guest
             ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
@@ -107,11 +107,11 @@ namespace HotelManagementAutomation.Forms.Guest
             ((System.ComponentModel.ISupportInitialize)(this.TxtTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCounty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl8
@@ -190,6 +190,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.pictureEditIDBack.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditIDBack.Size = new System.Drawing.Size(232, 101);
             this.pictureEditIDBack.TabIndex = 1;
+            this.pictureEditIDBack.EditValueChanged += new System.EventHandler(this.pictureEditIDBack_EditValueChanged);
             // 
             // pictureEditIDFront
             // 
@@ -199,6 +200,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.pictureEditIDFront.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEditIDFront.Size = new System.Drawing.Size(232, 101);
             this.pictureEditIDFront.TabIndex = 0;
+            this.pictureEditIDFront.EditValueChanged += new System.EventHandler(this.pictureEditIDFront_EditValueChanged);
             // 
             // groupControl5
             // 
@@ -318,6 +320,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnCancel
             // 
@@ -327,6 +330,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnSave
             // 
@@ -336,6 +340,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.BtnSave.Size = new System.Drawing.Size(123, 39);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Save";
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // groupControl4
             // 
@@ -398,17 +403,18 @@ namespace HotelManagementAutomation.Forms.Guest
             this.labelControl5.TabIndex = 15;
             this.labelControl5.Text = "City";
             // 
-            // lookUpEditMission
+            // lookUpEditCity
             // 
-            this.lookUpEditMission.Location = new System.Drawing.Point(353, 37);
-            this.lookUpEditMission.Name = "lookUpEditMission";
-            this.lookUpEditMission.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lookUpEditCity.Location = new System.Drawing.Point(353, 37);
+            this.lookUpEditCity.Name = "lookUpEditCity";
+            this.lookUpEditCity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditMission.Properties.DisplayMember = "MissionName";
-            this.lookUpEditMission.Properties.NullText = "Select Mission";
-            this.lookUpEditMission.Properties.ValueMember = "MissionID";
-            this.lookUpEditMission.Size = new System.Drawing.Size(128, 20);
-            this.lookUpEditMission.TabIndex = 13;
+            this.lookUpEditCity.Properties.DisplayMember = "Sehir";
+            this.lookUpEditCity.Properties.NullText = "Select City";
+            this.lookUpEditCity.Properties.ValueMember = "Id";
+            this.lookUpEditCity.Size = new System.Drawing.Size(128, 20);
+            this.lookUpEditCity.TabIndex = 13;
+            this.lookUpEditCity.EditValueChanged += new System.EventHandler(this.lookUpEditCity_EditValueChanged);
             // 
             // pictureEdit5
             // 
@@ -479,10 +485,10 @@ namespace HotelManagementAutomation.Forms.Guest
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.lookUpEdit1);
+            this.groupControl1.Controls.Add(this.lookUpEditCounty);
             this.groupControl1.Controls.Add(this.pictureEdit6);
             this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.lookUpEditMission);
+            this.groupControl1.Controls.Add(this.lookUpEditCity);
             this.groupControl1.Controls.Add(this.pictureEdit5);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.lookUpEditCountry);
@@ -499,6 +505,39 @@ namespace HotelManagementAutomation.Forms.Guest
             this.groupControl1.Size = new System.Drawing.Size(487, 94);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(271, 66);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(35, 13);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "County";
+            // 
+            // lookUpEditCounty
+            // 
+            this.lookUpEditCounty.Location = new System.Drawing.Point(353, 63);
+            this.lookUpEditCounty.Name = "lookUpEditCounty";
+            this.lookUpEditCounty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditCounty.Properties.DisplayMember = "Ilce";
+            this.lookUpEditCounty.Properties.NullText = "Select County";
+            this.lookUpEditCounty.Properties.ValueMember = "Id";
+            this.lookUpEditCounty.Size = new System.Drawing.Size(128, 20);
+            this.lookUpEditCounty.TabIndex = 16;
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(245, 59);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit6.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit6.TabIndex = 17;
             // 
             // labelControl2
             // 
@@ -535,39 +574,6 @@ namespace HotelManagementAutomation.Forms.Guest
             this.TxtNameSurname.Name = "TxtNameSurname";
             this.TxtNameSurname.Size = new System.Drawing.Size(371, 20);
             this.TxtNameSurname.TabIndex = 1;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(271, 66);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(35, 13);
-            this.labelControl6.TabIndex = 18;
-            this.labelControl6.Text = "County";
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(353, 63);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Properties.DisplayMember = "MissionName";
-            this.lookUpEdit1.Properties.NullText = "Select Mission";
-            this.lookUpEdit1.Properties.ValueMember = "MissionID";
-            this.lookUpEdit1.Size = new System.Drawing.Size(128, 20);
-            this.lookUpEdit1.TabIndex = 16;
-            // 
-            // pictureEdit6
-            // 
-            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(245, 59);
-            this.pictureEdit6.Name = "pictureEdit6";
-            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit6.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit6.TabIndex = 17;
             // 
             // FrmGuest
             // 
@@ -607,7 +613,7 @@ namespace HotelManagementAutomation.Forms.Guest
             ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditMission.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
@@ -616,11 +622,11 @@ namespace HotelManagementAutomation.Forms.Guest
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditCounty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -655,7 +661,7 @@ namespace HotelManagementAutomation.Forms.Guest
         private DevExpress.XtraEditors.PictureEdit pictureEdit9;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEditMission;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditCity;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditCountry;
@@ -669,7 +675,7 @@ namespace HotelManagementAutomation.Forms.Guest
         private DevExpress.XtraEditors.TextEdit TxtNameSurname;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditCounty;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
     }
 }

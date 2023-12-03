@@ -35,6 +35,11 @@
         <AssociationConnector Association="DbHotelModel.FK_TblRoom_TblStatus" ManuallyRouted="false" />
         <AssociationConnector Association="DbHotelModel.FK_TblStaff_TblStatus" ManuallyRouted="false" />
         <AssociationConnector Association="DbHotelModel.FK_TblStockUnit_TblStatus" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbHotelModel.ilceler" Width="1.5" PointX="7.875" PointY="7.75" />
+        <EntityTypeShape EntityType="DbHotelModel.iller" Width="1.5" PointX="6" PointY="7.75" />
+        <AssociationConnector Association="DbHotelModel.FK_ilceler_iller" />
+        <AssociationConnector Association="DbHotelModel.FK_TblGuest_ilceler" />
+        <AssociationConnector Association="DbHotelModel.FK_TblGuest_iller" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
