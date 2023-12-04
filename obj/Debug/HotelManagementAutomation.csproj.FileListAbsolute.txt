@@ -59,3 +59,5 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManag
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Staff.FrmStaffList.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Guest.FrmGuest.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Guest.FrmGuestList.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Product.FrmProductList.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Product.FrmProductCard.resources

@@ -110,7 +110,6 @@
     <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Tax" Type="tinyint" />
-    <Property Name="Staff" Type="int" />
     <Property Name="Status" Type="int" />
   </EntityType>
   <EntityType Name="TblProductGroup">
@@ -120,6 +119,17 @@
     <Property Name="ProductGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ProductGroupName" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblProductProcess">
+    <Key>
+      <PropertyRef Name="ProcessID" />
+    </Key>
+    <Property Name="ProcessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Product" Type="int" />
+    <Property Name="ProcessType" Type="nvarchar" MaxLength="5" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="TblRoom">
     <Key>
@@ -289,15 +299,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TblProduct_TblProductGroup">
-    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="1" />
-    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="0..1" />
+  <Association Name="FK_TblProduct_TblProductGroup1">
+    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="0..1" />
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TblProductGroup">
         <PropertyRef Name="ProductGroupID" />
       </Principal>
       <Dependent Role="TblProduct">
-        <PropertyRef Name="ProductID" />
+        <PropertyRef Name="ProductGroup" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -334,6 +344,18 @@
       </Principal>
       <Dependent Role="TblProductGroup">
         <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProductProcess_TblProduct">
+    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="0..1" />
+    <End Role="TblProductProcess" Type="Self.TblProductProcess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="TblProductProcess">
+        <PropertyRef Name="Product" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -410,6 +432,7 @@
     <EntitySet Name="TblPhone" EntityType="Self.TblPhone" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProduct" EntityType="Self.TblProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProductGroup" EntityType="Self.TblProductGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProductProcess" EntityType="Self.TblProductProcess" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblRoom" EntityType="Self.TblRoom" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblStaff" EntityType="Self.TblStaff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblStatus" EntityType="Self.TblStatus" Schema="dbo" store:Type="Tables" />
@@ -454,7 +477,7 @@
       <End Role="TblStatus" EntitySet="TblStatus" />
       <End Role="TblPhone" EntitySet="TblPhone" />
     </AssociationSet>
-    <AssociationSet Name="FK_TblProduct_TblProductGroup" Association="Self.FK_TblProduct_TblProductGroup">
+    <AssociationSet Name="FK_TblProduct_TblProductGroup1" Association="Self.FK_TblProduct_TblProductGroup1">
       <End Role="TblProductGroup" EntitySet="TblProductGroup" />
       <End Role="TblProduct" EntitySet="TblProduct" />
     </AssociationSet>
@@ -469,6 +492,10 @@
     <AssociationSet Name="FK_TblProductGroup_TblStatus" Association="Self.FK_TblProductGroup_TblStatus">
       <End Role="TblStatus" EntitySet="TblStatus" />
       <End Role="TblProductGroup" EntitySet="TblProductGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProductProcess_TblProduct" Association="Self.FK_TblProductProcess_TblProduct">
+      <End Role="TblProduct" EntitySet="TblProduct" />
+      <End Role="TblProductProcess" EntitySet="TblProductProcess" />
     </AssociationSet>
     <AssociationSet Name="FK_TblRoom_TblStatus" Association="Self.FK_TblRoom_TblStatus">
       <End Role="TblStatus" EntitySet="TblStatus" />

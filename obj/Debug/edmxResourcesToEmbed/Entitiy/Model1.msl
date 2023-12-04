@@ -103,7 +103,6 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Total" ColumnName="Total" />
           <ScalarProperty Name="Tax" ColumnName="Tax" />
-          <ScalarProperty Name="Staff" ColumnName="Staff" />
           <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -183,6 +182,18 @@
         <MappingFragment StoreEntitySet="iller">
           <ScalarProperty Name="sehir" ColumnName="sehir" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProductProcess">
+      <EntityTypeMapping TypeName="DbHotelModel.TblProductProcess">
+        <MappingFragment StoreEntitySet="TblProductProcess">
+          <ScalarProperty Name="Statement" ColumnName="Statement" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ProcessType" ColumnName="ProcessType" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

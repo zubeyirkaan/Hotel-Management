@@ -107,11 +107,11 @@
     <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Tax" Type="Byte" />
-    <Property Name="Staff" Type="Int32" />
     <Property Name="Status" Type="Int32" />
-    <NavigationProperty Name="TblProductGroup" Relationship="Self.FK_TblProduct_TblProductGroup" FromRole="TblProduct" ToRole="TblProductGroup" />
     <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblProduct_TblStatus" FromRole="TblProduct" ToRole="TblStatus" />
     <NavigationProperty Name="TblStockUnit" Relationship="Self.FK_TblProduct_TblStockUnit" FromRole="TblProduct" ToRole="TblStockUnit" />
+    <NavigationProperty Name="TblProductGroup1" Relationship="DbHotelModel.FK_TblProduct_TblProductGroup1" FromRole="TblProduct" ToRole="TblProductGroup" />
+    <NavigationProperty Name="TblProductProcess" Relationship="DbHotelModel.FK_TblProductProcess_TblProduct" FromRole="TblProduct" ToRole="TblProductProcess" />
   </EntityType>
   <EntityType Name="TblProductGroup">
     <Key>
@@ -120,8 +120,8 @@
     <Property Name="ProductGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProductGroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="Int32" />
-    <NavigationProperty Name="TblProduct" Relationship="Self.FK_TblProduct_TblProductGroup" FromRole="TblProductGroup" ToRole="TblProduct" />
     <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblProductGroup_TblStatus" FromRole="TblProductGroup" ToRole="TblStatus" />
+    <NavigationProperty Name="TblProduct1" Relationship="DbHotelModel.FK_TblProduct_TblProductGroup1" FromRole="TblProductGroup" ToRole="TblProduct" />
   </EntityType>
   <EntityType Name="TblRoom">
     <Key>
@@ -296,18 +296,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TblProduct_TblProductGroup">
-    <End Role="TblProductGroup" Type="Self.TblProductGroup" Multiplicity="1" />
-    <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="TblProductGroup">
-        <PropertyRef Name="ProductGroupID" />
-      </Principal>
-      <Dependent Role="TblProduct">
-        <PropertyRef Name="ProductID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_TblProduct_TblStatus">
     <End Role="TblStatus" Type="Self.TblStatu" Multiplicity="0..1" />
     <End Role="TblProduct" Type="Self.TblProduct" Multiplicity="*" />
@@ -431,10 +419,6 @@
       <End Role="TblStatus" EntitySet="TblStatus" />
       <End Role="TblPhone" EntitySet="TblPhones" />
     </AssociationSet>
-    <AssociationSet Name="FK_TblProduct_TblProductGroup" Association="Self.FK_TblProduct_TblProductGroup">
-      <End Role="TblProductGroup" EntitySet="TblProductGroups" />
-      <End Role="TblProduct" EntitySet="TblProducts" />
-    </AssociationSet>
     <AssociationSet Name="FK_TblProduct_TblStatus" Association="Self.FK_TblProduct_TblStatus">
       <End Role="TblStatus" EntitySet="TblStatus" />
       <End Role="TblProduct" EntitySet="TblProducts" />
@@ -472,6 +456,15 @@
     <AssociationSet Name="FK_TblGuest_iller" Association="DbHotelModel.FK_TblGuest_iller">
       <End Role="iller" EntitySet="iller" />
       <End Role="TblGuest" EntitySet="TblGuests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblProduct_TblProductGroup1" Association="DbHotelModel.FK_TblProduct_TblProductGroup1">
+      <End Role="TblProductGroup" EntitySet="TblProductGroups" />
+      <End Role="TblProduct" EntitySet="TblProducts" />
+    </AssociationSet>
+    <EntitySet Name="TblProductProcess" EntityType="DbHotelModel.TblProductProcess" />
+    <AssociationSet Name="FK_TblProductProcess_TblProduct" Association="DbHotelModel.FK_TblProductProcess_TblProduct">
+      <End Role="TblProduct" EntitySet="TblProducts" />
+      <End Role="TblProductProcess" EntitySet="TblProductProcess" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ilceler">
@@ -526,6 +519,42 @@
       </Principal>
       <Dependent Role="TblGuest">
         <PropertyRef Name="sehir" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblProduct_TblProductGroup1">
+    <End Type="DbHotelModel.TblProductGroup" Role="TblProductGroup" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblProduct" Role="TblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblProductGroup">
+        <PropertyRef Name="ProductGroupID" />
+      </Principal>
+      <Dependent Role="TblProduct">
+        <PropertyRef Name="ProductGroup" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TblProductProcess">
+    <Key>
+      <PropertyRef Name="ProcessID" />
+    </Key>
+    <Property Name="ProcessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="ProcessType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblProduct" Relationship="DbHotelModel.FK_TblProductProcess_TblProduct" FromRole="TblProductProcess" ToRole="TblProduct" />
+  </EntityType>
+  <Association Name="FK_TblProductProcess_TblProduct">
+    <End Type="DbHotelModel.TblProduct" Role="TblProduct" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblProductProcess" Role="TblProductProcess" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblProduct">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="TblProductProcess">
+        <PropertyRef Name="Product" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

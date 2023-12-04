@@ -14,6 +14,12 @@ namespace HotelManagementAutomation.Entitiy
     
     public partial class TblProduct
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblProduct()
+        {
+            this.TblProductProcess = new HashSet<TblProductProcess>();
+        }
+    
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public Nullable<int> ProductGroup { get; set; }
@@ -21,11 +27,12 @@ namespace HotelManagementAutomation.Entitiy
         public Nullable<decimal> Price { get; set; }
         public Nullable<decimal> Total { get; set; }
         public Nullable<byte> Tax { get; set; }
-        public Nullable<int> Staff { get; set; }
         public Nullable<int> Status { get; set; }
     
-        public virtual TblProductGroup TblProductGroup { get; set; }
         public virtual TblStatu TblStatu { get; set; }
         public virtual TblStockUnit TblStockUnit { get; set; }
+        public virtual TblProductGroup TblProductGroup1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblProductProcess> TblProductProcess { get; set; }
     }
 }

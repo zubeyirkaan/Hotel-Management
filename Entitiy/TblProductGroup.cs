@@ -14,11 +14,18 @@ namespace HotelManagementAutomation.Entitiy
     
     public partial class TblProductGroup
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblProductGroup()
+        {
+            this.TblProduct1 = new HashSet<TblProduct>();
+        }
+    
         public int ProductGroupID { get; set; }
         public string ProductGroupName { get; set; }
         public Nullable<int> Status { get; set; }
     
-        public virtual TblProduct TblProduct { get; set; }
         public virtual TblStatu TblStatu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblProduct> TblProduct1 { get; set; }
     }
 }
