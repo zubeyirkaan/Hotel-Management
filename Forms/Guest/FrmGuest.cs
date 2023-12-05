@@ -141,7 +141,16 @@ namespace HotelManagementAutomation.Forms.Guest
             t.Country = int.Parse(lookUpEditCountry.EditValue.ToString());
             t.IDPhoto1 = image1;
             t.IDPhoto2 = image2;
-            repo.TAdd(t);
+            try
+            {
+                repo.TAdd(t);
+            }
+            catch (Exception)
+            {
+
+                XtraMessageBox.Show("please try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
             XtraMessageBox.Show("Guest successfully added to the system","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
         }

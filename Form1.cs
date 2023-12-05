@@ -116,7 +116,19 @@ namespace HotelManagementAutomation
             fr.Show();
         }
 
-        
+        private void BtnProductEntryProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductEntryProcess fr = new Forms.Product.FrmProductEntryProcess();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnProductReductionProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmProductReductionProcess fr = new Forms.Product.FrmProductReductionProcess();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }
 

@@ -49,6 +49,9 @@ namespace HotelManagementAutomation
             this.BtnGuestCard = new DevExpress.XtraBars.BarButtonItem();
             this.BtnProductList = new DevExpress.XtraBars.BarButtonItem();
             this.BtnProductCard = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnProductEntryProcess = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnProductReductionProcess = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -59,14 +62,11 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -94,8 +94,8 @@ namespace HotelManagementAutomation
             this.BtnGuestCard,
             this.BtnProductList,
             this.BtnProductCard,
-            this.barButtonItem1,
-            this.barButtonItem3,
+            this.BtnProductEntryProcess,
+            this.BtnProductReductionProcess,
             this.barButtonItem5});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 22;
@@ -259,6 +259,32 @@ namespace HotelManagementAutomation
             this.BtnProductCard.Name = "BtnProductCard";
             this.BtnProductCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnProductCard_ItemClick);
             // 
+            // BtnProductEntryProcess
+            // 
+            this.BtnProductEntryProcess.Caption = "Product Entry Process";
+            this.BtnProductEntryProcess.Id = 19;
+            this.BtnProductEntryProcess.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductEntryProcess.ImageOptions.Image")));
+            this.BtnProductEntryProcess.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnProductEntryProcess.ImageOptions.LargeImage")));
+            this.BtnProductEntryProcess.Name = "BtnProductEntryProcess";
+            this.BtnProductEntryProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnProductEntryProcess_ItemClick);
+            // 
+            // BtnProductReductionProcess
+            // 
+            this.BtnProductReductionProcess.Caption = "Product Reduction Process";
+            this.BtnProductReductionProcess.Id = 20;
+            this.BtnProductReductionProcess.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnProductReductionProcess.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnProductReductionProcess.Name = "BtnProductReductionProcess";
+            this.BtnProductReductionProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnProductReductionProcess_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "New Product Transaction";
+            this.barButtonItem5.Id = 21;
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -325,6 +351,17 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup4.ItemLinks.Add(this.BtnProductCard);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.BtnProductEntryProcess);
+            this.ribbonPageGroup7.ItemLinks.Add(this.BtnProductReductionProcess);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            // 
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -349,41 +386,6 @@ namespace HotelManagementAutomation
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup7.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Product Entry Transactions";
-            this.barButtonItem1.Id = 19;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Product Departion Transaction";
-            this.barButtonItem3.Id = 20;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "New Product Transaction";
-            this.barButtonItem5.Id = 21;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // Form1
             // 
@@ -437,8 +439,8 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnGuestCard;
         private DevExpress.XtraBars.BarButtonItem BtnProductList;
         private DevExpress.XtraBars.BarButtonItem BtnProductCard;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem BtnProductEntryProcess;
+        private DevExpress.XtraBars.BarButtonItem BtnProductReductionProcess;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
