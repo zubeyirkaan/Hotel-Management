@@ -82,6 +82,8 @@ namespace HotelManagementAutomation.Forms.Product
             t.Tax = byte.Parse(TxtTax.Text);
             
             repo.TAdd(t);
+
+
             XtraMessageBox.Show("Product is succesfuly added to the database");
         }
 

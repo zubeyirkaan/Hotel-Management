@@ -32,5 +32,12 @@ namespace HotelManagementAutomation.Forms.Product
                                            x.ProcessType
                                        }).Where(y=>y.ProcessType=="Entry").ToList();
         }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmProcessDefinitions fr = new FrmProcessDefinitions();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ProcessID").ToString());
+            fr.Show();
+        }
     }
 }

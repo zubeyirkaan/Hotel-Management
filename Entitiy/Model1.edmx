@@ -1067,7 +1067,7 @@
           </Key>
           <Property Name="ProcessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Product" Type="Int32" />
-          <Property Name="ProcessType" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />

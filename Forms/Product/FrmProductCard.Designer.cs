@@ -31,12 +31,14 @@ namespace HotelManagementAutomation.Forms.Product
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductCard));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEditUnit = new DevExpress.XtraEditors.LookUpEdit();
-            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEditProductGroup = new DevExpress.XtraEditors.LookUpEdit();
-            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
+            this.TxtTotal = new DevExpress.XtraEditors.TextEdit();
+            this.TxtTax = new DevExpress.XtraEditors.TextEdit();
+            this.rdb18 = new System.Windows.Forms.RadioButton();
+            this.rdb10 = new System.Windows.Forms.RadioButton();
+            this.rdb8 = new System.Windows.Forms.RadioButton();
+            this.rdb1 = new System.Windows.Forms.RadioButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -45,8 +47,12 @@ namespace HotelManagementAutomation.Forms.Product
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtProductName = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEditUnit = new DevExpress.XtraEditors.LookUpEdit();
+            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEditProductGroup = new DevExpress.XtraEditors.LookUpEdit();
+            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.lookUpEditStatus = new DevExpress.XtraEditors.LookUpEdit();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
@@ -54,29 +60,25 @@ namespace HotelManagementAutomation.Forms.Product
             this.TxtStatement = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
-            this.rdb1 = new System.Windows.Forms.RadioButton();
-            this.rdb8 = new System.Windows.Forms.RadioButton();
-            this.rdb10 = new System.Windows.Forms.RadioButton();
-            this.rdb18 = new System.Windows.Forms.RadioButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.TxtTax = new DevExpress.XtraEditors.TextEdit();
-            this.TxtTotal = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditProductGroup.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTax.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtProductName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditProductGroup.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
@@ -87,8 +89,6 @@ namespace HotelManagementAutomation.Forms.Product
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTax.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTotal.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -116,71 +116,84 @@ namespace HotelManagementAutomation.Forms.Product
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "groupControl1";
             // 
-            // labelControl6
+            // TxtTotal
             // 
-            this.labelControl6.Location = new System.Drawing.Point(28, 38);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(19, 13);
-            this.labelControl6.TabIndex = 18;
-            this.labelControl6.Text = "Unit";
+            this.TxtTotal.Location = new System.Drawing.Point(348, 37);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(134, 20);
+            this.TxtTotal.TabIndex = 27;
             // 
-            // lookUpEditUnit
+            // TxtTax
             // 
-            this.lookUpEditUnit.Location = new System.Drawing.Point(110, 35);
-            this.lookUpEditUnit.Name = "lookUpEditUnit";
-            this.lookUpEditUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditUnit.Properties.DisplayMember = "StockUnitName";
-            this.lookUpEditUnit.Properties.NullText = "Select Unit";
-            this.lookUpEditUnit.Properties.ValueMember = "StockUnitID";
-            this.lookUpEditUnit.Size = new System.Drawing.Size(367, 20);
-            this.lookUpEditUnit.TabIndex = 16;
+            this.TxtTax.Location = new System.Drawing.Point(111, 63);
+            this.TxtTax.Name = "TxtTax";
+            this.TxtTax.Size = new System.Drawing.Size(128, 20);
+            this.TxtTax.TabIndex = 26;
             // 
-            // pictureEdit6
+            // rdb18
             // 
-            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(2, 31);
-            this.pictureEdit6.Name = "pictureEdit6";
-            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit6.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit6.TabIndex = 17;
+            this.rdb18.AutoSize = true;
+            this.rdb18.Location = new System.Drawing.Point(429, 66);
+            this.rdb18.Name = "rdb18";
+            this.rdb18.Size = new System.Drawing.Size(48, 17);
+            this.rdb18.TabIndex = 25;
+            this.rdb18.TabStop = true;
+            this.rdb18.Text = "%18";
+            this.rdb18.UseVisualStyleBackColor = true;
             // 
-            // labelControl5
+            // rdb10
             // 
-            this.labelControl5.Location = new System.Drawing.Point(28, 12);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(69, 13);
-            this.labelControl5.TabIndex = 15;
-            this.labelControl5.Text = "Product Group";
+            this.rdb10.AutoSize = true;
+            this.rdb10.Location = new System.Drawing.Point(369, 66);
+            this.rdb10.Name = "rdb10";
+            this.rdb10.Size = new System.Drawing.Size(48, 17);
+            this.rdb10.TabIndex = 24;
+            this.rdb10.TabStop = true;
+            this.rdb10.Text = "%10";
+            this.rdb10.UseVisualStyleBackColor = true;
             // 
-            // lookUpEditProductGroup
+            // rdb8
             // 
-            this.lookUpEditProductGroup.Location = new System.Drawing.Point(110, 9);
-            this.lookUpEditProductGroup.Name = "lookUpEditProductGroup";
-            this.lookUpEditProductGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEditProductGroup.Properties.DisplayMember = "ProductGroupName";
-            this.lookUpEditProductGroup.Properties.NullText = "Select Product Group";
-            this.lookUpEditProductGroup.Properties.ValueMember = "ProductGroupID";
-            this.lookUpEditProductGroup.Size = new System.Drawing.Size(367, 20);
-            this.lookUpEditProductGroup.TabIndex = 13;
+            this.rdb8.AutoSize = true;
+            this.rdb8.Location = new System.Drawing.Point(311, 66);
+            this.rdb8.Name = "rdb8";
+            this.rdb8.Size = new System.Drawing.Size(42, 17);
+            this.rdb8.TabIndex = 23;
+            this.rdb8.TabStop = true;
+            this.rdb8.Text = "%8";
+            this.rdb8.UseVisualStyleBackColor = true;
             // 
-            // pictureEdit5
+            // rdb1
             // 
-            this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(2, 5);
-            this.pictureEdit5.Name = "pictureEdit5";
-            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit5.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit5.TabIndex = 14;
+            this.rdb1.AutoSize = true;
+            this.rdb1.Location = new System.Drawing.Point(253, 66);
+            this.rdb1.Name = "rdb1";
+            this.rdb1.Size = new System.Drawing.Size(42, 17);
+            this.rdb1.TabIndex = 22;
+            this.rdb1.TabStop = true;
+            this.rdb1.Text = "%1";
+            this.rdb1.UseVisualStyleBackColor = true;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(33, 66);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(18, 13);
+            this.labelControl3.TabIndex = 21;
+            this.labelControl3.Text = "Tax";
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(7, 59);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit3.TabIndex = 20;
             // 
             // labelControl4
             // 
@@ -259,26 +272,71 @@ namespace HotelManagementAutomation.Forms.Product
             this.TxtProductName.Size = new System.Drawing.Size(371, 20);
             this.TxtProductName.TabIndex = 1;
             // 
-            // labelControl3
+            // labelControl6
             // 
-            this.labelControl3.Location = new System.Drawing.Point(33, 66);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(18, 13);
-            this.labelControl3.TabIndex = 21;
-            this.labelControl3.Text = "Tax";
+            this.labelControl6.Location = new System.Drawing.Point(28, 38);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(19, 13);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "Unit";
             // 
-            // pictureEdit3
+            // lookUpEditUnit
             // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(7, 59);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit3.TabIndex = 20;
+            this.lookUpEditUnit.Location = new System.Drawing.Point(110, 35);
+            this.lookUpEditUnit.Name = "lookUpEditUnit";
+            this.lookUpEditUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditUnit.Properties.DisplayMember = "StockUnitName";
+            this.lookUpEditUnit.Properties.NullText = "Select Unit";
+            this.lookUpEditUnit.Properties.ValueMember = "StockUnitID";
+            this.lookUpEditUnit.Size = new System.Drawing.Size(367, 20);
+            this.lookUpEditUnit.TabIndex = 16;
+            // 
+            // pictureEdit6
+            // 
+            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
+            this.pictureEdit6.Location = new System.Drawing.Point(2, 31);
+            this.pictureEdit6.Name = "pictureEdit6";
+            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit6.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit6.TabIndex = 17;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(28, 12);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(69, 13);
+            this.labelControl5.TabIndex = 15;
+            this.labelControl5.Text = "Product Group";
+            // 
+            // lookUpEditProductGroup
+            // 
+            this.lookUpEditProductGroup.Location = new System.Drawing.Point(110, 9);
+            this.lookUpEditProductGroup.Name = "lookUpEditProductGroup";
+            this.lookUpEditProductGroup.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditProductGroup.Properties.DisplayMember = "ProductGroupName";
+            this.lookUpEditProductGroup.Properties.NullText = "Select Product Group";
+            this.lookUpEditProductGroup.Properties.ValueMember = "ProductGroupID";
+            this.lookUpEditProductGroup.Size = new System.Drawing.Size(367, 20);
+            this.lookUpEditProductGroup.TabIndex = 13;
+            // 
+            // pictureEdit5
+            // 
+            this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
+            this.pictureEdit5.Location = new System.Drawing.Point(2, 5);
+            this.pictureEdit5.Name = "pictureEdit5";
+            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit5.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit5.TabIndex = 14;
             // 
             // labelControl7
             // 
@@ -353,50 +411,6 @@ namespace HotelManagementAutomation.Forms.Product
             this.pictureEdit11.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit11.TabIndex = 22;
             // 
-            // rdb1
-            // 
-            this.rdb1.AutoSize = true;
-            this.rdb1.Location = new System.Drawing.Point(253, 66);
-            this.rdb1.Name = "rdb1";
-            this.rdb1.Size = new System.Drawing.Size(42, 17);
-            this.rdb1.TabIndex = 22;
-            this.rdb1.TabStop = true;
-            this.rdb1.Text = "%1";
-            this.rdb1.UseVisualStyleBackColor = true;
-            // 
-            // rdb8
-            // 
-            this.rdb8.AutoSize = true;
-            this.rdb8.Location = new System.Drawing.Point(311, 66);
-            this.rdb8.Name = "rdb8";
-            this.rdb8.Size = new System.Drawing.Size(42, 17);
-            this.rdb8.TabIndex = 23;
-            this.rdb8.TabStop = true;
-            this.rdb8.Text = "%8";
-            this.rdb8.UseVisualStyleBackColor = true;
-            // 
-            // rdb10
-            // 
-            this.rdb10.AutoSize = true;
-            this.rdb10.Location = new System.Drawing.Point(369, 66);
-            this.rdb10.Name = "rdb10";
-            this.rdb10.Size = new System.Drawing.Size(48, 17);
-            this.rdb10.TabIndex = 24;
-            this.rdb10.TabStop = true;
-            this.rdb10.Text = "%10";
-            this.rdb10.UseVisualStyleBackColor = true;
-            // 
-            // rdb18
-            // 
-            this.rdb18.AutoSize = true;
-            this.rdb18.Location = new System.Drawing.Point(429, 66);
-            this.rdb18.Name = "rdb18";
-            this.rdb18.Size = new System.Drawing.Size(48, 17);
-            this.rdb18.TabIndex = 25;
-            this.rdb18.TabStop = true;
-            this.rdb18.Text = "%18";
-            this.rdb18.UseVisualStyleBackColor = true;
-            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.labelControl5);
@@ -457,25 +471,11 @@ namespace HotelManagementAutomation.Forms.Product
             this.BtnSave.Text = "Save";
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // TxtTax
-            // 
-            this.TxtTax.Location = new System.Drawing.Point(111, 63);
-            this.TxtTax.Name = "TxtTax";
-            this.TxtTax.Size = new System.Drawing.Size(128, 20);
-            this.TxtTax.TabIndex = 26;
-            // 
-            // TxtTotal
-            // 
-            this.TxtTotal.Location = new System.Drawing.Point(348, 37);
-            this.TxtTotal.Name = "TxtTotal";
-            this.TxtTotal.Size = new System.Drawing.Size(134, 20);
-            this.TxtTotal.TabIndex = 27;
-            // 
             // FrmProductCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 382);
+            this.ClientSize = new System.Drawing.Size(494, 381);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl5);
@@ -489,16 +489,18 @@ namespace HotelManagementAutomation.Forms.Product
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditProductGroup.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtTax.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtProductName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditUnit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditProductGroup.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -511,8 +513,6 @@ namespace HotelManagementAutomation.Forms.Product
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTax.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtTotal.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
