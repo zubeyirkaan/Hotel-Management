@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2066e07d83d14fdc8eefd094837487ba" Name="Diagram1">
+      <Diagram DiagramId="2066e07d83d14fdc8eefd094837487ba" Name="Diagram1" ZoomLevel="83">
         <EntityTypeShape EntityType="DbHotelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblCashRegister" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblCountry" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
@@ -13,8 +13,8 @@
         <EntityTypeShape EntityType="DbHotelModel.TblGuest" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblMission" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblPhone" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbHotelModel.TblProduct" Width="3.625" PointX="8.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbHotelModel.TblProductGroup" Width="2.25" PointX="13.875" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblProduct" Width="3.625" PointX="10.125" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbHotelModel.TblProductGroup" Width="2.25" PointX="15.375" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblRoom" Width="1.5" PointX="0.625" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblStaff" Width="1.5" PointX="14.75" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblStatu" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
@@ -40,7 +40,7 @@
         <AssociationConnector Association="DbHotelModel.FK_TblGuest_ilceler" />
         <AssociationConnector Association="DbHotelModel.FK_TblGuest_iller" />
         <AssociationConnector Association="DbHotelModel.FK_TblProduct_TblProductGroup1" />
-        <EntityTypeShape EntityType="DbHotelModel.TblProductProcess" Width="1.5" PointX="12.625" PointY="11.125" />
+        <EntityTypeShape EntityType="DbHotelModel.TblProductProcess" Width="1.5" PointX="14.25" PointY="7.875" />
         <AssociationConnector Association="DbHotelModel.FK_TblProductProcess_TblProduct" />
       </Diagram>
     </edmx:Diagrams>
