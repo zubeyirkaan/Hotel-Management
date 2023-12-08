@@ -64,3 +64,4 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManag
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Product.FrmProductEntryProcess.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Product.FrmProductReductionProcess.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Product.FrmProcessDefinitions.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Reservation.FrmReservationCard.resources

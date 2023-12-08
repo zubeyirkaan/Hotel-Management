@@ -197,5 +197,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblReservation">
+      <EntityTypeMapping TypeName="DbHotelModel.TblReservation">
+        <MappingFragment StoreEntitySet="TblReservation">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Statement" ColumnName="Statement" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ReservationNameSurname" ColumnName="ReservationNameSurname" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="NumberOfPeople" ColumnName="NumberOfPeople" />
+          <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Guest" ColumnName="Guest" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

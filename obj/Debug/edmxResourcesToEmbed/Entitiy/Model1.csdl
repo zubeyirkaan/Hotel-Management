@@ -73,6 +73,7 @@
     <Property Name="ilce" Type="Int32" />
     <NavigationProperty Name="ilceler" Relationship="DbHotelModel.FK_TblGuest_ilceler" FromRole="TblGuest" ToRole="ilceler" />
     <NavigationProperty Name="iller" Relationship="DbHotelModel.FK_TblGuest_iller" FromRole="TblGuest" ToRole="iller" />
+    <NavigationProperty Name="TblReservation" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblGuest" ToRole="TblReservation" />
   </EntityType>
   <EntityType Name="TblMission">
     <Key>
@@ -135,6 +136,7 @@
     <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
     <Property Name="Status" Type="Int32" />
     <NavigationProperty Name="TblStatu" Relationship="Self.FK_TblRoom_TblStatus" FromRole="TblRoom" ToRole="TblStatus" />
+    <NavigationProperty Name="TblReservation" Relationship="DbHotelModel.FK_TblReservation_TblRoom" FromRole="TblRoom" ToRole="TblReservation" />
   </EntityType>
   <EntityType Name="TblStaff">
     <Key>
@@ -177,6 +179,7 @@
     <NavigationProperty Name="TblRooms" Relationship="Self.FK_TblRoom_TblStatus" FromRole="TblStatus" ToRole="TblRoom" />
     <NavigationProperty Name="TblStaffs" Relationship="Self.FK_TblStaff_TblStatus" FromRole="TblStatus" ToRole="TblStaff" />
     <NavigationProperty Name="TblStockUnits" Relationship="Self.FK_TblStockUnit_TblStatus" FromRole="TblStatus" ToRole="TblStockUnit" />
+    <NavigationProperty Name="TblReservation" Relationship="DbHotelModel.FK_TblReservation_TblStatus" FromRole="TblStatu" ToRole="TblReservation" />
   </EntityType>
   <EntityType Name="TblStockUnit">
     <Key>
@@ -466,6 +469,19 @@
       <End Role="TblProduct" EntitySet="TblProducts" />
       <End Role="TblProductProcess" EntitySet="TblProductProcess" />
     </AssociationSet>
+    <EntitySet Name="TblReservation" EntityType="DbHotelModel.TblReservation" />
+    <AssociationSet Name="FK_TblReservation_TblGuest" Association="DbHotelModel.FK_TblReservation_TblGuest">
+      <End Role="TblGuest" EntitySet="TblGuests" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblReservation_TblRoom" Association="DbHotelModel.FK_TblReservation_TblRoom">
+      <End Role="TblRoom" EntitySet="TblRooms" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblReservation_TblStatus" Association="DbHotelModel.FK_TblReservation_TblStatus">
+      <End Role="TblStatu" EntitySet="TblStatus" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="ilceler">
     <Key>
@@ -555,6 +571,60 @@
       </Principal>
       <Dependent Role="TblProductProcess">
         <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TblReservation">
+    <Key>
+      <PropertyRef Name="ReservationID" />
+    </Key>
+    <Property Name="ReservationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guest" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="LeaveDate" Type="DateTime" Precision="0" />
+    <Property Name="NumberOfPeople" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Room" Type="Int32" />
+    <Property Name="ReservationNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Statement" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblReservation" ToRole="TblGuest" />
+    <NavigationProperty Name="TblRoom" Relationship="DbHotelModel.FK_TblReservation_TblRoom" FromRole="TblReservation" ToRole="TblRoom" />
+    <NavigationProperty Name="TblStatus" Relationship="DbHotelModel.FK_TblReservation_TblStatus" FromRole="TblReservation" ToRole="TblStatu" />
+  </EntityType>
+  <Association Name="FK_TblReservation_TblGuest">
+    <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblReservation" Role="TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblGuest">
+        <PropertyRef Name="GuestID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Guest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblReservation_TblRoom">
+    <End Type="DbHotelModel.TblRoom" Role="TblRoom" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblReservation" Role="TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoom">
+        <PropertyRef Name="RoomID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblReservation_TblStatus">
+    <End Type="DbHotelModel.TblStatu" Role="TblStatu" Multiplicity="0..1" />
+    <End Type="DbHotelModel.TblReservation" Role="TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatu">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Status" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -42,5 +42,6 @@ namespace HotelManagementAutomation.Entitiy
         public virtual DbSet<ilceler> ilceler { get; set; }
         public virtual DbSet<iller> iller { get; set; }
         public virtual DbSet<TblProductProcess> TblProductProcess { get; set; }
+        public virtual DbSet<TblReservation> TblReservation { get; set; }
     }
 }

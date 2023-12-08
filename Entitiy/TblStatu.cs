@@ -28,6 +28,7 @@ namespace HotelManagementAutomation.Entitiy
             this.TblRooms = new HashSet<TblRoom>();
             this.TblStaffs = new HashSet<TblStaff>();
             this.TblStockUnits = new HashSet<TblStockUnit>();
+            this.TblReservation = new HashSet<TblReservation>();
         }
     
         public int StatusID { get; set; }
@@ -55,5 +56,7 @@ namespace HotelManagementAutomation.Entitiy
         public virtual ICollection<TblStaff> TblStaffs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TblStockUnit> TblStockUnits { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblReservation> TblReservation { get; set; }
     }
 }

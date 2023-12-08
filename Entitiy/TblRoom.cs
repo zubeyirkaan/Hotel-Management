@@ -14,6 +14,12 @@ namespace HotelManagementAutomation.Entitiy
     
     public partial class TblRoom
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblRoom()
+        {
+            this.TblReservation = new HashSet<TblReservation>();
+        }
+    
         public int RoomID { get; set; }
         public string RoomNo { get; set; }
         public string Floor { get; set; }
@@ -23,5 +29,7 @@ namespace HotelManagementAutomation.Entitiy
         public Nullable<int> Status { get; set; }
     
         public virtual TblStatu TblStatu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblReservation> TblReservation { get; set; }
     }
 }

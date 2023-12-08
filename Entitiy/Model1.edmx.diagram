@@ -42,6 +42,10 @@
         <AssociationConnector Association="DbHotelModel.FK_TblProduct_TblProductGroup1" />
         <EntityTypeShape EntityType="DbHotelModel.TblProductProcess" Width="1.5" PointX="14.25" PointY="7.875" />
         <AssociationConnector Association="DbHotelModel.FK_TblProductProcess_TblProduct" />
+        <EntityTypeShape EntityType="DbHotelModel.TblReservation" Width="1.5" PointX="7.5" PointY="11" />
+        <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblGuest" />
+        <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblRoom" />
+        <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblStatus" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

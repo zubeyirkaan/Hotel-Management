@@ -119,6 +119,9 @@
     <Compile Include="Entitiy\TblProductProcess.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entitiy\TblReservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entitiy\TblRoom.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -239,6 +242,18 @@
     <Compile Include="Forms\Product\FrmProductReductionProcess.Designer.cs">
       <DependentUpon>FrmProductReductionProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reservation\FrmAllReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmAllReservations.Designer.cs">
+      <DependentUpon>FrmAllReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmReservationCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmReservationCard.Designer.cs">
+      <DependentUpon>FrmReservationCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Staff\FrmStaffCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProductReductionProcess.resx">
       <DependentUpon>FrmProductReductionProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmReservationCard.resx">
+      <DependentUpon>FrmReservationCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Staff\FrmStaffCard.resx">
       <DependentUpon>FrmStaffCard.cs</DependentUpon>

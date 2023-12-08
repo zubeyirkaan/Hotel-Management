@@ -135,6 +135,12 @@ namespace HotelManagementAutomation
             Forms.Product.FrmProcessDefinitions fr = new Forms.Product.FrmProcessDefinitions();
             fr.Show();
         }
+
+        private void BtnReservationCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmReservationCard fr = new Forms.Reservation.FrmReservationCard();
+            fr.Show();
+        }
     }
 }
 

@@ -126,10 +126,25 @@
     </Key>
     <Property Name="ProcessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Product" Type="int" />
-    <Property Name="ProcessType" Type="nvarchar" MaxLength="5" />
+    <Property Name="ProcessType" Type="nvarchar" MaxLength="10" />
     <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Date" Type="date" />
     <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblReservation">
+    <Key>
+      <PropertyRef Name="ReservationID" />
+    </Key>
+    <Property Name="ReservationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guest" Type="int" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="LeaveDate" Type="date" />
+    <Property Name="NumberOfPeople" Type="char" MaxLength="1" />
+    <Property Name="Room" Type="int" />
+    <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="int" />
   </EntityType>
   <EntityType Name="TblRoom">
     <Key>
@@ -179,6 +194,11 @@
     <Property Name="StockUnitName" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'DbHotel.dbo.Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Test">
+          <Property Name="AbsoluteUnit" Type="int" />
+        </EntityType>-->
   <Association Name="FK_ilceler_iller">
     <End Role="iller" Type="Self.iller" Multiplicity="1" />
     <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
@@ -359,6 +379,42 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TblReservation_TblGuest">
+    <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="0..1" />
+    <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblGuest">
+        <PropertyRef Name="GuestID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Guest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblReservation_TblRoom">
+    <End Role="TblRoom" Type="Self.TblRoom" Multiplicity="0..1" />
+    <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblRoom">
+        <PropertyRef Name="RoomID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Room" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblReservation_TblStatus">
+    <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
+    <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblStatus">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="TblReservation">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TblRoom_TblStatus">
     <End Role="TblStatus" Type="Self.TblStatus" Multiplicity="0..1" />
     <End Role="TblRoom" Type="Self.TblRoom" Multiplicity="*" />
@@ -433,6 +489,7 @@
     <EntitySet Name="TblProduct" EntityType="Self.TblProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProductGroup" EntityType="Self.TblProductGroup" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProductProcess" EntityType="Self.TblProductProcess" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblReservation" EntityType="Self.TblReservation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblRoom" EntityType="Self.TblRoom" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblStaff" EntityType="Self.TblStaff" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblStatus" EntityType="Self.TblStatus" Schema="dbo" store:Type="Tables" />
@@ -496,6 +553,18 @@
     <AssociationSet Name="FK_TblProductProcess_TblProduct" Association="Self.FK_TblProductProcess_TblProduct">
       <End Role="TblProduct" EntitySet="TblProduct" />
       <End Role="TblProductProcess" EntitySet="TblProductProcess" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblReservation_TblGuest" Association="Self.FK_TblReservation_TblGuest">
+      <End Role="TblGuest" EntitySet="TblGuest" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblReservation_TblRoom" Association="Self.FK_TblReservation_TblRoom">
+      <End Role="TblRoom" EntitySet="TblRoom" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblReservation_TblStatus" Association="Self.FK_TblReservation_TblStatus">
+      <End Role="TblStatus" EntitySet="TblStatus" />
+      <End Role="TblReservation" EntitySet="TblReservation" />
     </AssociationSet>
     <AssociationSet Name="FK_TblRoom_TblStatus" Association="Self.FK_TblRoom_TblStatus">
       <End Role="TblStatus" EntitySet="TblStatus" />
