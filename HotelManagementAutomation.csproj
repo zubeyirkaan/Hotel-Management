@@ -242,11 +242,35 @@
     <Compile Include="Forms\Product\FrmProductReductionProcess.Designer.cs">
       <DependentUpon>FrmProductReductionProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Reservation\FrmActiveReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmActiveReservations.Designer.cs">
+      <DependentUpon>FrmActiveReservations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Reservation\FrmAllReservations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Reservation\FrmAllReservations.Designer.cs">
       <DependentUpon>FrmAllReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmCanceledReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmCanceledReservations.Designer.cs">
+      <DependentUpon>FrmCanceledReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmFutureReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmFutureReservations.Designer.cs">
+      <DependentUpon>FrmFutureReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPastReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reservation\FrmPastReservations.Designer.cs">
+      <DependentUpon>FrmPastReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Reservation\FrmReservationCard.cs">
       <SubType>Form</SubType>
@@ -322,6 +346,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProductReductionProcess.resx">
       <DependentUpon>FrmProductReductionProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmActiveReservations.resx">
+      <DependentUpon>FrmActiveReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmAllReservations.resx">
+      <DependentUpon>FrmAllReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmCanceledReservations.resx">
+      <DependentUpon>FrmCanceledReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmFutureReservations.resx">
+      <DependentUpon>FrmFutureReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reservation\FrmPastReservations.resx">
+      <DependentUpon>FrmPastReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reservation\FrmReservationCard.resx">
       <DependentUpon>FrmReservationCard.cs</DependentUpon>

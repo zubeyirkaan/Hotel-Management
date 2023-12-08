@@ -11,16 +11,14 @@ using System.Windows.Forms;
 
 namespace HotelManagementAutomation.Forms.Reservation
 {
-    public partial class FrmAllReservations : Form
+    public partial class FrmActiveReservations : Form
     {
-        public FrmAllReservations()
+        public FrmActiveReservations()
         {
             InitializeComponent();
         }
-
         DbHotelEntities db = new DbHotelEntities();
-
-        private void FrmAllReservations_Load(object sender, EventArgs e)
+        private void FrmActiveReservations_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = (from x in db.TblReservation
                                        select new
@@ -33,7 +31,7 @@ namespace HotelManagementAutomation.Forms.Reservation
                                            x.TblRoom.RoomNo,
                                            x.Phone,
                                            x.TblStatus.StatusName
-                                       }).ToList();
+                                       }).Where(y=>y.StatusName == "Active").ToList();
         }
     }
 }

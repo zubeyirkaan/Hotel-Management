@@ -1,7 +1,7 @@
 ﻿
-namespace HotelManagementAutomation.Forms.Guest
+namespace HotelManagementAutomation.Forms.Reservation
 {
-    partial class FrmGuestList
+    partial class FrmPastReservations
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace HotelManagementAutomation.Forms.Guest
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(884, 311);
-            this.gridControl1.TabIndex = 1;
+            this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -51,17 +51,16 @@ namespace HotelManagementAutomation.Forms.Guest
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // FrmGuestList
+            // FrmPastReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 311);
             this.Controls.Add(this.gridControl1);
-            this.Name = "FrmGuestList";
-            this.Text = "Guest List";
-            this.Load += new System.EventHandler(this.FrmGuestList_Load);
+            this.Name = "FrmPastReservations";
+            this.Text = "FrmPastReservations";
+            this.Load += new System.EventHandler(this.FrmPastReservations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

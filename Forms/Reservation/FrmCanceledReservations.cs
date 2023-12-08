@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace HotelManagementAutomation.Forms.Reservation
 {
-    public partial class FrmAllReservations : Form
+    public partial class FrmCanceledReservations : Form
     {
-        public FrmAllReservations()
+        public FrmCanceledReservations()
         {
             InitializeComponent();
         }
 
         DbHotelEntities db = new DbHotelEntities();
 
-        private void FrmAllReservations_Load(object sender, EventArgs e)
+        private void FrmCanceledReservations_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = (from x in db.TblReservation
                                        select new
@@ -33,7 +33,7 @@ namespace HotelManagementAutomation.Forms.Reservation
                                            x.TblRoom.RoomNo,
                                            x.Phone,
                                            x.TblStatus.StatusName
-                                       }).ToList();
+                                       }).Where(y=>y.StatusName == "Reservation canceled").ToList();
         }
     }
 }

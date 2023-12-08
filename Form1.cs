@@ -141,6 +141,41 @@ namespace HotelManagementAutomation
             Forms.Reservation.FrmReservationCard fr = new Forms.Reservation.FrmReservationCard();
             fr.Show();
         }
+
+        private void BtnAllReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmAllReservations fr = new Forms.Reservation.FrmAllReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnActiveReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmActiveReservations fr = new Forms.Reservation.FrmActiveReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnCanceledReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmCanceledReservations fr = new Forms.Reservation.FrmCanceledReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnPastreservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmPastReservations fr = new Forms.Reservation.FrmPastReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnFutureReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Reservation.FrmFutureReservations fr = new Forms.Reservation.FrmFutureReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }
 

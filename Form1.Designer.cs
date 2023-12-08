@@ -52,8 +52,12 @@ namespace HotelManagementAutomation
             this.BtnProductEntryProcess = new DevExpress.XtraBars.BarButtonItem();
             this.BtnProductReductionProcess = new DevExpress.XtraBars.BarButtonItem();
             this.BtnNewProductProcess = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnReservationList = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAllReservationList = new DevExpress.XtraBars.BarButtonItem();
             this.BtnReservationCard = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnActiveReservations = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCanceledReservations = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnPastreservations = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnFutureReservations = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -62,6 +66,7 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -69,10 +74,6 @@ namespace HotelManagementAutomation
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -103,13 +104,14 @@ namespace HotelManagementAutomation
             this.BtnProductEntryProcess,
             this.BtnProductReductionProcess,
             this.BtnNewProductProcess,
-            this.BtnReservationList,
+            this.BtnAllReservationList,
             this.BtnReservationCard,
-            this.barButtonItem1,
-            this.barButtonItem3,
-            this.barButtonItem5});
+            this.BtnActiveReservations,
+            this.BtnCanceledReservations,
+            this.BtnPastreservations,
+            this.BtnFutureReservations});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 27;
+            this.ribbonControl1.MaxItemId = 28;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -297,13 +299,14 @@ namespace HotelManagementAutomation
             this.BtnNewProductProcess.Name = "BtnNewProductProcess";
             this.BtnNewProductProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnNewProductProcess_ItemClick);
             // 
-            // BtnReservationList
+            // BtnAllReservationList
             // 
-            this.BtnReservationList.Caption = "All Reservation List";
-            this.BtnReservationList.Id = 22;
-            this.BtnReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnReservationList.ImageOptions.Image")));
-            this.BtnReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnReservationList.ImageOptions.LargeImage")));
-            this.BtnReservationList.Name = "BtnReservationList";
+            this.BtnAllReservationList.Caption = "All Reservation List";
+            this.BtnAllReservationList.Id = 22;
+            this.BtnAllReservationList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAllReservationList.ImageOptions.Image")));
+            this.BtnAllReservationList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAllReservationList.ImageOptions.LargeImage")));
+            this.BtnAllReservationList.Name = "BtnAllReservationList";
+            this.BtnAllReservationList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAllReservationList_ItemClick);
             // 
             // BtnReservationCard
             // 
@@ -313,6 +316,42 @@ namespace HotelManagementAutomation
             this.BtnReservationCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnReservationCard.ImageOptions.LargeImage")));
             this.BtnReservationCard.Name = "BtnReservationCard";
             this.BtnReservationCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnReservationCard_ItemClick);
+            // 
+            // BtnActiveReservations
+            // 
+            this.BtnActiveReservations.Caption = "Active Reservations";
+            this.BtnActiveReservations.Id = 24;
+            this.BtnActiveReservations.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnActiveReservations.ImageOptions.Image")));
+            this.BtnActiveReservations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnActiveReservations.ImageOptions.LargeImage")));
+            this.BtnActiveReservations.Name = "BtnActiveReservations";
+            this.BtnActiveReservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnActiveReservations_ItemClick);
+            // 
+            // BtnCanceledReservations
+            // 
+            this.BtnCanceledReservations.Caption = "Canceled Reservations";
+            this.BtnCanceledReservations.Id = 25;
+            this.BtnCanceledReservations.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCanceledReservations.ImageOptions.Image")));
+            this.BtnCanceledReservations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCanceledReservations.ImageOptions.LargeImage")));
+            this.BtnCanceledReservations.Name = "BtnCanceledReservations";
+            this.BtnCanceledReservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCanceledReservations_ItemClick);
+            // 
+            // BtnPastreservations
+            // 
+            this.BtnPastreservations.Caption = "Past Reservations";
+            this.BtnPastreservations.Id = 26;
+            this.BtnPastreservations.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnPastreservations.ImageOptions.Image")));
+            this.BtnPastreservations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnPastreservations.ImageOptions.LargeImage")));
+            this.BtnPastreservations.Name = "BtnPastreservations";
+            this.BtnPastreservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPastreservations_ItemClick);
+            // 
+            // BtnFutureReservations
+            // 
+            this.BtnFutureReservations.Caption = "Future Reservations";
+            this.BtnFutureReservations.Id = 27;
+            this.BtnFutureReservations.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnFutureReservations.ImageOptions.Image")));
+            this.BtnFutureReservations.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnFutureReservations.ImageOptions.LargeImage")));
+            this.BtnFutureReservations.Name = "BtnFutureReservations";
+            this.BtnFutureReservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnFutureReservations_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -363,9 +402,17 @@ namespace HotelManagementAutomation
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.BtnReservationList);
+            this.ribbonPageGroup5.ItemLinks.Add(this.BtnAllReservationList);
             this.ribbonPageGroup5.ItemLinks.Add(this.BtnReservationCard);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.BtnActiveReservations);
+            this.ribbonPageGroup9.ItemLinks.Add(this.BtnCanceledReservations);
+            this.ribbonPageGroup9.ItemLinks.Add(this.BtnPastreservations);
+            this.ribbonPageGroup9.ItemLinks.Add(this.BtnFutureReservations);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             // 
             // ribbonPage4
             // 
@@ -417,37 +464,6 @@ namespace HotelManagementAutomation
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // ribbonPageGroup9
-            // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Active Reservations";
-            this.barButtonItem1.Id = 24;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Canceled Reservations";
-            this.barButtonItem3.Id = 25;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Past Reservations";
-            this.barButtonItem5.Id = 26;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
-            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // Form1
             // 
@@ -506,12 +522,13 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnNewProductProcess;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.BarButtonItem BtnReservationList;
+        private DevExpress.XtraBars.BarButtonItem BtnAllReservationList;
         private DevExpress.XtraBars.BarButtonItem BtnReservationCard;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem BtnActiveReservations;
+        private DevExpress.XtraBars.BarButtonItem BtnCanceledReservations;
+        private DevExpress.XtraBars.BarButtonItem BtnPastreservations;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem BtnFutureReservations;
     }
 }
 
