@@ -176,6 +176,42 @@ namespace HotelManagementAutomation
             fr.MdiParent = this;
             fr.Show();
         }
+
+        private void BtnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void BtnCalculator_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void BtnCurrency_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmCurrency fr = new Forms.Tools.FrmCurrency();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmYoutube fr = new Forms.Tools.FrmYoutube();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGoogle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Tools.FrmGoogle fr = new Forms.Tools.FrmGoogle();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
     }
 }
 

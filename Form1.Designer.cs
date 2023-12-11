@@ -58,6 +58,15 @@ namespace HotelManagementAutomation
             this.BtnCanceledReservations = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPastreservations = new DevExpress.XtraBars.BarButtonItem();
             this.BtnFutureReservations = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAgenda = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCurrency = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnYoutube = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnGoogle = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnWord = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCalculator = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -73,7 +82,10 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -109,9 +121,19 @@ namespace HotelManagementAutomation
             this.BtnActiveReservations,
             this.BtnCanceledReservations,
             this.BtnPastreservations,
-            this.BtnFutureReservations});
+            this.BtnFutureReservations,
+            this.BtnAgenda,
+            this.BtnCurrency,
+            this.BtnYoutube,
+            this.BtnGoogle,
+            this.BtnWord,
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barButtonItem10,
+            this.BtnCalculator,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 28;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -119,7 +141,8 @@ namespace HotelManagementAutomation
             this.ribbonPage3,
             this.ribbonPage5,
             this.ribbonPage4,
-            this.ribbonPage6});
+            this.ribbonPage6,
+            this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(884, 150);
             // 
             // BtnCustomerList
@@ -353,6 +376,84 @@ namespace HotelManagementAutomation
             this.BtnFutureReservations.Name = "BtnFutureReservations";
             this.BtnFutureReservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnFutureReservations_ItemClick);
             // 
+            // BtnAgenda
+            // 
+            this.BtnAgenda.Caption = "Agenda";
+            this.BtnAgenda.Id = 28;
+            this.BtnAgenda.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgenda.ImageOptions.Image")));
+            this.BtnAgenda.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAgenda.ImageOptions.LargeImage")));
+            this.BtnAgenda.Name = "BtnAgenda";
+            // 
+            // BtnCurrency
+            // 
+            this.BtnCurrency.Caption = "Currency";
+            this.BtnCurrency.Id = 29;
+            this.BtnCurrency.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCurrency.ImageOptions.Image")));
+            this.BtnCurrency.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCurrency.ImageOptions.LargeImage")));
+            this.BtnCurrency.Name = "BtnCurrency";
+            this.BtnCurrency.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCurrency_ItemClick);
+            // 
+            // BtnYoutube
+            // 
+            this.BtnYoutube.Caption = "Youtube";
+            this.BtnYoutube.Id = 30;
+            this.BtnYoutube.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnYoutube.ImageOptions.Image")));
+            this.BtnYoutube.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnYoutube.ImageOptions.LargeImage")));
+            this.BtnYoutube.Name = "BtnYoutube";
+            this.BtnYoutube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnYoutube_ItemClick);
+            // 
+            // BtnGoogle
+            // 
+            this.BtnGoogle.Caption = "Google";
+            this.BtnGoogle.Id = 31;
+            this.BtnGoogle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGoogle.ImageOptions.Image")));
+            this.BtnGoogle.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnGoogle.ImageOptions.LargeImage")));
+            this.BtnGoogle.Name = "BtnGoogle";
+            this.BtnGoogle.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGoogle_ItemClick);
+            // 
+            // BtnWord
+            // 
+            this.BtnWord.Caption = "Word";
+            this.BtnWord.Id = 32;
+            this.BtnWord.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnWord.ImageOptions.Image")));
+            this.BtnWord.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnWord.ImageOptions.LargeImage")));
+            this.BtnWord.Name = "BtnWord";
+            this.BtnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnWord_ItemClick);
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Excel";
+            this.barButtonItem8.Id = 33;
+            this.barButtonItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
+            this.barButtonItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.barButtonItem8.Name = "barButtonItem8";
+            this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Password";
+            this.barButtonItem9.Id = 34;
+            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
+            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.barButtonItem9.Name = "barButtonItem9";
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "Help";
+            this.barButtonItem10.Id = 35;
+            this.barButtonItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.Image")));
+            this.barButtonItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
+            this.barButtonItem10.Name = "barButtonItem10";
+            // 
+            // BtnCalculator
+            // 
+            this.BtnCalculator.Caption = "Calculator";
+            this.BtnCalculator.Id = 36;
+            this.BtnCalculator.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCalculator.ImageOptions.Image")));
+            this.BtnCalculator.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCalculator.ImageOptions.LargeImage")));
+            this.BtnCalculator.Name = "BtnCalculator";
+            this.BtnCalculator.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCalculator_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -461,9 +562,38 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup6.ItemLinks.Add(this.BtnProductGroupDefinitions);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
+            // ribbonPage7
+            // 
+            this.ribbonPage7.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup10});
+            this.ribbonPage7.Name = "ribbonPage7";
+            this.ribbonPage7.Text = "Tools";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnAgenda);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnCurrency);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnYoutube);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnGoogle);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnWord);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnCalculator);
+            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Authorization";
+            this.barButtonItem1.Id = 37;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // Form1
             // 
@@ -529,6 +659,18 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnPastreservations;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem BtnFutureReservations;
+        private DevExpress.XtraBars.BarButtonItem BtnAgenda;
+        private DevExpress.XtraBars.BarButtonItem BtnCurrency;
+        private DevExpress.XtraBars.BarButtonItem BtnYoutube;
+        private DevExpress.XtraBars.BarButtonItem BtnGoogle;
+        private DevExpress.XtraBars.BarButtonItem BtnWord;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem BtnCalculator;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
 
