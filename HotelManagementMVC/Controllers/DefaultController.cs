@@ -18,5 +18,26 @@ namespace HotelManagementMVC.Controllers
         {
             return View();
         }
+
+        public ActionResult HomePage()
+        {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            return View();
+        }
+
+
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialSocialMedia()
+        {
+            return PartialView();
+        }
     }
 }

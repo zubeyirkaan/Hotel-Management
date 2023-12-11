@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,6 +166,7 @@
     <Content Include="hotels-starter\assets\images\team2.jpg" />
     <Content Include="hotels-starter\assets\images\team3.jpg" />
     <Content Include="hotels-starter\assets\images\team4.jpg" />
+    <Content Include="hotels-starter\assets\images\theartio.png" />
     <Content Include="hotels-starter\assets\images\top.jpg" />
     <Content Include="hotels-starter\assets\images\videobg.jpg" />
     <Content Include="hotels-starter\assets\js\bootstrap.min.js" />
@@ -210,6 +212,11 @@
     <Content Include="Views\Shared\_hotelManagementLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Index2.cshtml" />
+    <Content Include="Views\Shared\_HotelShowcase.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Default\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialSocialMedia.cshtml" />
+    <Content Include="Views\Services\Service.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
