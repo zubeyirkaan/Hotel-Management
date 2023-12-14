@@ -124,6 +124,9 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomepageController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -177,6 +180,32 @@
     <Content Include="hotels-starter\assets\js\owl.carousel.js" />
     <Content Include="hotels-starter\contact.html" />
     <Content Include="hotels-starter\index.html" />
+    <Content Include="hotels-starter\Login\css\style.css" />
+    <Content Include="hotels-starter\Login\images\banner.jpg" />
+    <Content Include="hotels-starter\Login\index.html" />
+    <Content Include="hotels-starter\Login\js\index.js" />
+    <Content Include="hotels-starter\Login\js\particles.min.js" />
+    <Content Include="hotels-starter\Login\w3layouts-License.txt" />
+    <Content Include="hotels-starter\Register\css\font-awesome.css" />
+    <Content Include="hotels-starter\Register\css\style.css" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.svg" />
+    <Content Include="hotels-starter\Register\images\bg6.jpg" />
+    <Content Include="hotels-starter\Register\images\tick.png" />
+    <Content Include="hotels-starter\Register\index.html" />
+    <Content Include="hotels-starter\Register\w3layouts-License.txt" />
+    <Content Include="hotels-starter\Reservation\css\bootstrap.css" />
+    <Content Include="hotels-starter\Reservation\css\jquery-ui.css" />
+    <Content Include="hotels-starter\Reservation\css\style.css" />
+    <Content Include="hotels-starter\Reservation\images\arrow.png" />
+    <Content Include="hotels-starter\Reservation\images\date-icon.png" />
+    <Content Include="hotels-starter\Reservation\images\terrace.jpg" />
+    <Content Include="hotels-starter\Reservation\index.html" />
+    <Content Include="hotels-starter\Reservation\js\easing.js" />
+    <Content Include="hotels-starter\Reservation\js\jquery-ui.js" />
+    <Content Include="hotels-starter\Reservation\js\jquery.flexslider.js" />
+    <Content Include="hotels-starter\Reservation\js\jquery.min.js" />
+    <Content Include="hotels-starter\Reservation\js\move-top.js" />
+    <Content Include="hotels-starter\Reservation\w3layouts-License.txt" />
     <Content Include="hotels-starter\services.html" />
     <Content Include="hotels-starter\starter-license-W3Layouts.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -186,6 +215,11 @@
     <Content Include="hotels-starter\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="hotels-starter\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="hotels-starter\assets\fonts\FontAwesome.otf" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.eot" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.ttf" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.woff" />
+    <Content Include="hotels-starter\Register\fonts\fontawesome-webfont.woff2" />
+    <Content Include="hotels-starter\Register\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -221,6 +255,9 @@
     <Content Include="Views\Services\Service.cshtml" />
     <Content Include="Views\Homepage\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Reservation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
