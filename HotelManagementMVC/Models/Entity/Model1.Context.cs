@@ -26,5 +26,6 @@ namespace HotelManagementMVC.Models.Entity
         }
     
         public virtual DbSet<TblAbout> TblAbouts { get; set; }
+        public virtual DbSet<TblContact> TblContacts { get; set; }
     }
 }

@@ -3,30 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using HotelManagementMVC.Models.Entity;
 namespace HotelManagementMVC.Controllers
 {
     public class DefaultController : Controller
     {
         // GET: Default
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Index2()
-        {
-            return View();
-        }
-
-        public ActionResult HomePage()
-        {
-            return View();
-        }
+        DbHotelEntities db = new DbHotelEntities();
 
         public ActionResult About()
         {
-            return View();
+            var datas = db.TblAbouts.ToList();
+            return View(datas);
         }
 
 

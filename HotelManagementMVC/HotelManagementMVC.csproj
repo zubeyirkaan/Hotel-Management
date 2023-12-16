@@ -157,6 +157,9 @@
     <Compile Include="Models\Entity\TblAbout.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -289,8 +292,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_hotelManagementLayout.cshtml" />
-    <Content Include="Views\Default\Index.cshtml" />
-    <Content Include="Views\Default\Index2.cshtml" />
     <Content Include="Views\Shared\_HotelShowcase.cshtml" />
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\PartialFooter.cshtml" />

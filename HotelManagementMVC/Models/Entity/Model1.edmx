@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbHotelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DbHotel.dbo.TblAbout' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblAbout">
@@ -17,7 +17,19 @@ warning 6002: The table/view 'DbHotel.dbo.TblAbout' does not have a primary key 
           <Property Name="About3" Type="nvarchar" MaxLength="1000" />
           <Property Name="About4" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="TblContact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Coordinate" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="250" />
+        </EntityType>
         <EntityContainer Name="DbHotelModelStoreContainer">
+          <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [TblAbout].[ID] AS [ID], 
@@ -28,8 +40,7 @@ warning 6002: The table/view 'DbHotel.dbo.TblAbout' does not have a primary key 
     FROM [dbo].[TblAbout] AS [TblAbout]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbHotelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -45,7 +56,19 @@ warning 6002: The table/view 'DbHotel.dbo.TblAbout' does not have a primary key 
         </EntityType>
         <EntityContainer Name="DbHotelEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblAbouts" EntityType="Self.TblAbout" />
+          <EntitySet Name="TblContacts" EntityType="DbHotelModel.TblContact" />
         </EntityContainer>
+        <EntityType Name="TblContact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Coordinate" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -60,6 +83,18 @@ warning 6002: The table/view 'DbHotel.dbo.TblAbout' does not have a primary key 
                 <ScalarProperty Name="About2" ColumnName="About2" />
                 <ScalarProperty Name="About3" ColumnName="About3" />
                 <ScalarProperty Name="About4" ColumnName="About4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblContacts">
+            <EntityTypeMapping TypeName="DbHotelModel.TblContact">
+              <MappingFragment StoreEntitySet="TblContact">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
