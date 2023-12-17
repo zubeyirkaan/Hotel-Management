@@ -1,0 +1,19 @@
+﻿@model HotelManagementMVC.Models.Entity.TblMessage
+
+<div class="map-content-9 mt-lg-0 mt-4">
+    <form method="post">
+        <div class="twice-two">
+            <input type="text" class="form-control" name="Sender"  placeholder="Name"
+                   required="">
+            <input type="email" class="form-control" name="Email"  placeholder="Email"
+                   required="">
+        </div>
+        <div class="twice">
+            <input type="text" class="form-control" name="Subject" 
+                   placeholder="Subject" required="">
+        </div>
+        <textarea name="Message" class="form-control"  placeholder="Message"
+                  required=""></textarea>
+        <button type="submit" class="btn btn-contact">Send Message</button>
+    </form>
+</div>

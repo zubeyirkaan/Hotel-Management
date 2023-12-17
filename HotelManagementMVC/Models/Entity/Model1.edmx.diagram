@@ -7,6 +7,8 @@
       <Diagram DiagramId="8a2debc06cec445ba2d30e5e2bd785b9" Name="Diagram1">
         <EntityTypeShape EntityType="DbHotelModel.TblAbout" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblContact" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblMessage" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblNewRegistry" Width="1.5" PointX="3.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
