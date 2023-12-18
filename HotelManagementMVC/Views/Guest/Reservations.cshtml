@@ -1,0 +1,29 @@
+﻿@using HotelManagementMVC.Models.Entity
+@model List<TblReservation>
+
+@{
+    ViewBag.Title = "Reservations";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+
+<h2>Reservations</h2>
+<br />
+<table class=" table table-bordered">
+    <tr>
+        <th>Guest Name Surname</th>
+        <th>Check-in Date</th>
+        <th>Check-out Date</th>
+        <th>Number of People</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+    <tr>
+        <td>@x.TblGuest.NameSurname</td>
+        <td>@x.StartDate</td>
+        <td>@x.LeaveDate</td>
+        <td>@x.NumberOfPeople</td>
+    </tr>
+    }
+</table>
+@ViewBag.a
+

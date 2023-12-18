@@ -26,6 +26,24 @@
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
           <Property Name="Address" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <EntityType Name="TblGuest">
+          <Key>
+            <PropertyRef Name="GuestID" />
+          </Key>
+          <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="TC" Type="char" MaxLength="11" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+          <Property Name="IDPhoto1" Type="nvarchar" MaxLength="100" />
+          <Property Name="IDPhoto2" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="int" />
+          <Property Name="sehir" Type="int" />
+          <Property Name="ilce" Type="int" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
         <EntityType Name="TblMessage">
           <Key>
             <PropertyRef Name="MessageID" />
@@ -46,11 +64,44 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TblReservation">
+          <Key>
+            <PropertyRef Name="ReservationID" />
+          </Key>
+          <Property Name="ReservationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Guest" Type="int" />
+          <Property Name="StartDate" Type="date" />
+          <Property Name="LeaveDate" Type="date" />
+          <Property Name="NumberOfPeople" Type="char" MaxLength="1" />
+          <Property Name="Room" Type="int" />
+          <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="Statement" Type="nvarchar" MaxLength="500" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <Association Name="FK_TblReservation_TblGuest">
+          <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="0..1" />
+          <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblGuest">
+              <PropertyRef Name="GuestID" />
+            </Principal>
+            <Dependent Role="TblReservation">
+              <PropertyRef Name="Guest" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbHotelModelStoreContainer">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblGuest" EntityType="Self.TblGuest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblNewRegistry" EntityType="Self.TblNewRegistry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblReservation" EntityType="Self.TblReservation" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TblReservation_TblGuest" Association="Self.FK_TblReservation_TblGuest">
+            <End Role="TblGuest" EntitySet="TblGuest" />
+            <End Role="TblReservation" EntitySet="TblReservation" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -71,6 +122,12 @@
           <EntitySet Name="TblContacts" EntityType="DbHotelModel.TblContact" />
           <EntitySet Name="TblMessages" EntityType="DbHotelModel.TblMessage" />
           <EntitySet Name="TblNewRegistries" EntityType="DbHotelModel.TblNewRegistry" />
+          <EntitySet Name="TblGuests" EntityType="DbHotelModel.TblGuest" />
+          <EntitySet Name="TblReservations" EntityType="DbHotelModel.TblReservation" />
+          <AssociationSet Name="FK_TblReservation_TblGuest" Association="DbHotelModel.FK_TblReservation_TblGuest">
+            <End Role="TblGuest" EntitySet="TblGuests" />
+            <End Role="TblReservation" EntitySet="TblReservations" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="TblContact">
           <Key>
@@ -103,6 +160,53 @@
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="TblGuest">
+          <Key>
+            <PropertyRef Name="GuestID" />
+          </Key>
+          <Property Name="GuestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TC" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Statement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IDPhoto1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IDPhoto2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="Int32" />
+          <Property Name="sehir" Type="Int32" />
+          <Property Name="ilce" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="TblReservations" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblGuest" ToRole="TblReservation" />
+        </EntityType>
+        <EntityType Name="TblReservation">
+          <Key>
+            <PropertyRef Name="ReservationID" />
+          </Key>
+          <Property Name="ReservationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Guest" Type="Int32" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="LeaveDate" Type="DateTime" Precision="0" />
+          <Property Name="NumberOfPeople" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Room" Type="Int32" />
+          <Property Name="ReservationNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Statement" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblReservation" ToRole="TblGuest" />
+        </EntityType>
+        <Association Name="FK_TblReservation_TblGuest">
+          <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />
+          <End Type="DbHotelModel.TblReservation" Role="TblReservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblGuest">
+              <PropertyRef Name="GuestID" />
+            </Principal>
+            <Dependent Role="TblReservation">
+              <PropertyRef Name="Guest" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -151,6 +255,41 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblGuests">
+            <EntityTypeMapping TypeName="DbHotelModel.TblGuest">
+              <MappingFragment StoreEntitySet="TblGuest">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ilce" ColumnName="ilce" />
+                <ScalarProperty Name="sehir" ColumnName="sehir" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="IDPhoto2" ColumnName="IDPhoto2" />
+                <ScalarProperty Name="IDPhoto1" ColumnName="IDPhoto1" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblReservations">
+            <EntityTypeMapping TypeName="DbHotelModel.TblReservation">
+              <MappingFragment StoreEntitySet="TblReservation">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ReservationNameSurname" ColumnName="ReservationNameSurname" />
+                <ScalarProperty Name="Room" ColumnName="Room" />
+                <ScalarProperty Name="NumberOfPeople" ColumnName="NumberOfPeople" />
+                <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Guest" ColumnName="Guest" />
+                <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
