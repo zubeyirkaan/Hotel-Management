@@ -14,7 +14,9 @@ namespace HotelManagementMVC.Controllers
         DbHotelEntities db = new DbHotelEntities();
         public ActionResult Index()
         {
-            return View();
+            var guestemail = (string)Session["Email"];
+            var guestdata = db.TblNewRegistries.Where(x => x.Email == guestemail).FirstOrDefault();
+            return View(guestdata);
         }
 
         public ActionResult Reservations()
@@ -23,6 +25,10 @@ namespace HotelManagementMVC.Controllers
             ViewBag.a = guestemail;
             var datas = db.TblReservations.Where(x => x.Guest == 5).ToList();
             return View(datas);
+        }
+        public ActionResult GuestInfoUpdate()
+        {
+            return View();
         }
     }
 }

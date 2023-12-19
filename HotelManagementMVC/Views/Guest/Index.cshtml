@@ -1,8 +1,24 @@
-﻿
+﻿@model HotelManagementMVC.Models.Entity.TblNewRegistry
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_GuestLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<h2>Profile</h2>
+<br />
+@using (Html.BeginForm("GuestInfoUpdate", "Guest", FormMethod.Post))
+{
+    <div class="form-group">
+        <label>Name Surname</label>
+        @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+        <br />
+        @Html.Label("Phone")
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+        <br />
+        @Html.Label("Password")
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-warning">Update</button>
+    </div>
+}
