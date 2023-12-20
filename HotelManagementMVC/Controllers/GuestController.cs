@@ -26,9 +26,14 @@ namespace HotelManagementMVC.Controllers
             var datas = db.TblReservations.Where(x => x.Guest == 5).ToList();
             return View(datas);
         }
-        public ActionResult GuestInfoUpdate()
+        public ActionResult GuestInfoUpdate(TblNewRegistry p)
         {
-            return View();
+            var guest = db.TblNewRegistries.Find(p.ID);
+            guest.NameSurname = p.NameSurname;
+            guest.Phone = p.Phone;
+            guest.Password = p.Password;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
