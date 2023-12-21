@@ -10,6 +10,8 @@
 @using (Html.BeginForm("GuestInfoUpdate", "Guest", FormMethod.Post))
 {
 <div class="form-group">
+    @Html.HiddenFor(x => x.ID, new { @class = "form-control" })
+    <br />
     @Html.Label("Name Surname")
     @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
     <br />

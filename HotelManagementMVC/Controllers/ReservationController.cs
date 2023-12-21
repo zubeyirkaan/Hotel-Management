@@ -9,6 +9,7 @@ namespace HotelManagementMVC.Controllers
     public class ReservationController : Controller
     {
         // GET: Reservation
+        [Authorize]
         public ActionResult Index()
         {
             return View();

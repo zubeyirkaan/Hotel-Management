@@ -14,6 +14,7 @@
         <th>Check-in Date</th>
         <th>Check-out Date</th>
         <th>Number of People</th>
+        <th>Details</th>
     </tr>
     @foreach (var x in Model)
     {
@@ -22,8 +23,8 @@
         <td>@x.StartDate</td>
         <td>@x.LeaveDate</td>
         <td>@x.NumberOfPeople</td>
+        <td><a href="#" class ="btn btn-primary">Details</a></td>
     </tr>
     }
 </table>
-@ViewBag.a
 
