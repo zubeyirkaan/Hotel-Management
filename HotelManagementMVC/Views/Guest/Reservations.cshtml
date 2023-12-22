@@ -20,8 +20,8 @@
     {
     <tr>
         <td>@x.TblGuest.NameSurname</td>
-        <td>@x.StartDate</td>
-        <td>@x.LeaveDate</td>
+        <td>@(((DateTime)x.StartDate).ToString("dd-MMM-yyy"))</td>
+        <td>@(((DateTime)x.LeaveDate).ToString("dd-MMM-yyy"))</td>
         <td>@x.NumberOfPeople</td>
         <td><a href="#" class ="btn btn-primary">Details</a></td>
     </tr>

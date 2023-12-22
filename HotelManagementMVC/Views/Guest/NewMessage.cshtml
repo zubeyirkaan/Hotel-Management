@@ -1,0 +1,18 @@
+﻿@model HotelManagementMVC.Models.Entity.TblMessage2
+
+@{
+    ViewBag.Title = "NewMessage";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+<br />
+<h2>NewMessage</h2>
+<br />
+<form method="post">
+    <label>Subject</label>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br />
+    <label>Message</label>
+    @Html.TextAreaFor(x => x.Message, 10, 4, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Send</button>
+</form>

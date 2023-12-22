@@ -1,0 +1,23 @@
+﻿@model HotelManagementMVC.Models.Entity.TblMessage2
+
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+<br />
+<h2>Message Detail</h2>
+<br />
+<label>Sender</label>
+@Html.TextBoxFor(x => x.Sender, new { @class = "form-control" })
+<br />
+<label>Reciever</label>
+@Html.TextBoxFor(x => x.Reciever, new { @class = "form-control" })
+<br />
+<label>Subject</label>
+@Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+<br />
+<label>Date</label>
+@Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+<br />
+<label>Message</label>
+@Html.TextAreaFor(x => x.Message, 10, 4, new { @class = "form-control" })

@@ -20,6 +20,10 @@ namespace HotelManagementMVC.Controllers
 
         public PartialViewResult PartialFooter()
         {
+            var bookedroom = db.TblRooms.Where(x => x.Status != 1).Count();
+            ViewBag.d = bookedroom;
+            var emptyroom = db.TblRooms.Where(x => x.Status == 1).Count();
+            ViewBag.b = emptyroom;
             return PartialView();
         }
 

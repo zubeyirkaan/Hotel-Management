@@ -26,5 +26,6 @@ namespace HotelManagementMVC.Models.Entity
         public Nullable<int> Status { get; set; }
     
         public virtual TblGuest TblGuest { get; set; }
+        public virtual TblRoom TblRoom { get; set; }
     }
 }

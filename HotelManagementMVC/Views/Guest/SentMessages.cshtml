@@ -1,0 +1,28 @@
+﻿@using HotelManagementMVC.Models.Entity
+@model List<TblMessage2>
+
+@{
+    ViewBag.Title = "SentMessages";
+    Layout = "~/Views/Shared/_GuestLayout.cshtml";
+}
+<br/>
+<h2>Sent Messages</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Reciever</th>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>See detail</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Reciever</td>
+            <td>@x.Subject</td>
+            <td>@(((DateTime)x.Date).ToString("dd-MMM-yyy"))</td>
+            <td><a href="/Guest/MessageDetail/@x.MessageID" class="btn btn-info">See detail</a></td>
+        </tr>
+    }
+</table>
+<a href="/Guest/NewMessage/" class="btn btn-success">New Message</a>

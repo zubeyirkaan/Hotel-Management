@@ -26,12 +26,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="~/hotels-starter/Reservation/js/move-top.js"></script>
     <script type="text/javascript" src="~/hotels-starter/Reservation/js/easing.js"></script>
     <script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
-			});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
     </script>
 </head>
 <body>
@@ -41,77 +41,91 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <div class="banner-top">
         <h2>Book Your Reservation!</h2>
-        <div class="banner-bottom">
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Check In</p>
+        <form method="post">
+            <div class="banner-bottom">
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Check In</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input class="date" id="datepicker" type="text" name="StartDate" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Check Out</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input class="date" id="datepicker1" type="text" name="LeaveDate" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Check Out</p>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Number of People</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="number" value="1" name="NumberOfPeople" class="form-control"/>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <input class="date" id="datepicker1" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required="" />
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Name Surname</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="ReservationNameSurname" class="form-control" />
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Number of People</p>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Phone</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="Phone" class="form-control" />
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <select>
-                        <option class="rm" value="saab">1</option>
-                        <option class="rm" value="opel">2</option>
-                        <option class="rm" value="audi">3</option>
-                        <option class="rm" value="audi">4++</option>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Room</p>
+                    </div>
+                    <div class="bnr-right">
+                        <select>
+                            <option value="volvo">Select a type</option>
+                            <option value="saab">Single</option>
+                            <option value="opel">Double</option>
+                            <option value="audi">Triple</option>
+                            <option value="audi">Triple</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Statement</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="Statement" />
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="bnr-btn">
 
-                    </select>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Name Surname</p>
-                </div>
-                <div class="bnr-right">
-                    <input type="text" />
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Room</p>
-                </div>
-                <div class="bnr-right">
-                    <select>
-                        <option value="volvo">Select a type</option>
-                        <option value="saab">Single</option>
-                        <option value="opel">Double</option>
-                        <option value="audi">Triple</option>
-                        <option value="audi">Triple</option>
-                    </select>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-btn">
-                <form>
                     <input type="submit" value="Book Now">
-                </form>
+
+                </div>
             </div>
-        </div>
+        </form>
         <!---start-date-piker---->
         <link rel="stylesheet" href="~/hotels-starter/Reservation/css/jquery-ui.css" />
         <script src="~/hotels-starter/Reservation/js/jquery-ui.js"></script>
         <script>
-				$(function() {
-				$( "#datepicker,#datepicker1" ).datepicker();
-				});
+            $(function () {
+                $("#datepicker,#datepicker1").datepicker();
+            });
         </script>
         <!---/End-date-piker---->
     </div>

@@ -54,6 +54,17 @@
           <Property Name="Subject" Type="nvarchar" MaxLength="100" />
           <Property Name="Message" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="TblMessage2">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reciever" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
         <EntityType Name="TblNewRegistry">
           <Key>
             <PropertyRef Name="ID" />
@@ -79,6 +90,18 @@
           <Property Name="Statement" Type="nvarchar" MaxLength="500" />
           <Property Name="Status" Type="int" />
         </EntityType>
+        <EntityType Name="TblRoom">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomNo" Type="char" MaxLength="3" />
+          <Property Name="Floor" Type="varchar" MaxLength="2" />
+          <Property Name="Capacity" Type="char" MaxLength="1" />
+          <Property Name="Statement" Type="nvarchar" MaxLength="200" />
+          <Property Name="Phone" Type="char" MaxLength="4" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
         <Association Name="FK_TblReservation_TblGuest">
           <End Role="TblGuest" Type="Self.TblGuest" Multiplicity="0..1" />
           <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
@@ -91,15 +114,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TblReservation_TblRoom">
+          <End Role="TblRoom" Type="Self.TblRoom" Multiplicity="0..1" />
+          <End Role="TblReservation" Type="Self.TblReservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblRoom">
+              <PropertyRef Name="RoomID" />
+            </Principal>
+            <Dependent Role="TblReservation">
+              <PropertyRef Name="Room" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DbHotelModelStoreContainer">
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblGuest" EntityType="Self.TblGuest" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblMessage2" EntityType="Self.TblMessage2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblNewRegistry" EntityType="Self.TblNewRegistry" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblReservation" EntityType="Self.TblReservation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblRoom" EntityType="Self.TblRoom" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblReservation_TblGuest" Association="Self.FK_TblReservation_TblGuest">
             <End Role="TblGuest" EntitySet="TblGuest" />
+            <End Role="TblReservation" EntitySet="TblReservation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TblReservation_TblRoom" Association="Self.FK_TblReservation_TblRoom">
+            <End Role="TblRoom" EntitySet="TblRoom" />
             <End Role="TblReservation" EntitySet="TblReservation" />
           </AssociationSet>
         </EntityContainer>
@@ -126,6 +167,12 @@
           <EntitySet Name="TblReservations" EntityType="DbHotelModel.TblReservation" />
           <AssociationSet Name="FK_TblReservation_TblGuest" Association="DbHotelModel.FK_TblReservation_TblGuest">
             <End Role="TblGuest" EntitySet="TblGuests" />
+            <End Role="TblReservation" EntitySet="TblReservations" />
+          </AssociationSet>
+          <EntitySet Name="TblMessage2" EntityType="DbHotelModel.TblMessage2" />
+          <EntitySet Name="TblRooms" EntityType="DbHotelModel.TblRoom" />
+          <AssociationSet Name="FK_TblReservation_TblRoom" Association="DbHotelModel.FK_TblReservation_TblRoom">
+            <End Role="TblRoom" EntitySet="TblRooms" />
             <End Role="TblReservation" EntitySet="TblReservations" />
           </AssociationSet>
         </EntityContainer>
@@ -194,6 +241,7 @@
           <Property Name="Statement" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Int32" />
           <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblReservation" ToRole="TblGuest" />
+          <NavigationProperty Name="TblRoom" Relationship="DbHotelModel.FK_TblReservation_TblRoom" FromRole="TblReservation" ToRole="TblRoom" />
         </EntityType>
         <Association Name="FK_TblReservation_TblGuest">
           <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />
@@ -204,6 +252,42 @@
             </Principal>
             <Dependent Role="TblReservation">
               <PropertyRef Name="Guest" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TblMessage2">
+          <Key>
+            <PropertyRef Name="MessageID" />
+          </Key>
+          <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reciever" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="TblRoom">
+          <Key>
+            <PropertyRef Name="RoomID" />
+          </Key>
+          <Property Name="RoomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomNo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="Floor" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="Capacity" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Statement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="TblReservations" Relationship="DbHotelModel.FK_TblReservation_TblRoom" FromRole="TblRoom" ToRole="TblReservation" />
+        </EntityType>
+        <Association Name="FK_TblReservation_TblRoom">
+          <End Type="DbHotelModel.TblRoom" Role="TblRoom" Multiplicity="0..1" />
+          <End Type="DbHotelModel.TblReservation" Role="TblReservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TblRoom">
+              <PropertyRef Name="RoomID" />
+            </Principal>
+            <Dependent Role="TblReservation">
+              <PropertyRef Name="Room" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -290,6 +374,31 @@
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="Guest" ColumnName="Guest" />
                 <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblMessage2">
+            <EntityTypeMapping TypeName="DbHotelModel.TblMessage2">
+              <MappingFragment StoreEntitySet="TblMessage2">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+                <ScalarProperty Name="Sender" ColumnName="Sender" />
+                <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblRooms">
+            <EntityTypeMapping TypeName="DbHotelModel.TblRoom">
+              <MappingFragment StoreEntitySet="TblRoom">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

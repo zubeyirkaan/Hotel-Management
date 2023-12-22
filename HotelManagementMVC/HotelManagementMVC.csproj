@@ -167,10 +167,16 @@
     <Compile Include="Models\Entity\TblMessage.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblMessage2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TblNewRegistry.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TblReservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TblRoom.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -402,6 +408,10 @@
     <Content Include="Views\Shared\_GuestLayout.cshtml" />
     <Content Include="Views\Guest\Index.cshtml" />
     <Content Include="Views\Guest\Reservations.cshtml" />
+    <Content Include="Views\Guest\Messages.cshtml" />
+    <Content Include="Views\Guest\SentMessages.cshtml" />
+    <Content Include="Views\Guest\MessageDetail.cshtml" />
+    <Content Include="Views\Guest\NewMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

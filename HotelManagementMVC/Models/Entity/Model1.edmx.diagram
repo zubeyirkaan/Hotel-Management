@@ -12,6 +12,9 @@
         <EntityTypeShape EntityType="DbHotelModel.TblGuest" Width="1.5" PointX="5.375" PointY="1" />
         <EntityTypeShape EntityType="DbHotelModel.TblReservation" Width="1.5" PointX="7.625" PointY="1.25" />
         <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblGuest" />
+        <EntityTypeShape EntityType="DbHotelModel.TblMessage2" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblRoom" Width="1.5" PointX="0.75" PointY="7" />
+        <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblRoom" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
