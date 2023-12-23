@@ -24,6 +24,9 @@ namespace HotelManagementAutomation.Entitiy
         public string Phone { get; set; }
         public string Statement { get; set; }
         public Nullable<int> Status { get; set; }
+        public Nullable<int> Person1 { get; set; }
+        public Nullable<int> Person2 { get; set; }
+        public Nullable<int> Person3 { get; set; }
     
         public virtual TblGuest TblGuest { get; set; }
         public virtual TblRoom TblRoom { get; set; }

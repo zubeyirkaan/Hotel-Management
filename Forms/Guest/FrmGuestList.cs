@@ -41,6 +41,7 @@ namespace HotelManagementAutomation.Forms.Guest
         {
             FrmGuest fr = new Forms.Guest.FrmGuest();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("GuestID").ToString());
+            fr.BtnUpdate.Visible = true;
             fr.Show();
         }
     }

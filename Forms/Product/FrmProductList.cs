@@ -39,6 +39,7 @@ namespace HotelManagementAutomation.Forms.Product
         {
             FrmProductCard fr = new FrmProductCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ProductID").ToString());
+            fr.BtnUpdate.Visible = true;
             fr.Show();
         }
     }

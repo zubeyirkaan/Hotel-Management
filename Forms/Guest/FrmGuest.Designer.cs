@@ -315,17 +315,18 @@ namespace HotelManagementAutomation.Forms.Guest
             // BtnUpdate
             // 
             this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
+            this.BtnUpdate.Location = new System.Drawing.Point(79, 5);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Visible = false;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(218, 6);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
@@ -654,7 +655,6 @@ namespace HotelManagementAutomation.Forms.Guest
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.GroupControl groupControl4;
@@ -679,5 +679,6 @@ namespace HotelManagementAutomation.Forms.Guest
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditCounty;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
+        public DevExpress.XtraEditors.SimpleButton BtnUpdate;
     }
 }

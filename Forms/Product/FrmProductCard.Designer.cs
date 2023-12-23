@@ -140,6 +140,7 @@ namespace HotelManagementAutomation.Forms.Product
             this.rdb18.TabStop = true;
             this.rdb18.Text = "%18";
             this.rdb18.UseVisualStyleBackColor = true;
+            this.rdb18.CheckedChanged += new System.EventHandler(this.rdb18_CheckedChanged);
             // 
             // rdb10
             // 
@@ -151,6 +152,7 @@ namespace HotelManagementAutomation.Forms.Product
             this.rdb10.TabStop = true;
             this.rdb10.Text = "%10";
             this.rdb10.UseVisualStyleBackColor = true;
+            this.rdb10.CheckedChanged += new System.EventHandler(this.rdb10_CheckedChanged);
             // 
             // rdb8
             // 
@@ -162,6 +164,7 @@ namespace HotelManagementAutomation.Forms.Product
             this.rdb8.TabStop = true;
             this.rdb8.Text = "%8";
             this.rdb8.UseVisualStyleBackColor = true;
+            this.rdb8.CheckedChanged += new System.EventHandler(this.rdb8_CheckedChanged);
             // 
             // rdb1
             // 
@@ -173,6 +176,7 @@ namespace HotelManagementAutomation.Forms.Product
             this.rdb1.TabStop = true;
             this.rdb1.Text = "%1";
             this.rdb1.UseVisualStyleBackColor = true;
+            this.rdb1.CheckedChanged += new System.EventHandler(this.rdb1_CheckedChanged);
             // 
             // labelControl3
             // 
@@ -444,17 +448,18 @@ namespace HotelManagementAutomation.Forms.Product
             // BtnUpdate
             // 
             this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
+            this.BtnUpdate.Location = new System.Drawing.Point(75, 5);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Visible = false;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(217, 5);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
@@ -549,10 +554,10 @@ namespace HotelManagementAutomation.Forms.Product
         private DevExpress.XtraEditors.PictureEdit pictureEdit11;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.TextEdit TxtTotal;
         private DevExpress.XtraEditors.TextEdit TxtTax;
+        public DevExpress.XtraEditors.SimpleButton BtnUpdate;
     }
 }

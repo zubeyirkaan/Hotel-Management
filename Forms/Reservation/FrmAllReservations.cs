@@ -35,5 +35,13 @@ namespace HotelManagementAutomation.Forms.Reservation
                                            x.TblStatus.StatusName
                                        }).ToList();
         }
+
+        private void gridView1_DoubleClick(object sender, EventArgs e)
+        {
+            FrmReservationCard fr = new FrmReservationCard();
+            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ReservationID").ToString());
+            fr.BtnUpdate.Visible = true;
+            fr.Show();
+        }
     }
 }

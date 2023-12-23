@@ -436,17 +436,18 @@ namespace HotelManagementAutomation.Forms.Staff
             // BtnUpdate
             // 
             this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
+            this.BtnUpdate.Location = new System.Drawing.Point(81, 5);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Visible = false;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(220, 5);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
@@ -968,8 +969,8 @@ namespace HotelManagementAutomation.Forms.Staff
         private System.Windows.Forms.RadioButton radioButton1;
         private DevExpress.XtraEditors.DateEdit DateEditterminationDate;
         private DevExpress.XtraEditors.DateEdit DateEditStartDate;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl16;
+        public DevExpress.XtraEditors.SimpleButton BtnUpdate;
     }
 }

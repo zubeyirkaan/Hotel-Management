@@ -40,6 +40,7 @@ namespace HotelManagementAutomation.Forms.Staff
         {
             FrmStaffCard fr = new Forms.Staff.FrmStaffCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("StaffID").ToString());
+            fr.BtnUpdate.Visible = true;
             fr.Show();
         }
     }

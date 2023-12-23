@@ -31,50 +31,64 @@ namespace HotelManagementAutomation.Forms.Guest
 
         private void FrmGuest_Load(object sender, EventArgs e)
         {
-
-            //Card information to be updated
-            if (id != 0)
+            try
             {
-                var guest = repo.Find(x => x.GuestID == id);
-                TxtNameSurname.Text = guest.NameSurname;
-                TxtTC.Text = guest.TC;
-                TxtAddres.Text = guest.Address;
-                TxtPhone.Text = guest.Phone;
-                TxtEmail.Text = guest.Mail;
-                TxtStatement.Text = guest.Statement;
-                pictureEditIDFront.Image = Image.FromFile(guest.IDPhoto1);
-                pictureEditIDBack.Image = Image.FromFile(guest.IDPhoto2);
-                image1 = guest.IDPhoto1;
-                image2 = guest.IDPhoto2;
-                lookUpEditCity.EditValue = guest.sehir;
-                lookUpEditCounty.EditValue = guest.ilce;
-                lookUpEditCountry.EditValue = guest.Country;
+                //Card information to be updated
+                if (id != 0)
+                {
+                    var guest = repo.Find(x => x.GuestID == id);
+                    TxtNameSurname.Text = guest.NameSurname;
+                    TxtTC.Text = guest.TC;
+                    TxtAddres.Text = guest.Address;
+                    TxtPhone.Text = guest.Phone;
+                    TxtEmail.Text = guest.Mail;
+                    TxtStatement.Text = guest.Statement;
+                    pictureEditIDFront.Image = Image.FromFile(guest.IDPhoto1);
+                    pictureEditIDBack.Image = Image.FromFile(guest.IDPhoto2);
+                    image1 = guest.IDPhoto1;
+                    image2 = guest.IDPhoto2;
+                    lookUpEditCity.EditValue = guest.sehir;
+                    lookUpEditCounty.EditValue = guest.ilce;
+                    lookUpEditCountry.EditValue = guest.Country;
 
+                    //country list
+                    loadCountry();
+
+                    //city list
+                    loadCity();
+
+                }
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Please fill the all blanks!","Warning", MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
 
+            loadCountry();
+            loadCity();
 
-            //country list
-            lookUpEditCountry.Properties.DataSource = (from x in db.TblCountries
-                                                       select new
-                                                       {
-                                                           x.CountryID,
-                                                           x.CountryName
-                                                       }).ToList();
 
-            //city list
+
+        }
+
+        private void loadCity()
+        {
             lookUpEditCity.Properties.DataSource = (from x in db.iller
                                                     select new
                                                     {
                                                         Id = x.id,
                                                         Sehir = x.sehir
                                                     }).ToList();
-            //county list
-            lookUpEditCounty.Properties.DataSource = (from x in db.ilceler
-                                                      select new
-                                                      {
-                                                          Id = x.id,
-                                                          Sehir = x.ilce
-                                                      }).ToList();
+        }
+
+        private void loadCountry()
+        {
+            lookUpEditCountry.Properties.DataSource = (from x in db.TblCountries
+                                                       select new
+                                                       {
+                                                           x.CountryID,
+                                                           x.CountryName
+                                                       }).ToList();
         }
 
         private void lookUpEditCity_EditValueChanged(object sender, EventArgs e)

@@ -147,6 +147,9 @@
           <Property Name="NumberOfPeople" Type="char" MaxLength="1" />
           <Property Name="Room" Type="int" />
           <Property Name="ReservationNameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Person1" Type="int" />
+          <Property Name="Person2" Type="int" />
+          <Property Name="Person3" Type="int" />
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Statement" Type="nvarchar" MaxLength="500" />
           <Property Name="Status" Type="int" />
@@ -199,11 +202,6 @@
           <Property Name="StockUnitName" Type="nvarchar" MaxLength="50" />
           <Property Name="Status" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'DbHotel.dbo.Test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Test">
-          <Property Name="AbsoluteUnit" Type="int" />
-        </EntityType>-->
         <Association Name="FK_ilceler_iller">
           <End Role="iller" Type="Self.iller" Multiplicity="1" />
           <End Role="ilceler" Type="Self.ilceler" Multiplicity="*" />
@@ -1187,6 +1185,9 @@ warning 6013: The table/view 'DbHotel.dbo.Test' does not have a primary key defi
           <NavigationProperty Name="TblGuest" Relationship="DbHotelModel.FK_TblReservation_TblGuest" FromRole="TblReservation" ToRole="TblGuest" />
           <NavigationProperty Name="TblRoom" Relationship="DbHotelModel.FK_TblReservation_TblRoom" FromRole="TblReservation" ToRole="TblRoom" />
           <NavigationProperty Name="TblStatus" Relationship="DbHotelModel.FK_TblReservation_TblStatus" FromRole="TblReservation" ToRole="TblStatu" />
+          <Property Name="Person1" Type="Int32" />
+          <Property Name="Person2" Type="Int32" />
+          <Property Name="Person3" Type="Int32" />
         </EntityType>
         <Association Name="FK_TblReservation_TblGuest">
           <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />
@@ -1429,6 +1430,9 @@ warning 6013: The table/view 'DbHotel.dbo.Test' does not have a primary key defi
           <EntitySetMapping Name="TblReservation">
             <EntityTypeMapping TypeName="DbHotelModel.TblReservation">
               <MappingFragment StoreEntitySet="TblReservation">
+                <ScalarProperty Name="Person3" ColumnName="Person3" />
+                <ScalarProperty Name="Person2" ColumnName="Person2" />
+                <ScalarProperty Name="Person1" ColumnName="Person1" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Statement" ColumnName="Statement" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />

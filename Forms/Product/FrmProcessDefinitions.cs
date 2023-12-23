@@ -28,7 +28,30 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void FrmProcessDefinitions_Load(object sender, EventArgs e)
         {
-            //id value
+            try
+            {
+                //id value
+                idValue();
+                //fill the list
+                if (id != 0)
+                {
+                    var product = repo.Find(x => x.ProcessID == id);
+                    lookUpEditProduct.EditValue = product.Product;
+                    TxtAmount.Text = product.Amount.ToString();
+                    TxtStatement.Text = product.Statement;
+                    comboBox1.Text = product.ProcessType;
+                    dateEdit1.Text = product.Date.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
+        }
+
+        private void idValue()
+        {
             TxtID.Text = id.ToString();
             TxtID.Enabled = false;
 
@@ -38,16 +61,6 @@ namespace HotelManagementAutomation.Forms.Product
                                                            x.ProductID,
                                                            x.ProductName
                                                        }).ToList();
-            //fill the list
-            if (id != 0)
-            {
-                var product = repo.Find(x => x.ProcessID == id);
-                lookUpEditProduct.EditValue = product.Product;
-                TxtAmount.Text = product.Amount.ToString();
-                TxtStatement.Text = product.Statement;
-                comboBox1.Text = product.ProcessType;
-                dateEdit1.Text = product.Date.ToString();
-            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -58,25 +71,41 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            t.Product = int.Parse(lookUpEditProduct.EditValue.ToString());
-            t.Date = DateTime.Parse(dateEdit1.Text);
-            t.ProcessType = comboBox1.Text;
-            t.Amount = decimal.Parse(TxtAmount.Text);
-            t.Statement = TxtStatement.Text;
-            repo.TAdd(t);
-            XtraMessageBox.Show("Process type added to the system.");
+            try
+            {
+                t.Product = int.Parse(lookUpEditProduct.EditValue.ToString());
+                t.Date = DateTime.Parse(dateEdit1.Text);
+                t.ProcessType = comboBox1.Text;
+                t.Amount = decimal.Parse(TxtAmount.Text);
+                t.Statement = TxtStatement.Text;
+                repo.TAdd(t);
+                XtraMessageBox.Show("Process type added to the system.");
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            var product = repo.Find(x => x.ProcessID == id);
-            product.Product = int.Parse(lookUpEditProduct.EditValue.ToString());
-            product.Date = DateTime.Parse(dateEdit1.Text);
-            product.ProcessType = comboBox1.Text;
-            product.Amount = decimal.Parse(TxtAmount.Text);
-            product.Statement = TxtStatement.Text;
-            repo.TUpdate(product);
-            XtraMessageBox.Show("Product type has been successfully updated");
+            try
+            {
+                var product = repo.Find(x => x.ProcessID == id);
+                product.Product = int.Parse(lookUpEditProduct.EditValue.ToString());
+                product.Date = DateTime.Parse(dateEdit1.Text);
+                product.ProcessType = comboBox1.Text;
+                product.Amount = decimal.Parse(TxtAmount.Text);
+                product.Statement = TxtStatement.Text;
+                repo.TUpdate(product);
+                XtraMessageBox.Show("Product type has been successfully updated");
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
         }
     }
 }

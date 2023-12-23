@@ -49,15 +49,6 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
-            this.TxtPhone = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
-            this.TxtReservationName = new DevExpress.XtraEditors.TextEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -66,7 +57,23 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.TxtStatement = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
+            this.TxtPhone = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lookUpEditStatus = new DevExpress.XtraEditors.LookUpEdit();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
+            this.lookUpEditPerson2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
+            this.lookUpEditPerson3 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
+            this.lookUpEditPerson4 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditRoom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
@@ -84,20 +91,26 @@ namespace HotelManagementAutomation.Forms.Reservation
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtReservationName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtStatement.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
+            this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl6
@@ -293,107 +306,12 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.pictureEdit2.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit2.TabIndex = 23;
             // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.lookUpEditStatus);
-            this.groupControl3.Controls.Add(this.labelControl3);
-            this.groupControl3.Controls.Add(this.pictureEdit3);
-            this.groupControl3.Controls.Add(this.labelControl12);
-            this.groupControl3.Controls.Add(this.pictureEdit12);
-            this.groupControl3.Controls.Add(this.TxtPhone);
-            this.groupControl3.Controls.Add(this.labelControl13);
-            this.groupControl3.Controls.Add(this.pictureEdit13);
-            this.groupControl3.Controls.Add(this.TxtReservationName);
-            this.groupControl3.Location = new System.Drawing.Point(4, 130);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.ShowCaption = false;
-            this.groupControl3.Size = new System.Drawing.Size(487, 68);
-            this.groupControl3.TabIndex = 9;
-            this.groupControl3.Text = "groupControl3";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(293, 40);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(31, 13);
-            this.labelControl3.TabIndex = 29;
-            this.labelControl3.Text = "Status";
-            // 
-            // pictureEdit3
-            // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(267, 33);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit3.TabIndex = 28;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(33, 40);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(30, 13);
-            this.labelControl12.TabIndex = 7;
-            this.labelControl12.Text = "Phone";
-            // 
-            // pictureEdit12
-            // 
-            this.pictureEdit12.EditValue = ((object)(resources.GetObject("pictureEdit12.EditValue")));
-            this.pictureEdit12.Location = new System.Drawing.Point(7, 33);
-            this.pictureEdit12.Name = "pictureEdit12";
-            this.pictureEdit12.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit12.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit12.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit12.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit12.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit12.TabIndex = 6;
-            // 
-            // TxtPhone
-            // 
-            this.TxtPhone.Location = new System.Drawing.Point(124, 37);
-            this.TxtPhone.Name = "TxtPhone";
-            this.TxtPhone.Size = new System.Drawing.Size(115, 20);
-            this.TxtPhone.TabIndex = 5;
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Location = new System.Drawing.Point(32, 14);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(88, 13);
-            this.labelControl13.TabIndex = 4;
-            this.labelControl13.Text = "Reservation Name";
-            // 
-            // pictureEdit13
-            // 
-            this.pictureEdit13.EditValue = ((object)(resources.GetObject("pictureEdit13.EditValue")));
-            this.pictureEdit13.Location = new System.Drawing.Point(7, 7);
-            this.pictureEdit13.Name = "pictureEdit13";
-            this.pictureEdit13.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit13.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit13.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit13.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit13.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit13.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit13.TabIndex = 0;
-            // 
-            // TxtReservationName
-            // 
-            this.TxtReservationName.Location = new System.Drawing.Point(124, 11);
-            this.TxtReservationName.Name = "TxtReservationName";
-            this.TxtReservationName.Size = new System.Drawing.Size(358, 20);
-            this.TxtReservationName.TabIndex = 1;
-            // 
             // groupControl4
             // 
             this.groupControl4.Controls.Add(this.BtnUpdate);
             this.groupControl4.Controls.Add(this.BtnCancel);
             this.groupControl4.Controls.Add(this.BtnSave);
-            this.groupControl4.Location = new System.Drawing.Point(4, 316);
+            this.groupControl4.Location = new System.Drawing.Point(4, 392);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.ShowCaption = false;
             this.groupControl4.Size = new System.Drawing.Size(486, 50);
@@ -403,16 +321,17 @@ namespace HotelManagementAutomation.Forms.Reservation
             // BtnUpdate
             // 
             this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
+            this.BtnUpdate.Location = new System.Drawing.Point(76, 5);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
             this.BtnUpdate.TabIndex = 2;
             this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Visible = false;
             // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(217, 5);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
@@ -434,7 +353,7 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.groupControl5.Controls.Add(this.TxtStatement);
             this.groupControl5.Controls.Add(this.labelControl11);
             this.groupControl5.Controls.Add(this.pictureEdit11);
-            this.groupControl5.Location = new System.Drawing.Point(4, 204);
+            this.groupControl5.Location = new System.Drawing.Point(4, 280);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.ShowCaption = false;
             this.groupControl5.Size = new System.Drawing.Size(487, 106);
@@ -469,9 +388,58 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.pictureEdit11.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit11.TabIndex = 22;
             // 
+            // TxtPhone
+            // 
+            this.TxtPhone.Location = new System.Drawing.Point(126, 14);
+            this.TxtPhone.Name = "TxtPhone";
+            this.TxtPhone.Size = new System.Drawing.Size(115, 20);
+            this.TxtPhone.TabIndex = 5;
+            // 
+            // pictureEdit12
+            // 
+            this.pictureEdit12.EditValue = ((object)(resources.GetObject("pictureEdit12.EditValue")));
+            this.pictureEdit12.Location = new System.Drawing.Point(9, 10);
+            this.pictureEdit12.Name = "pictureEdit12";
+            this.pictureEdit12.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit12.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit12.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit12.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit12.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit12.TabIndex = 6;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(35, 17);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(30, 13);
+            this.labelControl12.TabIndex = 7;
+            this.labelControl12.Text = "Phone";
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(269, 10);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit3.TabIndex = 28;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(295, 17);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(31, 13);
+            this.labelControl3.TabIndex = 29;
+            this.labelControl3.Text = "Status";
+            // 
             // lookUpEditStatus
             // 
-            this.lookUpEditStatus.Location = new System.Drawing.Point(356, 37);
+            this.lookUpEditStatus.Location = new System.Drawing.Point(358, 14);
             this.lookUpEditStatus.Name = "lookUpEditStatus";
             this.lookUpEditStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -481,11 +449,144 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.lookUpEditStatus.Size = new System.Drawing.Size(125, 20);
             this.lookUpEditStatus.TabIndex = 27;
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Controls.Add(this.lookUpEditStatus);
+            this.groupControl3.Controls.Add(this.labelControl3);
+            this.groupControl3.Controls.Add(this.pictureEdit3);
+            this.groupControl3.Controls.Add(this.labelControl12);
+            this.groupControl3.Controls.Add(this.pictureEdit12);
+            this.groupControl3.Controls.Add(this.TxtPhone);
+            this.groupControl3.Location = new System.Drawing.Point(4, 130);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.ShowCaption = false;
+            this.groupControl3.Size = new System.Drawing.Size(487, 43);
+            this.groupControl3.TabIndex = 9;
+            this.groupControl3.Text = "groupControl3";
+            // 
+            // groupControl6
+            // 
+            this.groupControl6.Controls.Add(this.lookUpEditPerson4);
+            this.groupControl6.Controls.Add(this.labelControl9);
+            this.groupControl6.Controls.Add(this.pictureEdit9);
+            this.groupControl6.Controls.Add(this.lookUpEditPerson3);
+            this.groupControl6.Controls.Add(this.labelControl8);
+            this.groupControl6.Controls.Add(this.pictureEdit8);
+            this.groupControl6.Controls.Add(this.lookUpEditPerson2);
+            this.groupControl6.Controls.Add(this.labelControl7);
+            this.groupControl6.Controls.Add(this.pictureEdit7);
+            this.groupControl6.Location = new System.Drawing.Point(3, 179);
+            this.groupControl6.Name = "groupControl6";
+            this.groupControl6.ShowCaption = false;
+            this.groupControl6.Size = new System.Drawing.Size(487, 95);
+            this.groupControl6.TabIndex = 30;
+            this.groupControl6.Text = "groupControl6";
+            // 
+            // lookUpEditPerson2
+            // 
+            this.lookUpEditPerson2.Location = new System.Drawing.Point(111, 11);
+            this.lookUpEditPerson2.Name = "lookUpEditPerson2";
+            this.lookUpEditPerson2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditPerson2.Properties.DisplayMember = "NameSurname";
+            this.lookUpEditPerson2.Properties.NullText = "Select Guest";
+            this.lookUpEditPerson2.Properties.ValueMember = "GuestID";
+            this.lookUpEditPerson2.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson2.TabIndex = 19;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(33, 14);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(42, 13);
+            this.labelControl7.TabIndex = 4;
+            this.labelControl7.Text = "Person 2";
+            // 
+            // pictureEdit7
+            // 
+            this.pictureEdit7.EditValue = ((object)(resources.GetObject("pictureEdit7.EditValue")));
+            this.pictureEdit7.Location = new System.Drawing.Point(7, 7);
+            this.pictureEdit7.Name = "pictureEdit7";
+            this.pictureEdit7.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit7.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit7.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit7.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit7.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit7.TabIndex = 0;
+            // 
+            // lookUpEditPerson3
+            // 
+            this.lookUpEditPerson3.Location = new System.Drawing.Point(110, 37);
+            this.lookUpEditPerson3.Name = "lookUpEditPerson3";
+            this.lookUpEditPerson3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditPerson3.Properties.DisplayMember = "NameSurname";
+            this.lookUpEditPerson3.Properties.NullText = "Select Guest";
+            this.lookUpEditPerson3.Properties.ValueMember = "GuestID";
+            this.lookUpEditPerson3.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson3.TabIndex = 22;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(32, 40);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(42, 13);
+            this.labelControl8.TabIndex = 21;
+            this.labelControl8.Text = "Person 3";
+            // 
+            // pictureEdit8
+            // 
+            this.pictureEdit8.EditValue = ((object)(resources.GetObject("pictureEdit8.EditValue")));
+            this.pictureEdit8.Location = new System.Drawing.Point(6, 33);
+            this.pictureEdit8.Name = "pictureEdit8";
+            this.pictureEdit8.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit8.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit8.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit8.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit8.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit8.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit8.TabIndex = 20;
+            // 
+            // lookUpEditPerson4
+            // 
+            this.lookUpEditPerson4.Location = new System.Drawing.Point(110, 63);
+            this.lookUpEditPerson4.Name = "lookUpEditPerson4";
+            this.lookUpEditPerson4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEditPerson4.Properties.DisplayMember = "NameSurname";
+            this.lookUpEditPerson4.Properties.NullText = "Select Guest";
+            this.lookUpEditPerson4.Properties.ValueMember = "GuestID";
+            this.lookUpEditPerson4.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson4.TabIndex = 25;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(32, 66);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(42, 13);
+            this.labelControl9.TabIndex = 24;
+            this.labelControl9.Text = "Person 4";
+            // 
+            // pictureEdit9
+            // 
+            this.pictureEdit9.EditValue = ((object)(resources.GetObject("pictureEdit9.EditValue")));
+            this.pictureEdit9.Location = new System.Drawing.Point(6, 59);
+            this.pictureEdit9.Name = "pictureEdit9";
+            this.pictureEdit9.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit9.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit9.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit9.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit9.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit9.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit9.TabIndex = 23;
+            // 
             // FrmReservationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 370);
+            this.ClientSize = new System.Drawing.Size(494, 445);
+            this.Controls.Add(this.groupControl6);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl3);
@@ -516,14 +617,6 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtReservationName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
@@ -531,7 +624,22 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.groupControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtStatement.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
+            this.groupControl6.ResumeLayout(false);
+            this.groupControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEditPerson4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -554,24 +662,31 @@ namespace HotelManagementAutomation.Forms.Reservation
         private DevExpress.XtraEditors.DateEdit dateEditCheckIn;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditGuest;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit12;
-        private DevExpress.XtraEditors.TextEdit TxtPhone;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit13;
-        private DevExpress.XtraEditors.TextEdit TxtReservationName;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private DevExpress.XtraEditors.MemoEdit TxtStatement;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.PictureEdit pictureEdit11;
+        public DevExpress.XtraEditors.SimpleButton BtnUpdate;
+        private DevExpress.XtraEditors.TextEdit TxtPhone;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit12;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LookUpEdit lookUpEditStatus;
+        private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.GroupControl groupControl6;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditPerson4;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit9;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditPerson3;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit8;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEditPerson2;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit7;
     }
 }
