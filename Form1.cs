@@ -212,6 +212,27 @@ namespace HotelManagementAutomation
         {
             System.Diagnostics.Process.Start("excel");
         }
+
+        private void BtnNewRegistirations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Website.FrmNewRegistry fr = new Forms.Website.FrmNewRegistry();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnPreReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Website.FrmPreReservations fr = new Forms.Website.FrmPreReservations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnRecievedMessages_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Website.FrmRecievedMessages fr = new Forms.Website.FrmRecievedMessages();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }
 

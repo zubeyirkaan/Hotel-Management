@@ -1,5 +1,5 @@
 ﻿@using HotelManagementMVC.Models.Entity
-@model List<TblReservation>
+@model List<TblPreReservation>
 
 @{
     ViewBag.Title = "Reservations";
@@ -19,7 +19,7 @@
     @foreach (var x in Model)
     {
     <tr>
-        <td>@x.TblGuest.NameSurname</td>
+        <td>@x.NameSurname</td>
         <td>@(((DateTime)x.StartDate).ToString("dd-MMM-yyy"))</td>
         <td>@(((DateTime)x.LeaveDate).ToString("dd-MMM-yyy"))</td>
         <td>@x.NumberOfPeople</td>

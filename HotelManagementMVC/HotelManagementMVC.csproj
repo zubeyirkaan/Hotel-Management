@@ -173,6 +173,9 @@
     <Compile Include="Models\Entity\TblNewRegistry.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblPreReservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TblReservation.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

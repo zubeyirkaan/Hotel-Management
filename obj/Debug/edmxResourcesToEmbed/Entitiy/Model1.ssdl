@@ -25,6 +25,16 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="TblAbout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="About1" Type="nvarchar" MaxLength="1000" />
+    <Property Name="About2" Type="nvarchar" MaxLength="1000" />
+    <Property Name="About3" Type="nvarchar" MaxLength="1000" />
+    <Property Name="About4" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
   <EntityType Name="TblCashRegister">
     <Key>
       <PropertyRef Name="CashRegisterID" />
@@ -35,6 +45,17 @@
     <Property Name="Income" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Expense" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblContact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Coordinate" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <EntityType Name="TblCountry">
     <Key>
@@ -81,6 +102,27 @@
     <Property Name="ilce" Type="int" />
     <Property Name="Status" Type="int" />
   </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblMessage2">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reciever" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
   <EntityType Name="TblMission">
     <Key>
       <PropertyRef Name="MissionID" />
@@ -90,6 +132,16 @@
     <Property Name="Department" Type="int" />
     <Property Name="Status" Type="int" />
   </EntityType>
+  <EntityType Name="TblNewRegistry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="TblPhone">
     <Key>
       <PropertyRef Name="PhoneID" />
@@ -98,6 +150,20 @@
     <Property Name="Statement" Type="nvarchar" MaxLength="50" />
     <Property Name="Phone" Type="nvarchar" MaxLength="50" />
     <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TblPreReservation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="LeaveDate" Type="date" />
+    <Property Name="NumberOfPeople" Type="nvarchar" MaxLength="1" />
+    <Property Name="Phone" Type="nchar" MaxLength="11" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
   </EntityType>
   <EntityType Name="TblProduct">
     <Key>
@@ -477,13 +543,19 @@
     <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblExchangeRate" EntityType="Self.TblExchangeRate" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblGuest" EntityType="Self.TblGuest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMessage2" EntityType="Self.TblMessage2" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMission" EntityType="Self.TblMission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblNewRegistry" EntityType="Self.TblNewRegistry" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblPhone" EntityType="Self.TblPhone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblPreReservation" EntityType="Self.TblPreReservation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProduct" EntityType="Self.TblProduct" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProductGroup" EntityType="Self.TblProductGroup" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblProductProcess" EntityType="Self.TblProductProcess" Schema="dbo" store:Type="Tables" />

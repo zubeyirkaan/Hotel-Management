@@ -46,6 +46,12 @@
         <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblGuest" />
         <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblRoom" />
         <AssociationConnector Association="DbHotelModel.FK_TblReservation_TblStatus" />
+        <EntityTypeShape EntityType="DbHotelModel.TblNewRegistry" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblPreReservation" Width="1.5" PointX="3.375" PointY="10.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblMessage2" Width="1.5" PointX="10.375" PointY="10.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblAbout" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblContact" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblMessage" Width="1.5" PointX="2.75" PointY="14.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

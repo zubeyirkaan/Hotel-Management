@@ -73,3 +73,7 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManag
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Tools.FrmGoogle.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Tools.FrmYoutube.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Tools.FrmCurrency.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Website.FrmNewRegistry.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Website.FrmPreReservations.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Website.FrmPreReservationCard.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Website.FrmRecievedMessages.resources

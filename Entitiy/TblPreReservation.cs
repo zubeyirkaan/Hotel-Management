@@ -7,28 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelManagementMVC.Models.Entity
+namespace HotelManagementAutomation.Entitiy
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TblReservation
+    public partial class TblPreReservation
     {
-        public int ReservationID { get; set; }
-        public Nullable<int> Guest { get; set; }
+        public int ID { get; set; }
+        public string Email { get; set; }
+        public string NameSurname { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
         public Nullable<System.DateTime> LeaveDate { get; set; }
         public string NumberOfPeople { get; set; }
-        public Nullable<int> Room { get; set; }
-        public string ReservationNameSurname { get; set; }
         public string Phone { get; set; }
         public string Statement { get; set; }
-        public Nullable<int> Status { get; set; }
-        public Nullable<int> Person1 { get; set; }
-        public Nullable<int> Person2 { get; set; }
-        public Nullable<int> Person3 { get; set; }
-    
-        public virtual TblGuest TblGuest { get; set; }
-        public virtual TblRoom TblRoom { get; set; }
+        public Nullable<System.DateTime> Date { get; set; }
     }
 }

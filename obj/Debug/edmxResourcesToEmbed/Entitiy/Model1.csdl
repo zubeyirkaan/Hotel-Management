@@ -482,6 +482,12 @@
       <End Role="TblStatu" EntitySet="TblStatus" />
       <End Role="TblReservation" EntitySet="TblReservation" />
     </AssociationSet>
+    <EntitySet Name="TblNewRegistry" EntityType="DbHotelModel.TblNewRegistry" />
+    <EntitySet Name="TblPreReservation" EntityType="DbHotelModel.TblPreReservation" />
+    <EntitySet Name="TblMessage2" EntityType="DbHotelModel.TblMessage2" />
+    <EntitySet Name="TblAbout" EntityType="DbHotelModel.TblAbout" />
+    <EntitySet Name="TblContact" EntityType="DbHotelModel.TblContact" />
+    <EntitySet Name="TblMessage" EntityType="DbHotelModel.TblMessage" />
   </EntityContainer>
   <EntityType Name="ilceler">
     <Key>
@@ -631,4 +637,70 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="TblNewRegistry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblPreReservation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="LeaveDate" Type="DateTime" Precision="0" />
+    <Property Name="NumberOfPeople" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Statement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TblMessage2">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Reciever" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="TblAbout">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="About2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="About3" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="About4" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblContact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinate" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Sender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

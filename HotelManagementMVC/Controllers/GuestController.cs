@@ -26,10 +26,7 @@ namespace HotelManagementMVC.Controllers
         public ActionResult Reservations()
         {
             var guestemail = (string)Session["Email"];
-            //ViewBag.a = guestemail;
-            var guestid = db.TblNewRegistries.Where(x => x.Email == guestemail).Select(y => y.ID).FirstOrDefault();
-            ViewBag.a = guestid;
-            var datas = db.TblReservations.Where(x => x.Guest == guestid).ToList();
+            var datas = db.TblPreReservations.Where(x => x.Email == guestemail).ToList();
             return View(datas);
         }
         public ActionResult GuestInfoUpdate(TblNewRegistry p)

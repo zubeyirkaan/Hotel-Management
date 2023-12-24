@@ -38,27 +38,27 @@ namespace HotelManagementAutomation.Forms.Reservation
 
             //guest list2
             lookUpEditPerson2.Properties.DataSource = (from x in db.TblGuests
-                                                     select new
-                                                     {
-                                                         x.GuestID,
-                                                         x.NameSurname
-                                                     }).ToList();
+                                                       select new
+                                                       {
+                                                           x.GuestID,
+                                                           x.NameSurname
+                                                       }).ToList();
 
             //guest list3
             lookUpEditPerson3.Properties.DataSource = (from x in db.TblGuests
-                                                     select new
-                                                     {
-                                                         x.GuestID,
-                                                         x.NameSurname
-                                                     }).ToList();
+                                                       select new
+                                                       {
+                                                           x.GuestID,
+                                                           x.NameSurname
+                                                       }).ToList();
 
             //guest list4
             lookUpEditPerson4.Properties.DataSource = (from x in db.TblGuests
-                                                     select new
-                                                     {
-                                                         x.GuestID,
-                                                         x.NameSurname
-                                                     }).ToList();
+                                                       select new
+                                                       {
+                                                           x.GuestID,
+                                                           x.NameSurname
+                                                       }).ToList();
 
             //room list
             lookUpEditRoom.Properties.DataSource = (from x in db.TblRooms
@@ -67,15 +67,15 @@ namespace HotelManagementAutomation.Forms.Reservation
                                                         x.RoomID,
                                                         x.RoomNo,
                                                         x.TblStatu.StatusName
-                                                    }).Where(y=>y.StatusName == "Active").ToList();
+                                                    }).Where(y => y.StatusName == "Active").ToList();
 
             //product list
             lookUpEditStatus.Properties.DataSource = (from x in db.TblStatus
-                                                    select new
-                                                    {
-                                                        x.StatusID,
-                                                        x.StatusName
-                                                    }).ToList();
+                                                      select new
+                                                      {
+                                                          x.StatusID,
+                                                          x.StatusName
+                                                      }).ToList();
 
             //product update
             if (id != 0)
@@ -104,7 +104,7 @@ namespace HotelManagementAutomation.Forms.Reservation
         private void BtnSave_Click(object sender, EventArgs e)
         {
             TblReservation t = new TblReservation();
-            if(numericUpDown1.Value==1)
+            if (numericUpDown1.Value == 1)
             {
                 t.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
             }
@@ -136,6 +136,51 @@ namespace HotelManagementAutomation.Forms.Reservation
             t.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
             repo.TAdd(t);
             XtraMessageBox.Show("Reservation was created successfully");
+        }
+
+        private void lookUpEditGuest_EditValueChanged(object sender, EventArgs e)
+        {
+            int picked;
+            picked = int.Parse(lookUpEditGuest.EditValue.ToString());
+            var phone = db.TblGuests.Where(x => x.GuestID == picked).Select(y => y.Phone).FirstOrDefault();
+            TxtPhone.Text = phone.ToString();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            var reservation = repo.Find(x => x.ReservationID == id);
+            reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+            reservation.StartDate = DateTime.Parse(dateEditCheckIn.Text);
+            reservation.LeaveDate = DateTime.Parse(dateEditCheckOut.Text);
+            reservation.NumberOfPeople = numericUpDown1.Value.ToString();
+            reservation.Room = int.Parse(lookUpEditRoom.EditValue.ToString());
+            reservation.Phone = TxtPhone.Text;
+            reservation.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
+
+            if (numericUpDown1.Value == 1)
+            {
+                reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+            }
+            if (numericUpDown1.Value == 2)
+            {
+                reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+                reservation.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
+            }
+            if (numericUpDown1.Value == 3)
+            {
+                reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+                reservation.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
+                reservation.Person2 = int.Parse(lookUpEditPerson3.EditValue.ToString());
+            }
+            if (numericUpDown1.Value == 4)
+            {
+                reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+                reservation.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
+                reservation.Person2 = int.Parse(lookUpEditPerson3.EditValue.ToString());
+                reservation.Person3 = int.Parse(lookUpEditPerson4.EditValue.ToString());
+            }
+            repo.TUpdate(reservation);
+            XtraMessageBox.Show("Guest information has been successfully updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
