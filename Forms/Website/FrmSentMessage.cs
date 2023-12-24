@@ -11,26 +11,26 @@ using System.Windows.Forms;
 
 namespace HotelManagementAutomation.Forms.Website
 {
-    public partial class FrmRecievedMessages : Form
+    public partial class FrmSentMessage : Form
     {
-        public FrmRecievedMessages()
+        public FrmSentMessage()
         {
             InitializeComponent();
         }
 
         DbHotelEntities db = new DbHotelEntities();
 
-        private void FrmRecievedMessages_Load(object sender, EventArgs e)
+        private void FrmSentMessage_Load(object sender, EventArgs e)
         {
             gridControl1.DataSource = (from x in db.TblMessage2
                                        select new
                                        {
                                            x.MessageID,
-                                           x.Sender,
+                                           x.Reciever,
                                            x.Subject,
                                            x.Date,
-                                           x.Reciever
-                                       }).Where(y=>y.Reciever=="Admin").ToList();
+                                           x.Sender
+                                       }).Where(y => y.Sender == "Admin").ToList();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)

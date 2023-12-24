@@ -70,6 +70,12 @@ namespace HotelManagementAutomation
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnNewRegistirations = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPreReservations = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnRecievedMessages = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnNewMessage = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnSentMessage = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnContact = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAddressCard = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAboutPage = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -89,9 +95,11 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.BtnRecievedMessages = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -140,9 +148,14 @@ namespace HotelManagementAutomation
             this.barButtonItem1,
             this.BtnNewRegistirations,
             this.BtnPreReservations,
-            this.BtnRecievedMessages});
+            this.BtnRecievedMessages,
+            this.BtnNewMessage,
+            this.BtnSentMessage,
+            this.BtnContact,
+            this.BtnAddressCard,
+            this.BtnAboutPage});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 41;
+            this.ribbonControl1.MaxItemId = 46;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -490,6 +503,60 @@ namespace HotelManagementAutomation
             this.BtnPreReservations.Name = "BtnPreReservations";
             this.BtnPreReservations.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPreReservations_ItemClick);
             // 
+            // BtnRecievedMessages
+            // 
+            this.BtnRecievedMessages.Caption = "Recieved Messages";
+            this.BtnRecievedMessages.Id = 40;
+            this.BtnRecievedMessages.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnRecievedMessages.ImageOptions.Image")));
+            this.BtnRecievedMessages.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnRecievedMessages.ImageOptions.LargeImage")));
+            this.BtnRecievedMessages.Name = "BtnRecievedMessages";
+            this.BtnRecievedMessages.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRecievedMessages_ItemClick);
+            // 
+            // BtnNewMessage
+            // 
+            this.BtnNewMessage.Caption = "New Message";
+            this.BtnNewMessage.Id = 41;
+            this.BtnNewMessage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnNewMessage.ImageOptions.Image")));
+            this.BtnNewMessage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnNewMessage.ImageOptions.LargeImage")));
+            this.BtnNewMessage.Name = "BtnNewMessage";
+            this.BtnNewMessage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnNewMessage_ItemClick);
+            // 
+            // BtnSentMessage
+            // 
+            this.BtnSentMessage.Caption = "Sent Message";
+            this.BtnSentMessage.Id = 42;
+            this.BtnSentMessage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSentMessage.ImageOptions.Image")));
+            this.BtnSentMessage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnSentMessage.ImageOptions.LargeImage")));
+            this.BtnSentMessage.Name = "BtnSentMessage";
+            this.BtnSentMessage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnSentMessage_ItemClick);
+            // 
+            // BtnContact
+            // 
+            this.BtnContact.Caption = "Contact";
+            this.BtnContact.Id = 43;
+            this.BtnContact.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnContact.ImageOptions.Image")));
+            this.BtnContact.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnContact.ImageOptions.LargeImage")));
+            this.BtnContact.Name = "BtnContact";
+            this.BtnContact.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnContact_ItemClick);
+            // 
+            // BtnAddressCard
+            // 
+            this.BtnAddressCard.Caption = "Address Card";
+            this.BtnAddressCard.Id = 44;
+            this.BtnAddressCard.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAddressCard.ImageOptions.Image")));
+            this.BtnAddressCard.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAddressCard.ImageOptions.LargeImage")));
+            this.BtnAddressCard.Name = "BtnAddressCard";
+            this.BtnAddressCard.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAddressCard_ItemClick);
+            // 
+            // BtnAboutPage
+            // 
+            this.BtnAboutPage.Caption = "About Page";
+            this.BtnAboutPage.Id = 45;
+            this.BtnAboutPage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnAboutPage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnAboutPage.Name = "BtnAboutPage";
+            this.BtnAboutPage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAboutPage_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -623,7 +690,10 @@ namespace HotelManagementAutomation
             // 
             this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup13,
+            this.ribbonPageGroup14,
+            this.ribbonPageGroup15});
             this.ribbonPage8.Name = "ribbonPage8";
             this.ribbonPage8.Text = "Mvc Website";
             // 
@@ -633,23 +703,31 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup11.ItemLinks.Add(this.BtnPreReservations);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // BtnRecievedMessages
-            // 
-            this.BtnRecievedMessages.Caption = "Recieved Messages";
-            this.BtnRecievedMessages.Id = 40;
-            this.BtnRecievedMessages.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnRecievedMessages.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.BtnRecievedMessages.Name = "BtnRecievedMessages";
-            this.BtnRecievedMessages.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRecievedMessages_ItemClick);
-            // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.BtnRecievedMessages);
+            this.ribbonPageGroup12.ItemLinks.Add(this.BtnSentMessage);
+            this.ribbonPageGroup12.ItemLinks.Add(this.BtnNewMessage);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.BtnContact);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            // 
+            // ribbonPageGroup14
+            // 
+            this.ribbonPageGroup14.ItemLinks.Add(this.BtnAddressCard);
+            this.ribbonPageGroup14.Name = "ribbonPageGroup14";
+            // 
+            // ribbonPageGroup15
+            // 
+            this.ribbonPageGroup15.ItemLinks.Add(this.BtnAboutPage);
+            this.ribbonPageGroup15.Name = "ribbonPageGroup15";
+            // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
             // 
             // Form1
             // 
@@ -733,6 +811,14 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnPreReservations;
         private DevExpress.XtraBars.BarButtonItem BtnRecievedMessages;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem BtnNewMessage;
+        private DevExpress.XtraBars.BarButtonItem BtnSentMessage;
+        private DevExpress.XtraBars.BarButtonItem BtnContact;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
+        private DevExpress.XtraBars.BarButtonItem BtnAddressCard;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
+        private DevExpress.XtraBars.BarButtonItem BtnAboutPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
     }
 }
 

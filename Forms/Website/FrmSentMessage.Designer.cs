@@ -1,7 +1,7 @@
 ﻿
 namespace HotelManagementAutomation.Forms.Website
 {
-    partial class FrmRecievedMessages
+    partial class FrmSentMessage
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@ namespace HotelManagementAutomation.Forms.Website
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(884, 311);
-            this.gridControl1.TabIndex = 3;
+            this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -53,15 +53,15 @@ namespace HotelManagementAutomation.Forms.Website
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
             // 
-            // FrmRecievedMessages
+            // FrmSentMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 311);
             this.Controls.Add(this.gridControl1);
-            this.Name = "FrmRecievedMessages";
-            this.Text = "Recieved Messages";
-            this.Load += new System.EventHandler(this.FrmRecievedMessages_Load);
+            this.Name = "FrmSentMessage";
+            this.Text = "Sent Message";
+            this.Load += new System.EventHandler(this.FrmSentMessage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

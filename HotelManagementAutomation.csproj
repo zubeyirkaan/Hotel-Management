@@ -326,6 +326,30 @@
     <Compile Include="Forms\Tools\FrmYoutube.Designer.cs">
       <DependentUpon>FrmYoutube.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Website\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Website\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Website\FrmContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Website\FrmContact.Designer.cs">
+      <DependentUpon>FrmContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Website\FrmContactCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Website\FrmContactCard.Designer.cs">
+      <DependentUpon>FrmContactCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Website\FrmMessageCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Website\FrmMessageCard.Designer.cs">
+      <DependentUpon>FrmMessageCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Website\FrmNewRegistry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +373,12 @@
     </Compile>
     <Compile Include="Forms\Website\FrmRecievedMessages.Designer.cs">
       <DependentUpon>FrmRecievedMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Website\FrmSentMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Website\FrmSentMessage.Designer.cs">
+      <DependentUpon>FrmSentMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -440,6 +470,18 @@
     <EmbeddedResource Include="Forms\Tools\FrmYoutube.resx">
       <DependentUpon>FrmYoutube.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Website\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Website\FrmContact.resx">
+      <DependentUpon>FrmContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Website\FrmContactCard.resx">
+      <DependentUpon>FrmContactCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Website\FrmMessageCard.resx">
+      <DependentUpon>FrmMessageCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Website\FrmNewRegistry.resx">
       <DependentUpon>FrmNewRegistry.cs</DependentUpon>
     </EmbeddedResource>
@@ -451,6 +493,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Website\FrmRecievedMessages.resx">
       <DependentUpon>FrmRecievedMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Website\FrmSentMessage.resx">
+      <DependentUpon>FrmSentMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

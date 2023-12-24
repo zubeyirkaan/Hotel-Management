@@ -11,33 +11,33 @@ using System.Windows.Forms;
 
 namespace HotelManagementAutomation.Forms.Website
 {
-    public partial class FrmRecievedMessages : Form
+    public partial class FrmContact : Form
     {
-        public FrmRecievedMessages()
+        public FrmContact()
         {
             InitializeComponent();
         }
 
         DbHotelEntities db = new DbHotelEntities();
 
-        private void FrmRecievedMessages_Load(object sender, EventArgs e)
+        private void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.TblMessage2
+            FrmMessageCard fr = new FrmMessageCard();
+            fr.id2 = int.Parse(gridView1.GetFocusedRowCellValue("MessageID").ToString());
+            fr.Show();
+        }
+
+        private void FrmContact_Load(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = (from x in db.TblMessage
                                        select new
                                        {
                                            x.MessageID,
                                            x.Sender,
+                                           x.Email,
                                            x.Subject,
-                                           x.Date,
-                                           x.Reciever
-                                       }).Where(y=>y.Reciever=="Admin").ToList();
-        }
-
-        private void gridView1_DoubleClick(object sender, EventArgs e)
-        {
-            FrmMessageCard fr = new FrmMessageCard();
-            fr.id = int.Parse(gridView1.GetFocusedRowCellValue("MessageID").ToString());
-            fr.Show();
+                                           x.Message
+                                       }).ToList();
         }
     }
 }
