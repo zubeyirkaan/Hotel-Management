@@ -76,6 +76,8 @@ namespace HotelManagementAutomation
             this.BtnContact = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAddressCard = new DevExpress.XtraBars.BarButtonItem();
             this.BtnAboutPage = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnGraph2 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnGraph1 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -93,6 +95,8 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -153,9 +157,11 @@ namespace HotelManagementAutomation
             this.BtnSentMessage,
             this.BtnContact,
             this.BtnAddressCard,
-            this.BtnAboutPage});
+            this.BtnAboutPage,
+            this.BtnGraph2,
+            this.BtnGraph1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 46;
+            this.ribbonControl1.MaxItemId = 48;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -165,6 +171,7 @@ namespace HotelManagementAutomation
             this.ribbonPage4,
             this.ribbonPage6,
             this.ribbonPage7,
+            this.ribbonPage9,
             this.ribbonPage8});
             this.ribbonControl1.Size = new System.Drawing.Size(884, 150);
             // 
@@ -287,9 +294,12 @@ namespace HotelManagementAutomation
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Caption = "Main";
             this.barButtonItem4.Id = 15;
+            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
+            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // BtnGuestCard
             // 
@@ -552,10 +562,28 @@ namespace HotelManagementAutomation
             // 
             this.BtnAboutPage.Caption = "About Page";
             this.BtnAboutPage.Id = 45;
-            this.BtnAboutPage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnAboutPage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnAboutPage.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnAboutPage.ImageOptions.Image")));
+            this.BtnAboutPage.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnAboutPage.ImageOptions.LargeImage")));
             this.BtnAboutPage.Name = "BtnAboutPage";
             this.BtnAboutPage.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAboutPage_ItemClick);
+            // 
+            // BtnGraph2
+            // 
+            this.BtnGraph2.Caption = "Product Stock";
+            this.BtnGraph2.Id = 46;
+            this.BtnGraph2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.BtnGraph2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnGraph2.Name = "BtnGraph2";
+            this.BtnGraph2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGraph2_ItemClick);
+            // 
+            // BtnGraph1
+            // 
+            this.BtnGraph1.Caption = "Room Occupancy Graph";
+            this.BtnGraph1.Id = 47;
+            this.BtnGraph1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGraph1.ImageOptions.Image")));
+            this.BtnGraph1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnGraph1.ImageOptions.LargeImage")));
+            this.BtnGraph1.Name = "BtnGraph1";
+            this.BtnGraph1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGraph1_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -568,7 +596,6 @@ namespace HotelManagementAutomation
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // ribbonPage2
             // 
@@ -686,6 +713,19 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             // 
+            // ribbonPage9
+            // 
+            this.ribbonPage9.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup16});
+            this.ribbonPage9.Name = "ribbonPage9";
+            this.ribbonPage9.Text = "Graphs";
+            // 
+            // ribbonPageGroup16
+            // 
+            this.ribbonPageGroup16.ItemLinks.Add(this.BtnGraph2);
+            this.ribbonPageGroup16.ItemLinks.Add(this.BtnGraph1);
+            this.ribbonPageGroup16.Name = "ribbonPageGroup16";
+            // 
             // ribbonPage8
             // 
             this.ribbonPage8.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -733,7 +773,7 @@ namespace HotelManagementAutomation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(884, 481);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
@@ -819,6 +859,10 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem BtnAboutPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
+        private DevExpress.XtraBars.BarButtonItem BtnGraph2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage9;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
+        private DevExpress.XtraBars.BarButtonItem BtnGraph1;
     }
 }
 

@@ -539,6 +539,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="RoomStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="DbHotelModelStoreContainer">
     <EntitySet Name="ilceler" EntityType="Self.ilceler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />

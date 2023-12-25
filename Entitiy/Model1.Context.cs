@@ -12,6 +12,8 @@ namespace HotelManagementAutomation.Entitiy
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbHotelEntities : DbContext
     {
@@ -49,5 +51,10 @@ namespace HotelManagementAutomation.Entitiy
         public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblMessage> TblMessage { get; set; }
+    
+        public virtual ObjectResult<RoomStatus_Result> RoomStatus()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RoomStatus_Result>("RoomStatus");
+        }
     }
 }

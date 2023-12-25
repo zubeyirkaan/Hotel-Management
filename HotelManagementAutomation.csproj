@@ -33,12 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Wizard, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -85,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entitiy\RoomStatus_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Entitiy\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -218,6 +226,18 @@
     <Compile Include="Forms\Definitions\FrmStockUnit.Designer.cs">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Graphs\FrmGraph1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Graphs\FrmGraph1.Designer.cs">
+      <DependentUpon>FrmGraph1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Graphs\FrmGraph2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Graphs\FrmGraph2.Designer.cs">
+      <DependentUpon>FrmGraph2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Guest\FrmGuest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +249,12 @@
     </Compile>
     <Compile Include="Forms\Guest\FrmGuestList.Designer.cs">
       <DependentUpon>FrmGuestList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Product\FrmProcessDefinitions.cs">
       <SubType>Form</SubType>
@@ -416,11 +442,20 @@
     <EmbeddedResource Include="Forms\Definitions\FrmStockUnit.resx">
       <DependentUpon>FrmStockUnit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Graphs\FrmGraph1.resx">
+      <DependentUpon>FrmGraph1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Graphs\FrmGraph2.resx">
+      <DependentUpon>FrmGraph2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Guest\FrmGuest.resx">
       <DependentUpon>FrmGuest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Guest\FrmGuestList.resx">
       <DependentUpon>FrmGuestList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProcessDefinitions.resx">
       <DependentUpon>FrmProcessDefinitions.cs</DependentUpon>

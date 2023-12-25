@@ -265,5 +265,26 @@ namespace HotelManagementAutomation
             Forms.Website.FrmAbout fr = new Forms.Website.FrmAbout();
             fr.Show();
         }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Main.FrmMain fr = new Forms.Main.FrmMain();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGraph1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Graphs.FrmGraph2 fr = new Forms.Graphs.FrmGraph2();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnGraph2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Graphs.FrmGraph1 fr = new Forms.Graphs.FrmGraph1();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

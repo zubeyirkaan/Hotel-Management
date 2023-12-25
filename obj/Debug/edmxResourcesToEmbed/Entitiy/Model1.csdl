@@ -488,6 +488,7 @@
     <EntitySet Name="TblAbout" EntityType="DbHotelModel.TblAbout" />
     <EntitySet Name="TblContact" EntityType="DbHotelModel.TblContact" />
     <EntitySet Name="TblMessage" EntityType="DbHotelModel.TblMessage" />
+    <FunctionImport Name="RoomStatus" ReturnType="Collection(DbHotelModel.RoomStatus_Result)" />
   </EntityContainer>
   <EntityType Name="ilceler">
     <Key>
@@ -703,4 +704,8 @@
     <Property Name="Subject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Message" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
+  <ComplexType Name="RoomStatus_Result">
+    <Property Type="String" Name="StatusName" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Count" Nullable="true" />
+  </ComplexType>
 </Schema>

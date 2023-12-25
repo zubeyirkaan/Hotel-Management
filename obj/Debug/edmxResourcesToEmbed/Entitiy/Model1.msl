@@ -288,5 +288,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="RoomStatus" FunctionName="DbHotelModel.Store.RoomStatus">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DbHotelModel.RoomStatus_Result">
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>
