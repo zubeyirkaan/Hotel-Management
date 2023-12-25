@@ -108,3 +108,5 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\bin\Debug\DevExpress
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\bin\Debug\DevExpress.Xpo.v22.2.xml
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Graphs.FrmGraph1.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Graphs.FrmGraph2.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Admin.FrmPasswordProcess.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Admin.FrmLogin.resources

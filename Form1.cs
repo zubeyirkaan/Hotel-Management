@@ -286,5 +286,18 @@ namespace HotelManagementAutomation
             fr.MdiParent = this;
             fr.Show();
         }
+
+        private void BtnPassword_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Admin.FrmPasswordProcess fr = new Forms.Admin.FrmPasswordProcess();
+            fr.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Forms.Main.FrmMain fr = new Forms.Main.FrmMain();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

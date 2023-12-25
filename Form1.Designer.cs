@@ -64,7 +64,7 @@ namespace HotelManagementAutomation
             this.BtnGoogle = new DevExpress.XtraBars.BarButtonItem();
             this.BtnWord = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnPassword = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnCalculator = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -146,7 +146,7 @@ namespace HotelManagementAutomation
             this.BtnGoogle,
             this.BtnWord,
             this.barButtonItem8,
-            this.barButtonItem9,
+            this.BtnPassword,
             this.barButtonItem10,
             this.BtnCalculator,
             this.barButtonItem1,
@@ -462,13 +462,14 @@ namespace HotelManagementAutomation
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
-            // barButtonItem9
+            // BtnPassword
             // 
-            this.barButtonItem9.Caption = "Password";
-            this.barButtonItem9.Id = 34;
-            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
+            this.BtnPassword.Caption = "Password";
+            this.BtnPassword.Id = 34;
+            this.BtnPassword.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnPassword.ImageOptions.Image")));
+            this.BtnPassword.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnPassword.ImageOptions.LargeImage")));
+            this.BtnPassword.Name = "BtnPassword";
+            this.BtnPassword.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPassword_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -571,8 +572,8 @@ namespace HotelManagementAutomation
             // 
             this.BtnGraph2.Caption = "Product Stock";
             this.BtnGraph2.Id = 46;
-            this.BtnGraph2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnGraph2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnGraph2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGraph2.ImageOptions.Image")));
+            this.BtnGraph2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnGraph2.ImageOptions.LargeImage")));
             this.BtnGraph2.Name = "BtnGraph2";
             this.BtnGraph2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGraph2_ItemClick);
             // 
@@ -707,7 +708,7 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnGoogle);
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnWord);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem8);
-            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnPassword);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnCalculator);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem10);
@@ -781,6 +782,7 @@ namespace HotelManagementAutomation
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Management";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -839,7 +841,7 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem BtnGoogle;
         private DevExpress.XtraBars.BarButtonItem BtnWord;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem BtnPassword;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;

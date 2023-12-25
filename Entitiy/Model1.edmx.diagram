@@ -52,6 +52,7 @@
         <EntityTypeShape EntityType="DbHotelModel.TblAbout" Width="1.5" PointX="0.75" PointY="12.75" />
         <EntityTypeShape EntityType="DbHotelModel.TblContact" Width="1.5" PointX="12.75" PointY="11.75" />
         <EntityTypeShape EntityType="DbHotelModel.TblMessage" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="DbHotelModel.TblAdmin" Width="1.5" PointX="10.375" PointY="15.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

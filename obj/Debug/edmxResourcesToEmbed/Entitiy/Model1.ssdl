@@ -35,6 +35,15 @@
     <Property Name="About3" Type="nvarchar" MaxLength="1000" />
     <Property Name="About4" Type="nvarchar" MaxLength="1000" />
   </EntityType>
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="Role" Type="char" MaxLength="1" />
+  </EntityType>
   <EntityType Name="TblCashRegister">
     <Key>
       <PropertyRef Name="CashRegisterID" />
@@ -545,6 +554,7 @@
     <EntitySet Name="iller" EntityType="Self.iller" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
