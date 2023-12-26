@@ -223,6 +223,7 @@
     <Property Name="Phone" Type="nvarchar" MaxLength="20" />
     <Property Name="Statement" Type="nvarchar" MaxLength="500" />
     <Property Name="Status" Type="int" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
   </EntityType>
   <EntityType Name="TblRoom">
     <Key>

@@ -43,13 +43,13 @@ namespace HotelManagementAutomation.Forms.Guest
                     TxtPhone.Text = guest.Phone;
                     TxtEmail.Text = guest.Mail;
                     TxtStatement.Text = guest.Statement;
+                    lookUpEditCity.EditValue = guest.sehir;
+                    lookUpEditCounty.EditValue = guest.ilce;
+                    lookUpEditCountry.EditValue = guest.Country;
                     pictureEditIDFront.Image = Image.FromFile(guest.IDPhoto1);
                     pictureEditIDBack.Image = Image.FromFile(guest.IDPhoto2);
                     image1 = guest.IDPhoto1;
                     image2 = guest.IDPhoto2;
-                    lookUpEditCity.EditValue = guest.sehir;
-                    lookUpEditCounty.EditValue = guest.ilce;
-                    lookUpEditCountry.EditValue = guest.Country;
 
                     //country list
                     loadCountry();
@@ -136,13 +136,20 @@ namespace HotelManagementAutomation.Forms.Guest
             value.IDPhoto1 = image1;
             value.IDPhoto2 = image2;
             value.Status = 1;
-            repo.TUpdate(value);
+            try
+            {
+                repo.TUpdate(value);
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Fill the all blanks!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
             XtraMessageBox.Show("Guest information has been successfully updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
-        {
-            
+        {           
             t.NameSurname = TxtNameSurname.Text;
             t.TC = TxtTC.Text;
             t.Address = TxtAddres.Text;

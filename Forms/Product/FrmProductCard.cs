@@ -135,7 +135,7 @@ namespace HotelManagementAutomation.Forms.Product
                 value.Total = decimal.Parse(TxtTotal.Text);
                 value.Tax = byte.Parse(TxtTax.Text);
 
-                repo.TAdd(t);
+                repo.TUpdate(t);
                 XtraMessageBox.Show("Product information has been successfully updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception)

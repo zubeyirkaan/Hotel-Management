@@ -200,6 +200,7 @@
     <EntitySetMapping Name="TblReservation">
       <EntityTypeMapping TypeName="DbHotelModel.TblReservation">
         <MappingFragment StoreEntitySet="TblReservation">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
           <ScalarProperty Name="Person3" ColumnName="Person3" />
           <ScalarProperty Name="Person2" ColumnName="Person2" />
           <ScalarProperty Name="Person1" ColumnName="Person1" />

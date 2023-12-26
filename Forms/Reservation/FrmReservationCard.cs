@@ -89,6 +89,7 @@ namespace HotelManagementAutomation.Forms.Reservation
                 TxtPhone.Text = reservation.Phone;
                 lookUpEditStatus.EditValue = reservation.Status;
                 TxtStatement.Text = reservation.Statement;
+                TxtTotalPrice.Text = reservation.TotalPrice.ToString(); 
                 lookUpEditPerson2.EditValue = reservation.Person1;
                 lookUpEditPerson3.EditValue = reservation.Person2;
                 lookUpEditPerson4.EditValue = reservation.Person3;
@@ -134,6 +135,7 @@ namespace HotelManagementAutomation.Forms.Reservation
             t.Phone = TxtPhone.Text;
             t.Statement = TxtStatement.Text;
             t.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
+            t.TotalPrice = decimal.Parse(TxtTotalPrice.Text);
             repo.TAdd(t);
             XtraMessageBox.Show("Reservation was created successfully");
         }
@@ -156,6 +158,8 @@ namespace HotelManagementAutomation.Forms.Reservation
             reservation.Room = int.Parse(lookUpEditRoom.EditValue.ToString());
             reservation.Phone = TxtPhone.Text;
             reservation.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
+            reservation.Statement = TxtStatement.Text;
+            reservation.TotalPrice = decimal.Parse(TxtTotalPrice.Text);
 
             if (numericUpDown1.Value == 1)
             {

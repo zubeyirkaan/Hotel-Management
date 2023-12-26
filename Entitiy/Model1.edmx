@@ -228,6 +228,7 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="20" />
           <Property Name="Statement" Type="nvarchar" MaxLength="500" />
           <Property Name="Status" Type="int" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TblRoom">
           <Key>
@@ -1279,6 +1280,7 @@
           <Property Name="Person1" Type="Int32" />
           <Property Name="Person2" Type="Int32" />
           <Property Name="Person3" Type="Int32" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <Association Name="FK_TblReservation_TblGuest">
           <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />
@@ -1600,6 +1602,7 @@
           <EntitySetMapping Name="TblReservation">
             <EntityTypeMapping TypeName="DbHotelModel.TblReservation">
               <MappingFragment StoreEntitySet="TblReservation">
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
                 <ScalarProperty Name="Person3" ColumnName="Person3" />
                 <ScalarProperty Name="Person2" ColumnName="Person2" />
                 <ScalarProperty Name="Person1" ColumnName="Person1" />

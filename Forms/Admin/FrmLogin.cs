@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,6 +35,16 @@ namespace HotelManagementAutomation.Forms.Admin
             {
                 XtraMessageBox.Show("Username or password is incorrect!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            Thread.Sleep(5000);
         }
     }
 }

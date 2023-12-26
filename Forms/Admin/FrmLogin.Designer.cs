@@ -30,6 +30,7 @@ namespace HotelManagementAutomation.Forms.Admin
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::HotelManagementAutomation.Forms.Admin.SplashScreen1), true, true);
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtUsername = new DevExpress.XtraEditors.TextEdit();
@@ -97,6 +98,7 @@ namespace HotelManagementAutomation.Forms.Admin
             // 
             this.TxtPassword.Location = new System.Drawing.Point(108, 52);
             this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Properties.UseSystemPasswordChar = true;
             this.TxtPassword.Size = new System.Drawing.Size(258, 20);
             this.TxtPassword.TabIndex = 22;
             // 
@@ -134,16 +136,19 @@ namespace HotelManagementAutomation.Forms.Admin
             // 
             // BtnCancel
             // 
+            this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
             this.BtnCancel.Location = new System.Drawing.Point(26, 6);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnLogin
             // 
-            this.BtnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnLogin.ImageOptions.Image")));
             this.BtnLogin.Location = new System.Drawing.Point(225, 6);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(123, 39);
@@ -151,8 +156,13 @@ namespace HotelManagementAutomation.Forms.Admin
             this.BtnLogin.Text = "Login";
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 500;
+            // 
             // FrmLogin
             // 
+            this.AcceptButton = this.BtnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(381, 150);
@@ -164,6 +174,7 @@ namespace HotelManagementAutomation.Forms.Admin
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();

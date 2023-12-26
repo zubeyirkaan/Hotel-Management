@@ -43,6 +43,7 @@ namespace HotelManagementAutomation.Forms.Main
                                            x.TblGuest.NameSurname,
                                            x.Status
                                        }).Where(y=>y.Status == 1010).ToList();
+            gridView3.Columns["Status"].Visible = false;
 
             //product stock list
             gridControl1.DataSource = (from x in db.TblProducts

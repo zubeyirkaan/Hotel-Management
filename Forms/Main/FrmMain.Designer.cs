@@ -212,7 +212,7 @@ namespace HotelManagementAutomation.Forms.Main
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(348, 150);
             this.groupControl6.TabIndex = 8;
-            this.groupControl6.Text = "Product Stock";
+            this.groupControl6.Text = "Rooms";
             // 
             // chartControl2
             // 

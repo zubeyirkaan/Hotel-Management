@@ -16,7 +16,7 @@ namespace HotelManagementAutomation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Admin.FrmLogin());
+            Application.Run(new Form1());
         }
     }
 }
