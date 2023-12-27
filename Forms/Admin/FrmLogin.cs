@@ -28,6 +28,7 @@ namespace HotelManagementAutomation.Forms.Admin
             if (user != null)
             {
                 Form1 frm = new Form1();
+                frm.userRole = user.Role;
                 frm.Show();
                 this.Hide();
             }

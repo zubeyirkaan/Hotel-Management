@@ -294,10 +294,22 @@ namespace HotelManagementAutomation
             fr.Show();
         }
 
+        public string userRole;
         private void Form1_Load(object sender, EventArgs e)
         {
+            if(userRole != "A")
+            {
+                ribbonPage6.Visible = false;
+            }
+
             Forms.Main.FrmMain fr = new Forms.Main.FrmMain();
             fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void BtnAuthorization_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Admin.FrmPasswordProcess fr = new Forms.Admin.FrmPasswordProcess();
             fr.Show();
         }
     }

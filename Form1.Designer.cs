@@ -67,7 +67,7 @@ namespace HotelManagementAutomation
             this.BtnPassword = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.BtnCalculator = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAuthorization = new DevExpress.XtraBars.BarButtonItem();
             this.BtnNewRegistirations = new DevExpress.XtraBars.BarButtonItem();
             this.BtnPreReservations = new DevExpress.XtraBars.BarButtonItem();
             this.BtnRecievedMessages = new DevExpress.XtraBars.BarButtonItem();
@@ -149,7 +149,7 @@ namespace HotelManagementAutomation
             this.BtnPassword,
             this.barButtonItem10,
             this.BtnCalculator,
-            this.barButtonItem1,
+            this.BtnAuthorization,
             this.BtnNewRegistirations,
             this.BtnPreReservations,
             this.BtnRecievedMessages,
@@ -488,13 +488,14 @@ namespace HotelManagementAutomation
             this.BtnCalculator.Name = "BtnCalculator";
             this.BtnCalculator.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCalculator_ItemClick);
             // 
-            // barButtonItem1
+            // BtnAuthorization
             // 
-            this.barButtonItem1.Caption = "Authorization";
-            this.barButtonItem1.Id = 37;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.BtnAuthorization.Caption = "Authorization";
+            this.BtnAuthorization.Id = 37;
+            this.BtnAuthorization.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.BtnAuthorization.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnAuthorization.Name = "BtnAuthorization";
+            this.BtnAuthorization.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAuthorization_ItemClick);
             // 
             // BtnNewRegistirations
             // 
@@ -709,7 +710,7 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnWord);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnPassword);
-            this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup10.ItemLinks.Add(this.BtnAuthorization);
             this.ribbonPageGroup10.ItemLinks.Add(this.BtnCalculator);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
@@ -846,7 +847,7 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem BtnCalculator;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem BtnAuthorization;
         private DevExpress.XtraBars.BarButtonItem BtnNewRegistirations;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
