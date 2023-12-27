@@ -169,6 +169,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Admin\FrmAdminList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Admin\FrmAdminList.Designer.cs">
+      <DependentUpon>FrmAdminList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Admin\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     <Compile Include="Repositories\Repository.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Admin\FrmAdminList.resx">
+      <DependentUpon>FrmAdminList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

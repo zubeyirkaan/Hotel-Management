@@ -75,7 +75,10 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtRoomNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
             this.TxtTotalPrice = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEditRoom.Properties)).BeginInit();
@@ -117,6 +120,8 @@ namespace HotelManagementAutomation.Forms.Reservation
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
             this.groupControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRoomNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTotalPrice.Properties)).BeginInit();
             this.SuspendLayout();
@@ -400,9 +405,9 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // TxtPhone
             // 
-            this.TxtPhone.Location = new System.Drawing.Point(126, 14);
+            this.TxtPhone.Location = new System.Drawing.Point(124, 14);
             this.TxtPhone.Name = "TxtPhone";
-            this.TxtPhone.Size = new System.Drawing.Size(115, 20);
+            this.TxtPhone.Size = new System.Drawing.Size(126, 20);
             this.TxtPhone.TabIndex = 5;
             // 
             // pictureEdit12
@@ -449,14 +454,14 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // lookUpEditStatus
             // 
-            this.lookUpEditStatus.Location = new System.Drawing.Point(358, 14);
+            this.lookUpEditStatus.Location = new System.Drawing.Point(355, 14);
             this.lookUpEditStatus.Name = "lookUpEditStatus";
             this.lookUpEditStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditStatus.Properties.DisplayMember = "StatusName";
             this.lookUpEditStatus.Properties.NullText = "Select Satus";
             this.lookUpEditStatus.Properties.ValueMember = "StatusID";
-            this.lookUpEditStatus.Size = new System.Drawing.Size(125, 20);
+            this.lookUpEditStatus.Size = new System.Drawing.Size(128, 20);
             this.lookUpEditStatus.TabIndex = 27;
             // 
             // groupControl3
@@ -494,14 +499,14 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // lookUpEditPerson4
             // 
-            this.lookUpEditPerson4.Location = new System.Drawing.Point(110, 63);
+            this.lookUpEditPerson4.Location = new System.Drawing.Point(125, 63);
             this.lookUpEditPerson4.Name = "lookUpEditPerson4";
             this.lookUpEditPerson4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditPerson4.Properties.DisplayMember = "NameSurname";
             this.lookUpEditPerson4.Properties.NullText = "Select Guest";
             this.lookUpEditPerson4.Properties.ValueMember = "GuestID";
-            this.lookUpEditPerson4.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson4.Size = new System.Drawing.Size(355, 20);
             this.lookUpEditPerson4.TabIndex = 25;
             // 
             // labelControl9
@@ -527,14 +532,14 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // lookUpEditPerson3
             // 
-            this.lookUpEditPerson3.Location = new System.Drawing.Point(110, 37);
+            this.lookUpEditPerson3.Location = new System.Drawing.Point(125, 37);
             this.lookUpEditPerson3.Name = "lookUpEditPerson3";
             this.lookUpEditPerson3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditPerson3.Properties.DisplayMember = "NameSurname";
             this.lookUpEditPerson3.Properties.NullText = "Select Guest";
             this.lookUpEditPerson3.Properties.ValueMember = "GuestID";
-            this.lookUpEditPerson3.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson3.Size = new System.Drawing.Size(355, 20);
             this.lookUpEditPerson3.TabIndex = 22;
             // 
             // labelControl8
@@ -560,14 +565,14 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // lookUpEditPerson2
             // 
-            this.lookUpEditPerson2.Location = new System.Drawing.Point(111, 11);
+            this.lookUpEditPerson2.Location = new System.Drawing.Point(125, 11);
             this.lookUpEditPerson2.Name = "lookUpEditPerson2";
             this.lookUpEditPerson2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lookUpEditPerson2.Properties.DisplayMember = "NameSurname";
             this.lookUpEditPerson2.Properties.NullText = "Select Guest";
             this.lookUpEditPerson2.Properties.ValueMember = "GuestID";
-            this.lookUpEditPerson2.Size = new System.Drawing.Size(370, 20);
+            this.lookUpEditPerson2.Size = new System.Drawing.Size(356, 20);
             this.lookUpEditPerson2.TabIndex = 19;
             // 
             // labelControl7
@@ -593,7 +598,10 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // groupControl7
             // 
+            this.groupControl7.Controls.Add(this.TxtRoomNo);
+            this.groupControl7.Controls.Add(this.labelControl10);
             this.groupControl7.Controls.Add(this.labelControl13);
+            this.groupControl7.Controls.Add(this.pictureEdit10);
             this.groupControl7.Controls.Add(this.pictureEdit13);
             this.groupControl7.Controls.Add(this.TxtTotalPrice);
             this.groupControl7.Location = new System.Drawing.Point(3, 280);
@@ -603,6 +611,21 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.groupControl7.TabIndex = 31;
             this.groupControl7.Text = "groupControl7";
             // 
+            // TxtRoomNo
+            // 
+            this.TxtRoomNo.Location = new System.Drawing.Point(355, 14);
+            this.TxtRoomNo.Name = "TxtRoomNo";
+            this.TxtRoomNo.Size = new System.Drawing.Size(127, 20);
+            this.TxtRoomNo.TabIndex = 27;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(279, 17);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(43, 13);
+            this.labelControl10.TabIndex = 26;
+            this.labelControl10.Text = "Room No";
+            // 
             // labelControl13
             // 
             this.labelControl13.Location = new System.Drawing.Point(35, 17);
@@ -610,6 +633,19 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.labelControl13.Size = new System.Drawing.Size(50, 13);
             this.labelControl13.TabIndex = 7;
             this.labelControl13.Text = "Total Price";
+            // 
+            // pictureEdit10
+            // 
+            this.pictureEdit10.EditValue = ((object)(resources.GetObject("pictureEdit10.EditValue")));
+            this.pictureEdit10.Location = new System.Drawing.Point(257, 14);
+            this.pictureEdit10.Name = "pictureEdit10";
+            this.pictureEdit10.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit10.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit10.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit10.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit10.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit10.TabIndex = 25;
             // 
             // pictureEdit13
             // 
@@ -626,9 +662,9 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             // TxtTotalPrice
             // 
-            this.TxtTotalPrice.Location = new System.Drawing.Point(126, 14);
+            this.TxtTotalPrice.Location = new System.Drawing.Point(125, 14);
             this.TxtTotalPrice.Name = "TxtTotalPrice";
-            this.TxtTotalPrice.Size = new System.Drawing.Size(355, 20);
+            this.TxtTotalPrice.Size = new System.Drawing.Size(127, 20);
             this.TxtTotalPrice.TabIndex = 5;
             // 
             // FrmReservationCard
@@ -694,6 +730,8 @@ namespace HotelManagementAutomation.Forms.Reservation
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
             this.groupControl7.ResumeLayout(false);
             this.groupControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRoomNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTotalPrice.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -748,5 +786,8 @@ namespace HotelManagementAutomation.Forms.Reservation
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.PictureEdit pictureEdit13;
         private DevExpress.XtraEditors.TextEdit TxtTotalPrice;
+        private DevExpress.XtraEditors.TextEdit TxtRoomNo;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit10;
     }
 }

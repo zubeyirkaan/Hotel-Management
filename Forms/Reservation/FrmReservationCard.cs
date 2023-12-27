@@ -89,11 +89,11 @@ namespace HotelManagementAutomation.Forms.Reservation
                 TxtPhone.Text = reservation.Phone;
                 lookUpEditStatus.EditValue = reservation.Status;
                 TxtStatement.Text = reservation.Statement;
-                TxtTotalPrice.Text = reservation.TotalPrice.ToString(); 
+                TxtTotalPrice.Text = reservation.TotalPrice.ToString();
                 lookUpEditPerson2.EditValue = reservation.Person1;
                 lookUpEditPerson3.EditValue = reservation.Person2;
                 lookUpEditPerson4.EditValue = reservation.Person3;
-
+                TxtRoomNo.Text = reservation.TblRoom.RoomNo;
             }
         }
 
@@ -151,6 +151,17 @@ namespace HotelManagementAutomation.Forms.Reservation
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
             var reservation = repo.Find(x => x.ReservationID == id);
+
+            Repository<TblRoom> repo2 = new Repository<TblRoom>();
+            if (lookUpEditStatus.Text == "Checked out")
+            {
+                var roomstatus = repo2.Find(x => x.RoomID == reservation.Room);
+                roomstatus.Status = 3;
+                repo2.TUpdate(roomstatus);
+            }
+            
+
+            
             reservation.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
             reservation.StartDate = DateTime.Parse(dateEditCheckIn.Text);
             reservation.LeaveDate = DateTime.Parse(dateEditCheckOut.Text);
@@ -185,6 +196,10 @@ namespace HotelManagementAutomation.Forms.Reservation
             }
             repo.TUpdate(reservation);
             XtraMessageBox.Show("Guest information has been successfully updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //room status change
+
+
         }
     }
 }
