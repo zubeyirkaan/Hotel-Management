@@ -112,3 +112,4 @@ C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManag
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Admin.FrmLogin.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Admin.SplashScreen1.resources
 C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.Admin.FrmAdminList.resources
+C:\Users\zubeyirkaan\source\repos\HotelManagementAutomation\obj\Debug\HotelManagementAutomation.Forms.CashRegister.FrmReceptionOperations.resources

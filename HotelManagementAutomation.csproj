@@ -193,6 +193,12 @@
     <Compile Include="Forms\Admin\SplashScreen1.Designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CashRegister\FrmReceptionOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CashRegister\FrmReceptionOperations.Designer.cs">
+      <DependentUpon>FrmReceptionOperations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Definitions\FrmCashRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CashRegister\FrmReceptionOperations.resx">
+      <DependentUpon>FrmReceptionOperations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Definitions\FrmCashRegister.resx">
       <DependentUpon>FrmCashRegister.cs</DependentUpon>

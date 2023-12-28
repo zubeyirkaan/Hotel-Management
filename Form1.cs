@@ -312,5 +312,12 @@ namespace HotelManagementAutomation
             Forms.Admin.FrmPasswordProcess fr = new Forms.Admin.FrmPasswordProcess();
             fr.Show();
         }
+
+        private void BtnReceptionOperations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.CashRegister.FrmReceptionOperations fr = new Forms.CashRegister.FrmReceptionOperations();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }
