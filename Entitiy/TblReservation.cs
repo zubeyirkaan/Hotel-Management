@@ -28,6 +28,7 @@ namespace HotelManagementAutomation.Entitiy
         public Nullable<int> Person2 { get; set; }
         public Nullable<int> Person3 { get; set; }
         public Nullable<decimal> TotalPrice { get; set; }
+        public Nullable<bool> ToTheCashResgiter { get; set; }
     
         public virtual TblGuest TblGuest { get; set; }
         public virtual TblRoom TblRoom { get; set; }

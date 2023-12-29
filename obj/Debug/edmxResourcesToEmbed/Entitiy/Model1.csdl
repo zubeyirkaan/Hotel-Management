@@ -603,6 +603,7 @@
     <Property Name="Person2" Type="Int32" />
     <Property Name="Person3" Type="Int32" />
     <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ToTheCashResgiter" Type="Boolean" />
   </EntityType>
   <Association Name="FK_TblReservation_TblGuest">
     <End Type="DbHotelModel.TblGuest" Role="TblGuest" Multiplicity="0..1" />

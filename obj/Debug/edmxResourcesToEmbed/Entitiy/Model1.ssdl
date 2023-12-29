@@ -224,6 +224,7 @@
     <Property Name="Statement" Type="nvarchar" MaxLength="500" />
     <Property Name="Status" Type="int" />
     <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ToTheCashResgiter" Type="bit" />
   </EntityType>
   <EntityType Name="TblRoom">
     <Key>

@@ -158,6 +158,8 @@ namespace HotelManagementAutomation.Forms.Reservation
                 var roomstatus = repo2.Find(x => x.RoomID == reservation.Room);
                 roomstatus.Status = 3;
                 repo2.TUpdate(roomstatus);
+                reservation.ToTheCashResgiter = true;
+                repo.TUpdate(reservation);
             }
             
 
