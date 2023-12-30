@@ -29,7 +29,9 @@ namespace HotelManagementAutomation.Forms.Product
                                            x.TblProduct.ProductName,
                                            x.Amount,
                                            x.Date,
-                                           x.ProcessType
+                                           x.ProcessType,
+                                           x.UnitPrice,
+                                           x.TotalPrice
                                        }).Where(y => y.ProcessType == "Reduction").ToList();
         }
 

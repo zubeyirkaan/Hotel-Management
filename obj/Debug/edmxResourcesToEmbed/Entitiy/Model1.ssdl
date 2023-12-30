@@ -55,6 +55,24 @@
     <Property Name="Expense" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Status" Type="int" />
   </EntityType>
+  <EntityType Name="TblCashRegisterOperations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Guest" Type="nvarchar" MaxLength="50" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TblCashRegisterOut">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
   <EntityType Name="TblContact">
     <Key>
       <PropertyRef Name="ID" />
@@ -205,6 +223,8 @@
     <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Date" Type="date" />
     <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
   </EntityType>
   <EntityType Name="TblReservation">
     <Key>
@@ -558,6 +578,8 @@
     <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCashRegisterOperations" EntityType="Self.TblCashRegisterOperations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblCashRegisterOut" EntityType="Self.TblCashRegisterOut" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />

@@ -82,6 +82,8 @@ namespace HotelManagementAutomation
             this.BtnReceptionOperations = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtncashRegisterOutcome = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnCashRegisterOutcomeProcess = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -169,9 +171,11 @@ namespace HotelManagementAutomation
             this.barButtonItem1,
             this.BtnReceptionOperations,
             this.barButtonItem5,
-            this.barButtonItem6});
+            this.barButtonItem6,
+            this.BtncashRegisterOutcome,
+            this.BtnCashRegisterOutcomeProcess});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 52;
+            this.ribbonControl1.MaxItemId = 54;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -605,6 +609,7 @@ namespace HotelManagementAutomation
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // BtnReceptionOperations
             // 
@@ -630,6 +635,24 @@ namespace HotelManagementAutomation
             this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
             this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
             this.barButtonItem6.Name = "barButtonItem6";
+            // 
+            // BtncashRegisterOutcome
+            // 
+            this.BtncashRegisterOutcome.Caption = "Cash Register Outcome";
+            this.BtncashRegisterOutcome.Id = 52;
+            this.BtncashRegisterOutcome.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtncashRegisterOutcome.ImageOptions.Image")));
+            this.BtncashRegisterOutcome.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtncashRegisterOutcome.ImageOptions.LargeImage")));
+            this.BtncashRegisterOutcome.Name = "BtncashRegisterOutcome";
+            this.BtncashRegisterOutcome.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtncashRegisterOutcome_ItemClick);
+            // 
+            // BtnCashRegisterOutcomeProcess
+            // 
+            this.BtnCashRegisterOutcomeProcess.Caption = "Cash Register Outcome Process";
+            this.BtnCashRegisterOutcomeProcess.Id = 53;
+            this.BtnCashRegisterOutcomeProcess.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCashRegisterOutcomeProcess.ImageOptions.Image")));
+            this.BtnCashRegisterOutcomeProcess.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCashRegisterOutcomeProcess.ImageOptions.LargeImage")));
+            this.BtnCashRegisterOutcomeProcess.Name = "BtnCashRegisterOutcomeProcess";
+            this.BtnCashRegisterOutcomeProcess.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCashRegisterOutcomeProcess_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -772,6 +795,8 @@ namespace HotelManagementAutomation
             this.ribbonPageGroup17.ItemLinks.Add(this.BtnReceptionOperations);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup17.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup17.ItemLinks.Add(this.BtncashRegisterOutcome);
+            this.ribbonPageGroup17.ItemLinks.Add(this.BtnCashRegisterOutcomeProcess);
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             // 
             // ribbonPage9
@@ -931,6 +956,8 @@ namespace HotelManagementAutomation
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
+        private DevExpress.XtraBars.BarButtonItem BtncashRegisterOutcome;
+        private DevExpress.XtraBars.BarButtonItem BtnCashRegisterOutcomeProcess;
     }
 }
 

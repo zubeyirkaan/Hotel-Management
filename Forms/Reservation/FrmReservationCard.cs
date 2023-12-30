@@ -160,6 +160,16 @@ namespace HotelManagementAutomation.Forms.Reservation
                 repo2.TUpdate(roomstatus);
                 reservation.ToTheCashResgiter = true;
                 repo.TUpdate(reservation);
+
+                //to the cash register
+                TblCashRegisterOperations tcash = new TblCashRegisterOperations();
+                Repository<TblCashRegisterOperations> repocash = new Repository<TblCashRegisterOperations>();
+
+                tcash.Guest = lookUpEditGuest.Text;
+                tcash.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+                tcash.Price = decimal.Parse(TxtTotalPrice.Text);
+                repocash.TAdd(tcash);
+
             }
             
 

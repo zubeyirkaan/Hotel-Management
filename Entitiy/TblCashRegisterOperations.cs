@@ -12,17 +12,11 @@ namespace HotelManagementAutomation.Entitiy
     using System;
     using System.Collections.Generic;
     
-    public partial class TblProductProcess
+    public partial class TblCashRegisterOperations
     {
-        public int ProcessID { get; set; }
-        public Nullable<int> Product { get; set; }
-        public string ProcessType { get; set; }
-        public Nullable<decimal> Amount { get; set; }
+        public int ID { get; set; }
+        public string Guest { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
-        public string Statement { get; set; }
-        public Nullable<decimal> UnitPrice { get; set; }
-        public Nullable<decimal> TotalPrice { get; set; }
-    
-        public virtual TblProduct TblProduct { get; set; }
+        public Nullable<decimal> Price { get; set; }
     }
 }

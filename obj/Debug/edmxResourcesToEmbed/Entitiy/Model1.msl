@@ -188,6 +188,8 @@
     <EntitySetMapping Name="TblProductProcess">
       <EntityTypeMapping TypeName="DbHotelModel.TblProductProcess">
         <MappingFragment StoreEntitySet="TblProductProcess">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
           <ScalarProperty Name="Statement" ColumnName="Statement" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Amount" ColumnName="Amount" />
@@ -304,6 +306,26 @@
           <ScalarProperty Name="Role" ColumnName="Role" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCashRegisterOperations">
+      <EntityTypeMapping TypeName="DbHotelModel.TblCashRegisterOperations">
+        <MappingFragment StoreEntitySet="TblCashRegisterOperations">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Guest" ColumnName="Guest" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCashRegisterOut">
+      <EntityTypeMapping TypeName="DbHotelModel.TblCashRegisterOut">
+        <MappingFragment StoreEntitySet="TblCashRegisterOut">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Statement" ColumnName="Statement" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

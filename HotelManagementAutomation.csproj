@@ -106,6 +106,12 @@
     <Compile Include="Entitiy\TblCashRegister.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entitiy\TblCashRegisterOperations.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitiy\TblCashRegisterOut.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entitiy\TblContact.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -192,6 +198,12 @@
     </Compile>
     <Compile Include="Forms\Admin\SplashScreen1.Designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CashRegister\FrmCashregisterOutcomeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CashRegister\FrmCashregisterOutcomeList.Designer.cs">
+      <DependentUpon>FrmCashregisterOutcomeList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CashRegister\FrmReceptionOperations.cs">
       <SubType>Form</SubType>
@@ -288,6 +300,12 @@
     </Compile>
     <Compile Include="Forms\Main\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CashRegister\FrmCashRegisterOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CashRegister\FrmCashRegisterOut.Designer.cs">
+      <DependentUpon>FrmCashRegisterOut.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Product\FrmProcessDefinitions.cs">
       <SubType>Form</SubType>
@@ -457,6 +475,9 @@
     <EmbeddedResource Include="Forms\Admin\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CashRegister\FrmCashregisterOutcomeList.resx">
+      <DependentUpon>FrmCashregisterOutcomeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CashRegister\FrmReceptionOperations.resx">
       <DependentUpon>FrmReceptionOperations.cs</DependentUpon>
     </EmbeddedResource>
@@ -504,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CashRegister\FrmCashRegisterOut.resx">
+      <DependentUpon>FrmCashRegisterOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProcessDefinitions.resx">
       <DependentUpon>FrmProcessDefinitions.cs</DependentUpon>

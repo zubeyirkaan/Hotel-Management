@@ -11,21 +11,21 @@ using System.Windows.Forms;
 
 namespace HotelManagementAutomation.Forms.CashRegister
 {
-    public partial class FrmReceptionOperations : Form
+    public partial class FrmCashregisterOutcomeList : Form
     {
-        public FrmReceptionOperations()
+        public FrmCashregisterOutcomeList()
         {
             InitializeComponent();
         }
 
         DbHotelEntities db = new DbHotelEntities();
 
-        private void FrmReceptionOperations_Load(object sender, EventArgs e)
+        private void FrmCashregisterOutcomeList_Load(object sender, EventArgs e)
         {
-            gridControl1.DataSource = (from x in db.TblCashRegisterOperations
+            gridControl1.DataSource = (from x in db.TblCashRegisterOut
                                        select new
                                        {
-                                           x.Guest,
+                                           x.Statement,
                                            x.Date,
                                            x.Price
                                        }).ToList();

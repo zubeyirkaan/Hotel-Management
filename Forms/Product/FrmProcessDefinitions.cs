@@ -24,6 +24,7 @@ namespace HotelManagementAutomation.Forms.Product
         public int id;
 
         Repository<TblProductProcess> repo = new Repository<TblProductProcess>();
+        Repository<TblProduct> repoproduct = new Repository<TblProduct>();
         TblProductProcess t = new TblProductProcess();
 
         private void FrmProcessDefinitions_Load(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace HotelManagementAutomation.Forms.Product
             {
                 XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            
+
         }
 
         private void idValue()
@@ -71,6 +72,20 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            decimal selectedProductPrice = 0;
+
+            if (lookUpEditProduct.EditValue != null)
+            {
+                int selectedProductId = Convert.ToInt32(lookUpEditProduct.EditValue);
+                var selectedProduct = repoproduct.Find(x => x.ProductID == selectedProductId);
+                selectedProductPrice = Convert.ToDecimal(selectedProduct.Price);
+            }
+            else
+            {
+                MessageBox.Show("Product cannot be empty!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
             try
             {
                 t.Product = int.Parse(lookUpEditProduct.EditValue.ToString());
@@ -78,6 +93,8 @@ namespace HotelManagementAutomation.Forms.Product
                 t.ProcessType = comboBox1.Text;
                 t.Amount = decimal.Parse(TxtAmount.Text);
                 t.Statement = TxtStatement.Text;
+                t.UnitPrice = selectedProductPrice;
+                t.TotalPrice = decimal.Parse(TxtAmount.Text) * selectedProductPrice;
                 repo.TAdd(t);
                 XtraMessageBox.Show("Process type added to the system.");
             }
@@ -85,11 +102,24 @@ namespace HotelManagementAutomation.Forms.Product
             {
                 XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            
+
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            decimal selectedProductPrice = 0;
+
+            if (lookUpEditProduct.EditValue != null)
+            {
+                int selectedProductId = Convert.ToInt32(lookUpEditProduct.EditValue);
+                var selectedProduct = repoproduct.Find(x => x.ProductID == selectedProductId);
+                selectedProductPrice = Convert.ToDecimal(selectedProduct.Price);
+            }
+            else
+            {
+                MessageBox.Show("Product cannot be empty!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             try
             {
                 var product = repo.Find(x => x.ProcessID == id);
@@ -98,6 +128,8 @@ namespace HotelManagementAutomation.Forms.Product
                 product.ProcessType = comboBox1.Text;
                 product.Amount = decimal.Parse(TxtAmount.Text);
                 product.Statement = TxtStatement.Text;
+                product.UnitPrice = selectedProductPrice;
+                product.TotalPrice = decimal.Parse(TxtAmount.Text) * selectedProductPrice;
                 repo.TUpdate(product);
                 XtraMessageBox.Show("Product type has been successfully updated");
             }
@@ -105,7 +137,7 @@ namespace HotelManagementAutomation.Forms.Product
             {
                 XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            
+
         }
     }
 }

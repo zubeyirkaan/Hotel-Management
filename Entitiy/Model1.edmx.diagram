@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2066e07d83d14fdc8eefd094837487ba" Name="Diagram1" ZoomLevel="48">
+      <Diagram DiagramId="2066e07d83d14fdc8eefd094837487ba" Name="Diagram1" ZoomLevel="108">
         <EntityTypeShape EntityType="DbHotelModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblCashRegister" Width="1.5" PointX="5.375" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DbHotelModel.TblCountry" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
@@ -53,6 +53,8 @@
         <EntityTypeShape EntityType="DbHotelModel.TblContact" Width="1.5" PointX="12.75" PointY="11.75" />
         <EntityTypeShape EntityType="DbHotelModel.TblMessage" Width="1.5" PointX="2.75" PointY="14.75" />
         <EntityTypeShape EntityType="DbHotelModel.TblAdmin" Width="1.5" PointX="10.375" PointY="15.375" />
+        <EntityTypeShape EntityType="DbHotelModel.TblCashRegisterOperations" Width="1.5" PointX="12.375" PointY="15" />
+        <EntityTypeShape EntityType="DbHotelModel.TblCashRegisterOut" Width="1.5" PointX="14.375" PointY="14.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

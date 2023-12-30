@@ -490,6 +490,8 @@
     <EntitySet Name="TblMessage" EntityType="DbHotelModel.TblMessage" />
     <FunctionImport Name="RoomStatus" ReturnType="Collection(DbHotelModel.RoomStatus_Result)" />
     <EntitySet Name="TblAdmin" EntityType="DbHotelModel.TblAdmin" />
+    <EntitySet Name="TblCashRegisterOperations" EntityType="DbHotelModel.TblCashRegisterOperations" />
+    <EntitySet Name="TblCashRegisterOut" EntityType="DbHotelModel.TblCashRegisterOut" />
   </EntityContainer>
   <EntityType Name="ilceler">
     <Key>
@@ -569,6 +571,8 @@
     <Property Name="Date" Type="DateTime" Precision="0" />
     <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TblProduct" Relationship="DbHotelModel.FK_TblProductProcess_TblProduct" FromRole="TblProductProcess" ToRole="TblProduct" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
   </EntityType>
   <Association Name="FK_TblProductProcess_TblProduct">
     <End Type="DbHotelModel.TblProduct" Role="TblProduct" Multiplicity="0..1" />
@@ -719,5 +723,23 @@
     <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Role" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TblCashRegisterOperations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Guest" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TblCashRegisterOut">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Statement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
   </EntityType>
 </Schema>

@@ -319,5 +319,24 @@ namespace HotelManagementAutomation
             fr.MdiParent = this;
             fr.Show();
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Definitions.FrmCashRegister fr = new Forms.Definitions.FrmCashRegister();
+            fr.Show();
+        }
+
+        private void BtncashRegisterOutcome_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.Product.FrmCashRegisterOut fr = new Forms.Product.FrmCashRegisterOut();
+            fr.Show();
+        }
+
+        private void BtnCashRegisterOutcomeProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.CashRegister.FrmCashregisterOutcomeList fr = new Forms.CashRegister.FrmCashregisterOutcomeList();
+            fr.MdiParent = this;
+            fr.Show();
+        }
     }
 }

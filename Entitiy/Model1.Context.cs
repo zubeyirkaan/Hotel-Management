@@ -52,6 +52,8 @@ namespace HotelManagementAutomation.Entitiy
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblMessage> TblMessage { get; set; }
         public virtual DbSet<TblAdmin> TblAdmin { get; set; }
+        public virtual DbSet<TblCashRegisterOperations> TblCashRegisterOperations { get; set; }
+        public virtual DbSet<TblCashRegisterOut> TblCashRegisterOut { get; set; }
     
         public virtual ObjectResult<RoomStatus_Result> RoomStatus()
         {

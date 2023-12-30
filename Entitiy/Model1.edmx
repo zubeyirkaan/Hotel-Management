@@ -60,6 +60,24 @@
           <Property Name="Expense" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Status" Type="int" />
         </EntityType>
+        <EntityType Name="TblCashRegisterOperations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Guest" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="TblCashRegisterOut">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Statement" Type="nvarchar" MaxLength="250" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
         <EntityType Name="TblContact">
           <Key>
             <PropertyRef Name="ID" />
@@ -210,6 +228,8 @@
           <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Date" Type="date" />
           <Property Name="Statement" Type="nvarchar" MaxLength="1000" />
+          <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TblReservation">
           <Key>
@@ -563,6 +583,8 @@
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCashRegister" EntityType="Self.TblCashRegister" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblCashRegisterOperations" EntityType="Self.TblCashRegisterOperations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblCashRegisterOut" EntityType="Self.TblCashRegisterOut" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCountry" EntityType="Self.TblCountry" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />
@@ -1169,6 +1191,8 @@
           <EntitySet Name="TblMessage" EntityType="DbHotelModel.TblMessage" />
           <FunctionImport Name="RoomStatus" ReturnType="Collection(DbHotelModel.RoomStatus_Result)" />
           <EntitySet Name="TblAdmin" EntityType="DbHotelModel.TblAdmin" />
+          <EntitySet Name="TblCashRegisterOperations" EntityType="DbHotelModel.TblCashRegisterOperations" />
+          <EntitySet Name="TblCashRegisterOut" EntityType="DbHotelModel.TblCashRegisterOut" />
         </EntityContainer>
         <EntityType Name="ilceler">
           <Key>
@@ -1248,6 +1272,8 @@
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Statement" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TblProduct" Relationship="DbHotelModel.FK_TblProductProcess_TblProduct" FromRole="TblProductProcess" ToRole="TblProduct" />
+          <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <Association Name="FK_TblProductProcess_TblProduct">
           <End Type="DbHotelModel.TblProduct" Role="TblProduct" Multiplicity="0..1" />
@@ -1398,6 +1424,24 @@
           <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Role" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TblCashRegisterOperations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Guest" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="TblCashRegisterOut">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Statement" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1592,6 +1636,8 @@
           <EntitySetMapping Name="TblProductProcess">
             <EntityTypeMapping TypeName="DbHotelModel.TblProductProcess">
               <MappingFragment StoreEntitySet="TblProductProcess">
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
                 <ScalarProperty Name="Statement" ColumnName="Statement" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
@@ -1708,6 +1754,26 @@
                 <ScalarProperty Name="Role" ColumnName="Role" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCashRegisterOperations">
+            <EntityTypeMapping TypeName="DbHotelModel.TblCashRegisterOperations">
+              <MappingFragment StoreEntitySet="TblCashRegisterOperations">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Guest" ColumnName="Guest" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblCashRegisterOut">
+            <EntityTypeMapping TypeName="DbHotelModel.TblCashRegisterOut">
+              <MappingFragment StoreEntitySet="TblCashRegisterOut">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Statement" ColumnName="Statement" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

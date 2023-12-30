@@ -356,6 +356,8 @@ namespace HotelManagementAutomation.Forms.Product
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmProcessDefinitions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Product Process";
