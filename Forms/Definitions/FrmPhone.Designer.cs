@@ -143,6 +143,8 @@ namespace HotelManagementAutomation.Forms.Definitions
             this.ClientSize = new System.Drawing.Size(494, 421);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.gridControl2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phone Definitions";

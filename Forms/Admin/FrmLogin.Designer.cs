@@ -29,145 +29,96 @@ namespace HotelManagementAutomation.Forms.Admin
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::HotelManagementAutomation.Forms.Admin.SplashScreen1), true, true);
-            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.TxtUsername = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.TxtPassword = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.BtnLogin = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
-            this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupControl4
+            // splashScreenManager1
             // 
-            this.groupControl4.Controls.Add(this.pictureEdit1);
-            this.groupControl4.Controls.Add(this.TxtUsername);
-            this.groupControl4.Controls.Add(this.labelControl1);
-            this.groupControl4.Controls.Add(this.TxtPassword);
-            this.groupControl4.Controls.Add(this.pictureEdit9);
-            this.groupControl4.Controls.Add(this.labelControl9);
-            this.groupControl4.Location = new System.Drawing.Point(5, 4);
-            this.groupControl4.Name = "groupControl4";
-            this.groupControl4.ShowCaption = false;
-            this.groupControl4.Size = new System.Drawing.Size(372, 85);
-            this.groupControl4.TabIndex = 30;
-            this.groupControl4.Text = "groupControl4";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(5, 50);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit1.TabIndex = 25;
+            splashScreenManager1.ClosingDelay = 500;
             // 
             // TxtUsername
             // 
-            this.TxtUsername.Location = new System.Drawing.Point(108, 17);
+            this.TxtUsername.Location = new System.Drawing.Point(316, 210);
             this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.Size = new System.Drawing.Size(258, 20);
+            this.TxtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtUsername.Properties.Appearance.Options.UseFont = true;
+            this.TxtUsername.Size = new System.Drawing.Size(138, 26);
             this.TxtUsername.TabIndex = 22;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(26, 55);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(230, 248);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(46, 13);
+            this.labelControl1.Size = new System.Drawing.Size(67, 19);
             this.labelControl1.TabIndex = 26;
             this.labelControl1.Text = "Password";
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Location = new System.Drawing.Point(108, 52);
+            this.TxtPassword.Location = new System.Drawing.Point(316, 245);
             this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtPassword.Properties.Appearance.Options.UseFont = true;
             this.TxtPassword.Properties.UseSystemPasswordChar = true;
-            this.TxtPassword.Size = new System.Drawing.Size(258, 20);
+            this.TxtPassword.Size = new System.Drawing.Size(138, 26);
             this.TxtPassword.TabIndex = 22;
-            // 
-            // pictureEdit9
-            // 
-            this.pictureEdit9.EditValue = ((object)(resources.GetObject("pictureEdit9.EditValue")));
-            this.pictureEdit9.Location = new System.Drawing.Point(6, 13);
-            this.pictureEdit9.Name = "pictureEdit9";
-            this.pictureEdit9.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit9.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit9.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit9.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit9.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit9.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit9.TabIndex = 23;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(26, 20);
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(230, 213);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(48, 13);
+            this.labelControl9.Size = new System.Drawing.Size(71, 19);
             this.labelControl9.TabIndex = 24;
             this.labelControl9.Text = "Username";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.BtnCancel);
-            this.groupControl2.Controls.Add(this.BtnLogin);
-            this.groupControl2.Location = new System.Drawing.Point(5, 95);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.ShowCaption = false;
-            this.groupControl2.Size = new System.Drawing.Size(372, 50);
-            this.groupControl2.TabIndex = 31;
-            this.groupControl2.Text = "groupControl2";
             // 
             // BtnCancel
             // 
             this.BtnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(26, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(328, 284);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(123, 39);
+            this.BtnCancel.Size = new System.Drawing.Size(37, 39);
             this.BtnCancel.TabIndex = 1;
-            this.BtnCancel.Text = "Cancel";
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnLogin
             // 
             this.BtnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnLogin.ImageOptions.Image")));
-            this.BtnLogin.Location = new System.Drawing.Point(225, 6);
+            this.BtnLogin.Location = new System.Drawing.Point(404, 284);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(123, 39);
+            this.BtnLogin.Size = new System.Drawing.Size(37, 39);
             this.BtnLogin.TabIndex = 0;
-            this.BtnLogin.Text = "Login";
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 500;
             // 
             // FrmLogin
             // 
             this.AcceptButton = this.BtnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 150);
-            this.Controls.Add(this.groupControl4);
-            this.Controls.Add(this.groupControl2);
+            this.BackgroundImage = global::HotelManagementAutomation.Properties.Resources.logiiiiin1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(700, 435);
+            this.Controls.Add(this.BtnCancel);
+            this.Controls.Add(this.BtnLogin);
+            this.Controls.Add(this.TxtUsername);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.TxtPassword);
+            this.Controls.Add(this.labelControl9);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -175,29 +126,18 @@ namespace HotelManagementAutomation.Forms.Admin
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
-            this.groupControl4.ResumeLayout(false);
-            this.groupControl4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.TextEdit TxtUsername;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit TxtPassword;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit9;
         private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
         private DevExpress.XtraEditors.SimpleButton BtnLogin;
     }

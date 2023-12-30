@@ -31,8 +31,11 @@ namespace HotelManagementAutomation.Forms.Website
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMessageCard));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtDate = new DevExpress.XtraEditors.TextEdit();
             this.TxtSenderEmail = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.TxtSubject = new DevExpress.XtraEditors.TextEdit();
@@ -46,14 +49,13 @@ namespace HotelManagementAutomation.Forms.Website
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSend = new DevExpress.XtraEditors.SimpleButton();
-            this.TxtDate = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSenderEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
@@ -67,8 +69,6 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -86,12 +86,27 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl1.TabIndex = 32;
             this.groupControl1.Text = "groupControl1";
             // 
+            // TxtDate
+            // 
+            this.TxtDate.Location = new System.Drawing.Point(354, 11);
+            this.TxtDate.Name = "TxtDate";
+            this.TxtDate.Size = new System.Drawing.Size(115, 20);
+            this.TxtDate.TabIndex = 33;
+            // 
             // TxtSenderEmail
             // 
             this.TxtSenderEmail.Location = new System.Drawing.Point(126, 11);
             this.TxtSenderEmail.Name = "TxtSenderEmail";
             this.TxtSenderEmail.Size = new System.Drawing.Size(114, 20);
             this.TxtSenderEmail.TabIndex = 30;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(294, 14);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(23, 13);
+            this.labelControl2.TabIndex = 32;
+            this.labelControl2.Text = "Date";
             // 
             // labelControl1
             // 
@@ -100,6 +115,19 @@ namespace HotelManagementAutomation.Forms.Website
             this.labelControl1.Size = new System.Drawing.Size(61, 13);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Sender Email";
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
+            this.pictureEdit2.Location = new System.Drawing.Point(268, 11);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit2.TabIndex = 31;
             // 
             // pictureEdit1
             // 
@@ -236,6 +264,16 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl4.TabIndex = 38;
             this.groupControl4.Text = "groupControl4";
             // 
+            // BtnSend
+            // 
+            this.BtnSend.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSend.ImageOptions.Image")));
+            this.BtnSend.Location = new System.Drawing.Point(225, 5);
+            this.BtnSend.Name = "BtnSend";
+            this.BtnSend.Size = new System.Drawing.Size(123, 39);
+            this.BtnSend.TabIndex = 3;
+            this.BtnSend.Text = "Send";
+            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
+            // 
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
@@ -246,44 +284,6 @@ namespace HotelManagementAutomation.Forms.Website
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // BtnSend
-            // 
-            this.BtnSend.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
-            this.BtnSend.Location = new System.Drawing.Point(225, 5);
-            this.BtnSend.Name = "BtnSend";
-            this.BtnSend.Size = new System.Drawing.Size(123, 39);
-            this.BtnSend.TabIndex = 3;
-            this.BtnSend.Text = "Send";
-            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
-            // 
-            // TxtDate
-            // 
-            this.TxtDate.Location = new System.Drawing.Point(354, 11);
-            this.TxtDate.Name = "TxtDate";
-            this.TxtDate.Size = new System.Drawing.Size(115, 20);
-            this.TxtDate.TabIndex = 33;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(294, 14);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(23, 13);
-            this.labelControl2.TabIndex = 32;
-            this.labelControl2.Text = "Date";
-            // 
-            // pictureEdit2
-            // 
-            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(268, 11);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit2.TabIndex = 31;
-            // 
             // FrmMessageCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +293,8 @@ namespace HotelManagementAutomation.Forms.Website
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMessageCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message Card";
@@ -300,7 +302,9 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtSenderEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -316,8 +320,6 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
