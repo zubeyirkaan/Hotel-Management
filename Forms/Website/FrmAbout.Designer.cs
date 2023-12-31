@@ -271,7 +271,9 @@ namespace HotelManagementAutomation.Forms.Website
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(967, 317);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(967, 317);
             this.Name = "FrmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About Page";

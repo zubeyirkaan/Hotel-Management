@@ -70,22 +70,46 @@ namespace HotelManagementAutomation.Forms.Staff
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            TblStaff t = new TblStaff();
-            t.NameSurname = TxtNameSurname.Text;
-            t.TC = TxtTC.Text;
-            t.Address = TxtAddres.Text;
-            t.Phone = TxtPhone.Text;
-            t.StartDateOfWork = DateTime.Parse(DateEditStartDate.Text);
-            t.Department = int.Parse(lookUpEditDepartment.EditValue.ToString());
-            t.Mission = int.Parse(lookUpEditMission.EditValue.ToString());
-            t.Statement = TxtStatement.Text;
-            t.Mail = TxtEmail.Text;
-            t.IDFront = pictureEditIDFront.GetLoadedImageLocation();
-            t.IDBack = pictureEditIDBack.GetLoadedImageLocation();
-            t.Password = TxtPassword.Text;
-            t.Status = 1;
-            repo.TAdd(t);
-            XtraMessageBox.Show("Staff successfully added to the system");
+            try
+            {
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(TxtNameSurname.Text) ||
+                    string.IsNullOrWhiteSpace(TxtTC.Text) ||
+                    string.IsNullOrWhiteSpace(TxtAddres.Text) ||
+                    string.IsNullOrWhiteSpace(TxtPhone.Text) ||
+                    string.IsNullOrWhiteSpace(DateEditStartDate.Text) ||
+                    lookUpEditDepartment.EditValue == null ||
+                    lookUpEditMission.EditValue == null ||
+                    string.IsNullOrWhiteSpace(TxtEmail.Text) ||
+                    string.IsNullOrWhiteSpace(pictureEditIDFront.GetLoadedImageLocation()) ||
+                    string.IsNullOrWhiteSpace(pictureEditIDBack.GetLoadedImageLocation()))
+                {
+                    XtraMessageBox.Show("Please fill in all the required fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Stop further execution
+                }
+
+                TblStaff t = new TblStaff();
+                t.NameSurname = TxtNameSurname.Text;
+                t.TC = TxtTC.Text;
+                t.Address = TxtAddres.Text;
+                t.Phone = TxtPhone.Text;
+                t.StartDateOfWork = DateTime.Parse(DateEditStartDate.Text);
+                t.Department = int.Parse(lookUpEditDepartment.EditValue.ToString());
+                t.Mission = int.Parse(lookUpEditMission.EditValue.ToString());
+                t.Statement = TxtStatement.Text;
+                t.Mail = TxtEmail.Text;
+                t.IDFront = pictureEditIDFront.GetLoadedImageLocation();
+                t.IDBack = pictureEditIDBack.GetLoadedImageLocation();
+                t.Password = TxtPassword.Text;
+                t.Status = 1;
+
+                repo.TAdd(t);
+                XtraMessageBox.Show("Staff successfully added to the system", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)

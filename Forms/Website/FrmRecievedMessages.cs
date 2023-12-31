@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Website
 
         private void FrmRecievedMessages_Load(object sender, EventArgs e)
         {
+            revievedMessageList();
+        }
+
+        private void revievedMessageList()
+        {
             gridControl1.DataSource = (from x in db.TblMessage2
                                        select new
                                        {
@@ -30,14 +35,15 @@ namespace HotelManagementAutomation.Forms.Website
                                            x.Subject,
                                            x.Date,
                                            x.Reciever
-                                       }).Where(y=>y.Reciever=="Admin").ToList();
+                                       }).Where(y => y.Reciever == "Admin").ToList();
         }
 
         private void gridView1_DoubleClick(object sender, EventArgs e)
         {
             FrmMessageCard fr = new FrmMessageCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("MessageID").ToString());
-            fr.Show();
+            fr.ShowDialog();
+            revievedMessageList();
         }
     }
 }

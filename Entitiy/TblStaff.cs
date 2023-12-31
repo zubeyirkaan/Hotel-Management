@@ -29,7 +29,6 @@ namespace HotelManagementAutomation.Entitiy
         public string IDFront { get; set; }
         public string IDBack { get; set; }
         public string Password { get; set; }
-        public string Authority { get; set; }
     
         public virtual TblDepartment TblDepartment { get; set; }
         public virtual TblMission TblMission { get; set; }

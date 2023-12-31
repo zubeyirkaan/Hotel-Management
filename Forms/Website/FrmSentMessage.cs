@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Website
 
         private void FrmSentMessage_Load(object sender, EventArgs e)
         {
+            sentMessagesList();
+        }
+
+        private void sentMessagesList()
+        {
             gridControl1.DataSource = (from x in db.TblMessage2
                                        select new
                                        {
@@ -37,7 +42,8 @@ namespace HotelManagementAutomation.Forms.Website
         {
             FrmMessageCard fr = new FrmMessageCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("MessageID").ToString());
-            fr.Show();
+            fr.ShowDialog();
+            sentMessagesList();
         }
     }
 }

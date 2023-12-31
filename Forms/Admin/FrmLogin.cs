@@ -24,6 +24,14 @@ namespace HotelManagementAutomation.Forms.Admin
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            // Check if the username or password fields are empty
+            if (string.IsNullOrWhiteSpace(TxtUsername.Text) || string.IsNullOrWhiteSpace(TxtPassword.Text))
+            {
+                XtraMessageBox.Show("Please fill in both the username and password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop further execution
+            }
+
+            // Existing login logic
             var user = db.TblAdmin.Where(x => x.Username == TxtUsername.Text && x.Password == TxtPassword.Text).FirstOrDefault();
             if (user != null)
             {
@@ -34,7 +42,7 @@ namespace HotelManagementAutomation.Forms.Admin
             }
             else
             {
-                XtraMessageBox.Show("Username or password is incorrect!","Warning",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                XtraMessageBox.Show("Username or password is incorrect!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 

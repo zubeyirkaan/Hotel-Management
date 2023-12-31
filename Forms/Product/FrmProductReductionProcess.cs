@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void FrmProductReductionProcess_Load(object sender, EventArgs e)
         {
+            loadReductionList();
+        }
+
+        private void loadReductionList()
+        {
             gridControl1.DataSource = (from x in db.TblProductProcess
                                        select new
                                        {
@@ -39,7 +44,8 @@ namespace HotelManagementAutomation.Forms.Product
         {
             FrmProcessDefinitions fr = new FrmProcessDefinitions();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ProcessID").ToString());
-            fr.Show();
+            fr.ShowDialog();
+            loadReductionList();
         }
     }
 }

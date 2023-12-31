@@ -31,6 +31,17 @@ namespace HotelManagementAutomation.Forms.Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPasswordProcess));
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnList = new DevExpress.XtraEditors.SimpleButton();
+            this.TxtRole = new DevExpress.XtraEditors.TextEdit();
+            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.TxtNewPasswordAgain = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.TxtNewPassword = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
@@ -40,32 +51,23 @@ namespace HotelManagementAutomation.Forms.Admin
             this.TxtCurrentPassword = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
-            this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.TxtNewPasswordAgain = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.TxtRole = new DevExpress.XtraEditors.TextEdit();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.BtnList = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRole.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNewPasswordAgain.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNewPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCurrentPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNewPasswordAgain.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtRole.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl4
             // 
+            this.groupControl4.Controls.Add(this.labelControl5);
             this.groupControl4.Controls.Add(this.BtnCancel);
             this.groupControl4.Controls.Add(this.BtnUpdate);
             this.groupControl4.Controls.Add(this.BtnList);
@@ -88,9 +90,119 @@ namespace HotelManagementAutomation.Forms.Admin
             this.groupControl4.Location = new System.Drawing.Point(4, 4);
             this.groupControl4.Name = "groupControl4";
             this.groupControl4.ShowCaption = false;
-            this.groupControl4.Size = new System.Drawing.Size(612, 205);
+            this.groupControl4.Size = new System.Drawing.Size(612, 249);
             this.groupControl4.TabIndex = 2;
             this.groupControl4.Text = "groupControl4";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(51, 197);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(440, 38);
+            this.labelControl5.TabIndex = 34;
+            this.labelControl5.Text = "Info: If you are adding a new user, you do not need to \r\nenter the current passwo" +
+    "rd!";
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
+            this.BtnCancel.Location = new System.Drawing.Point(481, 150);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(123, 39);
+            this.BtnCancel.TabIndex = 1;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
+            this.BtnUpdate.Location = new System.Drawing.Point(481, 104);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
+            this.BtnUpdate.TabIndex = 2;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Visible = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // BtnList
+            // 
+            this.BtnList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnList.ImageOptions.Image")));
+            this.BtnList.Location = new System.Drawing.Point(481, 13);
+            this.BtnList.Name = "BtnList";
+            this.BtnList.Size = new System.Drawing.Size(123, 39);
+            this.BtnList.TabIndex = 3;
+            this.BtnList.Text = "List";
+            this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
+            // 
+            // TxtRole
+            // 
+            this.TxtRole.Location = new System.Drawing.Point(131, 163);
+            this.TxtRole.Name = "TxtRole";
+            this.TxtRole.Size = new System.Drawing.Size(333, 20);
+            this.TxtRole.TabIndex = 33;
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.Location = new System.Drawing.Point(481, 58);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(123, 39);
+            this.BtnSave.TabIndex = 0;
+            this.BtnSave.Text = "Save";
+            this.BtnSave.Visible = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // pictureEdit3
+            // 
+            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
+            this.pictureEdit3.Location = new System.Drawing.Point(6, 163);
+            this.pictureEdit3.Name = "pictureEdit3";
+            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit3.TabIndex = 31;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(27, 168);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(21, 13);
+            this.labelControl3.TabIndex = 32;
+            this.labelControl3.Text = "Role";
+            // 
+            // TxtNewPasswordAgain
+            // 
+            this.TxtNewPasswordAgain.Location = new System.Drawing.Point(131, 128);
+            this.TxtNewPasswordAgain.Name = "TxtNewPasswordAgain";
+            this.TxtNewPasswordAgain.Properties.UseSystemPasswordChar = true;
+            this.TxtNewPasswordAgain.Size = new System.Drawing.Size(333, 20);
+            this.TxtNewPasswordAgain.TabIndex = 30;
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
+            this.pictureEdit2.Location = new System.Drawing.Point(6, 128);
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Size = new System.Drawing.Size(20, 20);
+            this.pictureEdit2.TabIndex = 28;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(27, 133);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(100, 13);
+            this.labelControl2.TabIndex = 29;
+            this.labelControl2.Text = "New Password Again";
             // 
             // TxtNewPassword
             // 
@@ -178,111 +290,16 @@ namespace HotelManagementAutomation.Forms.Admin
             this.labelControl9.TabIndex = 24;
             this.labelControl9.Text = "Username";
             // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(481, 104);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
-            this.BtnUpdate.TabIndex = 2;
-            this.BtnUpdate.Text = "Update";
-            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
-            // BtnCancel
-            // 
-            this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(481, 150);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(123, 39);
-            this.BtnCancel.TabIndex = 1;
-            this.BtnCancel.Text = "Cancel";
-            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
-            // BtnSave
-            // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
-            this.BtnSave.Location = new System.Drawing.Point(481, 58);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(123, 39);
-            this.BtnSave.TabIndex = 0;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // TxtNewPasswordAgain
-            // 
-            this.TxtNewPasswordAgain.Location = new System.Drawing.Point(131, 128);
-            this.TxtNewPasswordAgain.Name = "TxtNewPasswordAgain";
-            this.TxtNewPasswordAgain.Properties.UseSystemPasswordChar = true;
-            this.TxtNewPasswordAgain.Size = new System.Drawing.Size(333, 20);
-            this.TxtNewPasswordAgain.TabIndex = 30;
-            // 
-            // pictureEdit2
-            // 
-            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(6, 128);
-            this.pictureEdit2.Name = "pictureEdit2";
-            this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit2.TabIndex = 28;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(27, 133);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(100, 13);
-            this.labelControl2.TabIndex = 29;
-            this.labelControl2.Text = "New Password Again";
-            // 
-            // TxtRole
-            // 
-            this.TxtRole.Location = new System.Drawing.Point(131, 163);
-            this.TxtRole.Name = "TxtRole";
-            this.TxtRole.Size = new System.Drawing.Size(333, 20);
-            this.TxtRole.TabIndex = 33;
-            // 
-            // pictureEdit3
-            // 
-            this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
-            this.pictureEdit3.Location = new System.Drawing.Point(6, 163);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(20, 20);
-            this.pictureEdit3.TabIndex = 31;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(27, 168);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(21, 13);
-            this.labelControl3.TabIndex = 32;
-            this.labelControl3.Text = "Role";
-            // 
-            // BtnList
-            // 
-            this.BtnList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.BtnList.Location = new System.Drawing.Point(481, 13);
-            this.BtnList.Name = "BtnList";
-            this.BtnList.Size = new System.Drawing.Size(123, 39);
-            this.BtnList.TabIndex = 3;
-            this.BtnList.Text = "List";
-            this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
-            // 
             // FrmPasswordProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 215);
+            this.ClientSize = new System.Drawing.Size(620, 257);
             this.Controls.Add(this.groupControl4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(636, 296);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(636, 296);
             this.Name = "FrmPasswordProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Password Process";
@@ -290,16 +307,16 @@ namespace HotelManagementAutomation.Forms.Admin
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtRole.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNewPasswordAgain.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtNewPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtCurrentPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNewPasswordAgain.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtRole.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,7 +324,6 @@ namespace HotelManagementAutomation.Forms.Admin
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private DevExpress.XtraEditors.TextEdit TxtUsername;
         private DevExpress.XtraEditors.PictureEdit pictureEdit9;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.TextEdit TxtCurrentPassword;
@@ -316,15 +332,17 @@ namespace HotelManagementAutomation.Forms.Admin
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
-        private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.TextEdit TxtNewPassword;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.TextEdit TxtNewPasswordAgain;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit TxtRole;
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.SimpleButton BtnList;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        public DevExpress.XtraEditors.SimpleButton BtnSave;
+        public DevExpress.XtraEditors.SimpleButton BtnUpdate;
+        public DevExpress.XtraEditors.SimpleButton BtnList;
+        public DevExpress.XtraEditors.TextEdit TxtRole;
+        public DevExpress.XtraEditors.TextEdit TxtUsername;
     }
 }

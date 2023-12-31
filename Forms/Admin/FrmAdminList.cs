@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Admin
 
         private void FrmAdminList_Load(object sender, EventArgs e)
         {
+            LoadAdminList();
+        }
+
+        private void LoadAdminList()
+        {
             gridControl1.DataSource = db.TblAdmin.ToList();
         }
 
@@ -29,7 +34,10 @@ namespace HotelManagementAutomation.Forms.Admin
         {
             FrmPasswordProcess fr = new FrmPasswordProcess();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            fr.Show();
+            fr.BtnUpdate.Visible = true;
+            fr.TxtUsername.ReadOnly = true;
+            fr.ShowDialog();
+            LoadAdminList();
         }
     }
 }

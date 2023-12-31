@@ -281,7 +281,6 @@
           <Property Name="IDFront" Type="nvarchar" MaxLength="250" />
           <Property Name="IDBack" Type="nvarchar" MaxLength="250" />
           <Property Name="Password" Type="nvarchar" MaxLength="20" />
-          <Property Name="Authority" Type="char" MaxLength="1" />
           <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="TblStatus">
@@ -861,7 +860,6 @@
           <Property Name="IDFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="IDBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         <EntityType Name="TblStatu">
           <Key>
@@ -1580,7 +1578,6 @@
           <EntitySetMapping Name="TblStaffs">
             <EntityTypeMapping TypeName="DbHotelModel.TblStaff">
               <MappingFragment StoreEntitySet="TblStaff">
-                <ScalarProperty Name="Authority" ColumnName="Authority" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IDBack" ColumnName="IDBack" />
                 <ScalarProperty Name="IDFront" ColumnName="IDFront" />

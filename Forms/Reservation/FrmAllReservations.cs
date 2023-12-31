@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Reservation
 
         private void FrmAllReservations_Load(object sender, EventArgs e)
         {
+            allReservationList();
+        }
+
+        private void allReservationList()
+        {
             gridControl1.DataSource = (from x in db.TblReservation
                                        select new
                                        {
@@ -41,7 +46,8 @@ namespace HotelManagementAutomation.Forms.Reservation
             FrmReservationCard fr = new FrmReservationCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ReservationID").ToString());
             fr.BtnUpdate.Visible = true;
-            fr.Show();
+            fr.ShowDialog();
+            allReservationList();
         }
     }
 }

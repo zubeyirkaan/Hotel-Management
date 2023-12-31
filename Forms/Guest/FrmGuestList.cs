@@ -23,6 +23,11 @@ namespace HotelManagementAutomation.Forms.Guest
 
         private void FrmGuestList_Load(object sender, EventArgs e)
         {
+            LoadGuestList();
+        }
+
+        private void LoadGuestList()
+        {
             gridControl1.DataSource = (from x in db.TblGuests
                                        select new
                                        {
@@ -42,7 +47,8 @@ namespace HotelManagementAutomation.Forms.Guest
             FrmGuest fr = new Forms.Guest.FrmGuest();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("GuestID").ToString());
             fr.BtnUpdate.Visible = true;
-            fr.Show();
+            fr.ShowDialog();
+            LoadGuestList();
         }
     }
 }

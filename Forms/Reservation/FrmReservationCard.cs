@@ -104,40 +104,47 @@ namespace HotelManagementAutomation.Forms.Reservation
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            TblReservation t = new TblReservation();
-            if (numericUpDown1.Value == 1)
+            try
             {
+                TblReservation t = new TblReservation();
+
+                // Validate if the lookUpEdit controls have values
+                if (lookUpEditGuest.EditValue == null ||
+                    lookUpEditRoom.EditValue == null ||
+                    lookUpEditStatus.EditValue == null ||
+                    string.IsNullOrWhiteSpace(dateEditCheckIn.Text) ||
+                    string.IsNullOrWhiteSpace(dateEditCheckOut.Text) ||
+                    string.IsNullOrWhiteSpace(TxtTotalPrice.Text))
+                {
+                    XtraMessageBox.Show("Please fill in all the required fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Your existing logic for setting values
                 t.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
+                if (numericUpDown1.Value >= 2 && lookUpEditPerson2.EditValue != null)
+                    t.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
+                if (numericUpDown1.Value >= 3 && lookUpEditPerson3.EditValue != null)
+                    t.Person2 = int.Parse(lookUpEditPerson3.EditValue.ToString());
+                if (numericUpDown1.Value == 4 && lookUpEditPerson4.EditValue != null)
+                    t.Person3 = int.Parse(lookUpEditPerson4.EditValue.ToString());
+
+                t.StartDate = DateTime.Parse(dateEditCheckIn.Text);
+                t.LeaveDate = DateTime.Parse(dateEditCheckOut.Text);
+                t.NumberOfPeople = numericUpDown1.Value.ToString();
+                t.Room = int.Parse(lookUpEditRoom.EditValue.ToString());
+                t.Phone = TxtPhone.Text;
+                t.Statement = TxtStatement.Text;
+                t.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
+                t.TotalPrice = decimal.Parse(TxtTotalPrice.Text);
+
+                repo.TAdd(t);
+                XtraMessageBox.Show("Reservation was created successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (numericUpDown1.Value == 2)
+            catch (Exception ex)
             {
-                t.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
-                t.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
+                XtraMessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (numericUpDown1.Value == 3)
-            {
-                t.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
-                t.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
-                t.Person2 = int.Parse(lookUpEditPerson3.EditValue.ToString());
-            }
-            if (numericUpDown1.Value == 4)
-            {
-                t.Guest = int.Parse(lookUpEditGuest.EditValue.ToString());
-                t.Person1 = int.Parse(lookUpEditPerson2.EditValue.ToString());
-                t.Person2 = int.Parse(lookUpEditPerson3.EditValue.ToString());
-                t.Person3 = int.Parse(lookUpEditPerson4.EditValue.ToString());
-            }
-            t.StartDate = DateTime.Parse(dateEditCheckIn.Text);
-            t.LeaveDate = DateTime.Parse(dateEditCheckOut.Text);
-            t.NumberOfPeople = numericUpDown1.Value.ToString();
-            t.Room = int.Parse(lookUpEditRoom.EditValue.ToString());
-            //t.ReservationNameSurname = TxtReservationName.Text;
-            t.Phone = TxtPhone.Text;
-            t.Statement = TxtStatement.Text;
-            t.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
-            t.TotalPrice = decimal.Parse(TxtTotalPrice.Text);
-            repo.TAdd(t);
-            XtraMessageBox.Show("Reservation was created successfully");
         }
 
         private void lookUpEditGuest_EditValueChanged(object sender, EventArgs e)

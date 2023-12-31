@@ -680,7 +680,9 @@ namespace HotelManagementAutomation.Forms.Reservation
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(510, 533);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(510, 533);
             this.Name = "FrmReservationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation Card";

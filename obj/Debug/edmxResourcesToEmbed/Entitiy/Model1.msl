@@ -132,7 +132,6 @@
     <EntitySetMapping Name="TblStaffs">
       <EntityTypeMapping TypeName="DbHotelModel.TblStaff">
         <MappingFragment StoreEntitySet="TblStaff">
-          <ScalarProperty Name="Authority" ColumnName="Authority" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="IDBack" ColumnName="IDBack" />
           <ScalarProperty Name="IDFront" ColumnName="IDFront" />

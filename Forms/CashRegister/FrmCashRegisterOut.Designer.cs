@@ -261,7 +261,9 @@ namespace HotelManagementAutomation.Forms.Product
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(510, 304);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(510, 304);
             this.Name = "FrmCashRegisterOut";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cash Register Out";

@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void FrmProductList_Load(object sender, EventArgs e)
         {
+            LoadProductList();
+        }
+
+        private void LoadProductList()
+        {
             gridControl1.DataSource = (from x in db.TblProducts
                                        join p in db.TblProductGroups on x.ProductGroup equals p.ProductGroupID
                                        select new
@@ -40,7 +45,8 @@ namespace HotelManagementAutomation.Forms.Product
             FrmProductCard fr = new FrmProductCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ProductID").ToString());
             fr.BtnUpdate.Visible = true;
-            fr.Show();
+            fr.ShowDialog();
+            LoadProductList();
         }
     }
 }

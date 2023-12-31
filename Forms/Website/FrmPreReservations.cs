@@ -22,6 +22,11 @@ namespace HotelManagementAutomation.Forms.Website
 
         private void FrmPreReservations_Load(object sender, EventArgs e)
         {
+            preReservationList();
+        }
+
+        private void preReservationList()
+        {
             gridControl1.DataSource = (from x in db.TblPreReservation
                                        select new
                                        {
@@ -37,7 +42,8 @@ namespace HotelManagementAutomation.Forms.Website
         {
             FrmPreReservationCard fr = new FrmPreReservationCard();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-            fr.Show();
+            fr.ShowDialog();
+            preReservationList();
         }
     }
 }

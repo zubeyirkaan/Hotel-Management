@@ -160,7 +160,6 @@
     <Property Name="IDFront" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="IDBack" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Authority" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="TblStatu">
     <Key>

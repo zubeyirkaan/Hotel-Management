@@ -486,7 +486,9 @@ namespace HotelManagementAutomation.Forms.Product
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(510, 420);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(510, 420);
             this.Name = "FrmProductCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Card";

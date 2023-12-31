@@ -149,30 +149,49 @@ namespace HotelManagementAutomation.Forms.Guest
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
-        {           
-            t.NameSurname = TxtNameSurname.Text;
-            t.TC = TxtTC.Text;
-            t.Address = TxtAddres.Text;
-            t.Phone = TxtPhone.Text;
-            t.Mail = TxtEmail.Text;
-            t.Statement = TxtStatement.Text;
-            t.Status = 1;
-            t.sehir = int.Parse(lookUpEditCity.EditValue.ToString());
-            t.ilce = int.Parse(lookUpEditCounty.EditValue.ToString());
-            t.Country = int.Parse(lookUpEditCountry.EditValue.ToString());
-            t.IDPhoto1 = image1;
-            t.IDPhoto2 = image2;
+        {
             try
             {
+                // Validate required fields
+                if (string.IsNullOrWhiteSpace(TxtNameSurname.Text) ||
+                    string.IsNullOrWhiteSpace(TxtTC.Text) ||
+                    string.IsNullOrWhiteSpace(TxtAddres.Text) ||
+                    string.IsNullOrWhiteSpace(TxtPhone.Text) ||
+                    string.IsNullOrWhiteSpace(TxtEmail.Text) ||
+                    string.IsNullOrWhiteSpace(TxtStatement.Text) ||
+                    lookUpEditCity.EditValue == null ||
+                    lookUpEditCounty.EditValue == null ||
+                    lookUpEditCountry.EditValue == null)
+                {
+                    XtraMessageBox.Show("Please fill in all the required fields", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Stop further execution
+                }
+
+                t.NameSurname = TxtNameSurname.Text;
+                t.TC = TxtTC.Text;
+                t.Address = TxtAddres.Text;
+                t.Phone = TxtPhone.Text;
+                t.Mail = TxtEmail.Text;
+                t.Statement = TxtStatement.Text;
+                t.Status = 1;
+                t.sehir = int.Parse(lookUpEditCity.EditValue.ToString());
+                t.ilce = int.Parse(lookUpEditCounty.EditValue.ToString());
+                t.Country = int.Parse(lookUpEditCountry.EditValue.ToString());
+                t.IDPhoto1 = image1;
+                t.IDPhoto2 = image2;
+
                 repo.TAdd(t);
+
+                XtraMessageBox.Show("Guest successfully added to the system", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
-
-                XtraMessageBox.Show("please try again", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            XtraMessageBox.Show("Guest successfully added to the system","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+
+
+
 
         }
     }

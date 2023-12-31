@@ -100,26 +100,37 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            // Check if any required field is empty or invalid
+            if (string.IsNullOrWhiteSpace(TxtProductName.Text) ||
+                lookUpEditProductGroup.EditValue == null ||
+                lookUpEditUnit.EditValue == null ||
+                lookUpEditStatus.EditValue == null ||
+                !decimal.TryParse(TxtPrice.Text, out decimal parsedPrice) ||
+                !decimal.TryParse(TxtTotal.Text, out decimal parsedTotal) ||
+                !byte.TryParse(TxtTax.Text, out byte parsedTax))
+            {
+                XtraMessageBox.Show("Please fill in all the blanks correctly!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop further execution if validation fails
+            }
+
             try
             {
                 t.ProductName = TxtProductName.Text;
                 t.ProductGroup = int.Parse(lookUpEditProductGroup.EditValue.ToString());
                 t.Unit = int.Parse(lookUpEditUnit.EditValue.ToString());
                 t.Status = int.Parse(lookUpEditStatus.EditValue.ToString());
-                t.Price = decimal.Parse(TxtPrice.Text);
-                t.Total = decimal.Parse(TxtTotal.Text);
-                t.Tax = byte.Parse(TxtTax.Text);
+                t.Price = parsedPrice;  // Use the parsed value
+                t.Total = parsedTotal;  // Use the parsed value
+                t.Tax = parsedTax;      // Use the parsed value
 
                 repo.TAdd(t);
-
-
-                XtraMessageBox.Show("Product is succesfuly added to the database");
+                XtraMessageBox.Show("Product is successfully added to the database", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                XtraMessageBox.Show("Please fill the all blanks!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                XtraMessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)

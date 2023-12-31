@@ -18,164 +18,162 @@ namespace HotelManagementAutomation
             InitializeComponent();
         }
 
+        public void OpenForm<T>() where T : Form, new()
+        {
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is T)
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            T newForm = new T
+            {
+                MdiParent = this
+            };
+            newForm.Show();
+        }
+
         private void BtnStatusDefinition_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmStatus fr = new Forms.Definitions.FrmStatus();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnStockUnitDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmStockUnit fr = new Forms.Definitions.FrmStockUnit();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnDepartmentDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmDepartment fr = new Forms.Definitions.FrmDepartment();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnMissionDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmMission fr = new Forms.Definitions.FrmMission();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmCashRegister fr = new Forms.Definitions.FrmCashRegister();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnExchangerateDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmExchangeRate fr = new Forms.Definitions.FrmExchangeRate();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnRoomDefinitions_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmRoom fr = new Forms.Definitions.FrmRoom();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void barButtonItem2_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmPhone fr = new Forms.Definitions.FrmPhone();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmCountry fr = new Forms.Definitions.FrmCountry();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void barButtonItem3_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmProductGroup fr = new Forms.Definitions.FrmProductGroup();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnStaffCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Staff.FrmStaffCard fr = new Forms.Staff.FrmStaffCard();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnStaffList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Staff.FrmStaffList fr = new Forms.Staff.FrmStaffList();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Staff.FrmStaffList>();
         }
 
         private void BtnGuestCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Guest.FrmGuest fr = new Forms.Guest.FrmGuest();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnCustomerList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Guest.FrmGuestList fr = new Forms.Guest.FrmGuestList();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Guest.FrmGuestList>();
         }
 
         private void BtnProductList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Product.FrmProductList fr = new Forms.Product.FrmProductList();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Product.FrmProductList>();
         }
 
         private void BtnProductCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Product.FrmProductCard fr = new Forms.Product.FrmProductCard();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnProductEntryProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Product.FrmProductEntryProcess fr = new Forms.Product.FrmProductEntryProcess();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Product.FrmProductEntryProcess>();
         }
 
         private void BtnProductReductionProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Product.FrmProductReductionProcess fr = new Forms.Product.FrmProductReductionProcess();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Product.FrmProductReductionProcess>();
         }
 
         private void BtnNewProductProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Product.FrmProcessDefinitions fr = new Forms.Product.FrmProcessDefinitions();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnReservationCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Reservation.FrmReservationCard fr = new Forms.Reservation.FrmReservationCard();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnAllReservationList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Reservation.FrmAllReservations fr = new Forms.Reservation.FrmAllReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Reservation.FrmAllReservations>();
         }
 
         private void BtnActiveReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Reservation.FrmActiveReservations fr = new Forms.Reservation.FrmActiveReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Reservation.FrmActiveReservations>();
         }
 
         private void BtnCanceledReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Reservation.FrmCanceledReservations fr = new Forms.Reservation.FrmCanceledReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Reservation.FrmCanceledReservations>();
         }
 
         private void BtnPastreservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Reservation.FrmPastReservations fr = new Forms.Reservation.FrmPastReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Reservation.FrmPastReservations>();
         }
 
         private void BtnFutureReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Reservation.FrmFutureReservations fr = new Forms.Reservation.FrmFutureReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Reservation.FrmFutureReservations>();
         }
 
         private void BtnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -190,23 +188,17 @@ namespace HotelManagementAutomation
 
         private void BtnCurrency_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Tools.FrmCurrency fr = new Forms.Tools.FrmCurrency();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Tools.FrmCurrency>();
         }
 
         private void BtnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Tools.FrmYoutube fr = new Forms.Tools.FrmYoutube();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Tools.FrmYoutube>();
         }
 
         private void BtnGoogle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Tools.FrmGoogle fr = new Forms.Tools.FrmGoogle();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Tools.FrmGoogle>();
         }
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -216,82 +208,66 @@ namespace HotelManagementAutomation
 
         private void BtnNewRegistirations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Website.FrmNewRegistry fr = new Forms.Website.FrmNewRegistry();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Website.FrmNewRegistry>();
         }
 
         private void BtnPreReservations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Website.FrmPreReservations fr = new Forms.Website.FrmPreReservations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Website.FrmPreReservations>();
         }
 
         private void BtnRecievedMessages_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Website.FrmRecievedMessages fr = new Forms.Website.FrmRecievedMessages();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Website.FrmRecievedMessages>();
         }
 
         private void BtnNewMessage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Website.FrmMessageCard fr = new Forms.Website.FrmMessageCard();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnSentMessage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Website.FrmSentMessage fr = new Forms.Website.FrmSentMessage();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Website.FrmSentMessage>();
         }
 
         private void BtnContact_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Website.FrmContact fr = new Forms.Website.FrmContact();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Website.FrmContact>();
         }
 
         private void BtnAddressCard_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Website.FrmContactCard fr = new Forms.Website.FrmContactCard();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnAboutPage_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Website.FrmAbout fr = new Forms.Website.FrmAbout();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Main.FrmMain fr = new Forms.Main.FrmMain();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Main.FrmMain>();
         }
 
         private void BtnGraph1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Graphs.FrmGraph2 fr = new Forms.Graphs.FrmGraph2();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Graphs.FrmGraph2>();
         }
 
         private void BtnGraph2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.Graphs.FrmGraph1 fr = new Forms.Graphs.FrmGraph1();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.Graphs.FrmGraph1>();
         }
 
         private void BtnPassword_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Admin.FrmPasswordProcess fr = new Forms.Admin.FrmPasswordProcess();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         public string userRole;
@@ -310,33 +286,43 @@ namespace HotelManagementAutomation
         private void BtnAuthorization_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Admin.FrmPasswordProcess fr = new Forms.Admin.FrmPasswordProcess();
-            fr.Show();
+
+            if (userRole != "A")
+            {
+                fr.BtnList.Visible = false;
+                fr.TxtRole.Text = "B";
+                fr.TxtRole.ReadOnly = true;               
+            }
+
+            fr.BtnSave.Visible = true;
+            fr.ShowDialog();
         }
 
         private void BtnReceptionOperations_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.CashRegister.FrmReceptionOperations fr = new Forms.CashRegister.FrmReceptionOperations();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.CashRegister.FrmReceptionOperations>();
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Definitions.FrmCashRegister fr = new Forms.Definitions.FrmCashRegister();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtncashRegisterOutcome_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.Product.FrmCashRegisterOut fr = new Forms.Product.FrmCashRegisterOut();
-            fr.Show();
+            fr.ShowDialog();
         }
 
         private void BtnCashRegisterOutcomeProcess_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.CashRegister.FrmCashregisterOutcomeList fr = new Forms.CashRegister.FrmCashregisterOutcomeList();
-            fr.MdiParent = this;
-            fr.Show();
+            OpenForm<Forms.CashRegister.FrmCashregisterOutcomeList>();
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

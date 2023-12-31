@@ -31,11 +31,28 @@ namespace HotelManagementAutomation.Forms.Product
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            t.Statement = TxtStatement.Text;
-            t.Date = DateTime.Parse(dateEdit1.Text);
-            t.Price = decimal.Parse(TxtTotalPrice.Text);
-            repo.TAdd(t);
-            XtraMessageBox.Show("Process type added to the system.");
+            // Check if any required field is empty or invalid
+            if (string.IsNullOrWhiteSpace(TxtStatement.Text) ||
+                string.IsNullOrWhiteSpace(dateEdit1.Text) ||
+                !decimal.TryParse(TxtTotalPrice.Text, out decimal parsedPrice))
+            {
+                XtraMessageBox.Show("Please fill in all the fields correctly!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Stop further execution if validation fails
+            }
+
+            try
+            {
+                t.Statement = TxtStatement.Text;
+                t.Date = DateTime.Parse(dateEdit1.Text); // Ensure that this field contains a valid date string
+                t.Price = parsedPrice; // Use the parsed value
+
+                repo.TAdd(t);
+                XtraMessageBox.Show("Process type added to the system.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

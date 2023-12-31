@@ -35,6 +35,7 @@ namespace HotelManagementAutomation.Forms.Website
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -44,6 +45,7 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.dateEditDate = new DevExpress.XtraEditors.DateEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.dateEditCheckOut = new DevExpress.XtraEditors.DateEdit();
@@ -56,16 +58,15 @@ namespace HotelManagementAutomation.Forms.Website
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.TxtNameSurname = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.TxtNameSurname = new DevExpress.XtraEditors.TextEdit();
-            this.dateEditDate = new DevExpress.XtraEditors.DateEdit();
-            this.TxtEmail = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtStatement.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).BeginInit();
@@ -73,6 +74,8 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditCheckOut.Properties)).BeginInit();
@@ -86,12 +89,9 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtStatement
@@ -136,6 +136,13 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl3.Size = new System.Drawing.Size(487, 43);
             this.groupControl3.TabIndex = 33;
             this.groupControl3.Text = "groupControl3";
+            // 
+            // TxtEmail
+            // 
+            this.TxtEmail.Location = new System.Drawing.Point(355, 14);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(115, 20);
+            this.TxtEmail.TabIndex = 30;
             // 
             // labelControl3
             // 
@@ -236,6 +243,18 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl2.Size = new System.Drawing.Size(487, 72);
             this.groupControl2.TabIndex = 32;
             this.groupControl2.Text = "groupControl2";
+            // 
+            // dateEditDate
+            // 
+            this.dateEditDate.EditValue = null;
+            this.dateEditDate.Location = new System.Drawing.Point(355, 40);
+            this.dateEditDate.Name = "dateEditDate";
+            this.dateEditDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEditDate.Size = new System.Drawing.Size(126, 20);
+            this.dateEditDate.TabIndex = 24;
             // 
             // pictureEdit2
             // 
@@ -366,6 +385,13 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "groupControl1";
             // 
+            // TxtNameSurname
+            // 
+            this.TxtNameSurname.Location = new System.Drawing.Point(124, 11);
+            this.TxtNameSurname.Name = "TxtNameSurname";
+            this.TxtNameSurname.Size = new System.Drawing.Size(356, 20);
+            this.TxtNameSurname.TabIndex = 30;
+            // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(33, 14);
@@ -387,32 +413,6 @@ namespace HotelManagementAutomation.Forms.Website
             this.pictureEdit1.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit1.TabIndex = 0;
             // 
-            // TxtNameSurname
-            // 
-            this.TxtNameSurname.Location = new System.Drawing.Point(124, 11);
-            this.TxtNameSurname.Name = "TxtNameSurname";
-            this.TxtNameSurname.Size = new System.Drawing.Size(356, 20);
-            this.TxtNameSurname.TabIndex = 30;
-            // 
-            // dateEditDate
-            // 
-            this.dateEditDate.EditValue = null;
-            this.dateEditDate.Location = new System.Drawing.Point(355, 40);
-            this.dateEditDate.Name = "dateEditDate";
-            this.dateEditDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEditDate.Size = new System.Drawing.Size(126, 20);
-            this.dateEditDate.TabIndex = 24;
-            // 
-            // TxtEmail
-            // 
-            this.TxtEmail.Location = new System.Drawing.Point(355, 14);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(115, 20);
-            this.TxtEmail.TabIndex = 30;
-            // 
             // FrmPreReservationCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,7 +424,9 @@ namespace HotelManagementAutomation.Forms.Website
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(508, 382);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(508, 382);
             this.Name = "FrmPreReservationCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pre Reservation Card";
@@ -434,6 +436,7 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtPhone.Properties)).EndInit();
@@ -443,6 +446,8 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditCheckOut.Properties.CalendarTimeProperties)).EndInit();
@@ -457,12 +462,9 @@ namespace HotelManagementAutomation.Forms.Website
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtNameSurname.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtEmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

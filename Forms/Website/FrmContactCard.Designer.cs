@@ -32,6 +32,7 @@ namespace HotelManagementAutomation.Forms.Website
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmContactCard));
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.TxtStatement = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
@@ -51,7 +52,6 @@ namespace HotelManagementAutomation.Forms.Website
             this.TxtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
-            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtStatement.Properties)).BeginInit();
@@ -94,6 +94,16 @@ namespace HotelManagementAutomation.Forms.Website
             this.groupControl4.Size = new System.Drawing.Size(486, 50);
             this.groupControl4.TabIndex = 42;
             this.groupControl4.Text = "groupControl4";
+            // 
+            // BtnUpdate
+            // 
+            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
+            this.BtnUpdate.Location = new System.Drawing.Point(225, 6);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
+            this.BtnUpdate.TabIndex = 2;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // TxtStatement
             // 
@@ -286,16 +296,6 @@ namespace HotelManagementAutomation.Forms.Website
             this.pictureEdit5.Size = new System.Drawing.Size(20, 20);
             this.pictureEdit5.TabIndex = 0;
             // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(225, 6);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
-            this.BtnUpdate.TabIndex = 2;
-            this.BtnUpdate.Text = "Update";
-            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
             // FrmContactCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -307,7 +307,9 @@ namespace HotelManagementAutomation.Forms.Website
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl5);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(508, 426);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(508, 426);
             this.Name = "FrmContactCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Card";

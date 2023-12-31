@@ -294,7 +294,9 @@ namespace HotelManagementAutomation.Forms.Website
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(508, 302);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(508, 302);
             this.Name = "FrmMessageCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message Card";

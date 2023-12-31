@@ -584,7 +584,9 @@ namespace HotelManagementAutomation.Forms.Guest
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(510, 460);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(510, 460);
             this.Name = "FrmGuest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Guest Card";
