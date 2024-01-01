@@ -23,10 +23,6 @@ namespace HotelManagementMVC.Controllers
         public ActionResult Index(TblPreReservation p)
         {
             var guestemail = (string)Session["Email"];
-            //var guestid = db.TblNewRegistries.Where(x => x.Email == guestemail).Select(x => x.ID).FirstOrDefault();
-
-            //p.Status = 12;
-            // p.Guest = guestid;
             p.Email = guestemail;
             p.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
             db.TblPreReservations.Add(p);
