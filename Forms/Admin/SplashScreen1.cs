@@ -26,8 +26,6 @@ namespace HotelManagementAutomation.Forms.Admin
 
         #endregion
 
-        public enum SplashScreenCommand
-        {
-        }
+       
     }
 }

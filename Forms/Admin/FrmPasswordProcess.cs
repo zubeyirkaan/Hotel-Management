@@ -50,7 +50,7 @@ namespace HotelManagementAutomation.Forms.Admin
                 }
                 catch (Exception)
                 {
-                    XtraMessageBox.Show("asdaweSD", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    XtraMessageBox.Show("Please fill the blanks", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                    
                 }
 
@@ -70,7 +70,6 @@ namespace HotelManagementAutomation.Forms.Admin
             {
                 if (TxtNewPassword.Text == TxtNewPasswordAgain.Text)
                 {
-                    //  var value = repo.Find(x => x.ID == id);
 
                     var value = repo.Find(x => x.Username == TxtUsername.Text);
 
