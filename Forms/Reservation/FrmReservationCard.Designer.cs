@@ -407,6 +407,8 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             this.TxtPhone.Location = new System.Drawing.Point(124, 14);
             this.TxtPhone.Name = "TxtPhone";
+            this.TxtPhone.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.TxtPhone.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.TxtPhone.Size = new System.Drawing.Size(126, 20);
             this.TxtPhone.TabIndex = 5;
             // 
@@ -615,6 +617,7 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             this.TxtRoomNo.Location = new System.Drawing.Point(355, 14);
             this.TxtRoomNo.Name = "TxtRoomNo";
+            this.TxtRoomNo.Properties.ReadOnly = true;
             this.TxtRoomNo.Size = new System.Drawing.Size(127, 20);
             this.TxtRoomNo.TabIndex = 27;
             // 
@@ -664,6 +667,9 @@ namespace HotelManagementAutomation.Forms.Reservation
             // 
             this.TxtTotalPrice.Location = new System.Drawing.Point(125, 14);
             this.TxtTotalPrice.Name = "TxtTotalPrice";
+            this.TxtTotalPrice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.TxtTotalPrice.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.TxtTotalPrice.Properties.MaskSettings.Set("mask", "c");
             this.TxtTotalPrice.Size = new System.Drawing.Size(127, 20);
             this.TxtTotalPrice.TabIndex = 5;
             // 

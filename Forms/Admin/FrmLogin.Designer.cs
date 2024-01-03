@@ -52,7 +52,7 @@ namespace HotelManagementAutomation.Forms.Admin
             this.TxtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtUsername.Properties.Appearance.Options.UseFont = true;
             this.TxtUsername.Size = new System.Drawing.Size(138, 26);
-            this.TxtUsername.TabIndex = 22;
+            this.TxtUsername.TabIndex = 0;
             // 
             // labelControl1
             // 
@@ -72,7 +72,7 @@ namespace HotelManagementAutomation.Forms.Admin
             this.TxtPassword.Properties.Appearance.Options.UseFont = true;
             this.TxtPassword.Properties.UseSystemPasswordChar = true;
             this.TxtPassword.Size = new System.Drawing.Size(138, 26);
-            this.TxtPassword.TabIndex = 22;
+            this.TxtPassword.TabIndex = 1;
             // 
             // labelControl9
             // 
@@ -91,7 +91,7 @@ namespace HotelManagementAutomation.Forms.Admin
             this.BtnCancel.Location = new System.Drawing.Point(328, 284);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(37, 39);
-            this.BtnCancel.TabIndex = 1;
+            this.BtnCancel.TabIndex = 3;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnLogin
@@ -101,7 +101,7 @@ namespace HotelManagementAutomation.Forms.Admin
             this.BtnLogin.Location = new System.Drawing.Point(404, 284);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(37, 39);
-            this.BtnLogin.TabIndex = 0;
+            this.BtnLogin.TabIndex = 2;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // FrmLogin

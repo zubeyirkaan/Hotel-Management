@@ -3,12 +3,7 @@
     Layout = null;
 }
 
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE HTML>
 <html lang="zxx">
 
@@ -41,6 +36,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="w3ls-pos">
         <h1>Login Form</h1>
         <h2 style="color:white">To make a reservation, you have to log in!</h2>
+
+        <script type="text/javascript">
+        window.onload = function() {
+            @if(ViewBag.ErrorMessage != null)
+            {
+                @:alert("@ViewBag.ErrorMessage");
+            }
+        }
+        </script>
+
         <div class="w3ls-login box">
             <!-- form starts here -->
             <form method="post">
@@ -62,8 +67,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--copyright-->
         <div class="copy-wthree">
             <p>
-                © 2023 The Artio. All Rights Reserved | Design by
-                <a href="http://w3layouts.com/" target="_blank">W3layouts</a>
+                © 2023 The Artio. All Rights Reserved 
             </p>
         </div>
         <!--//copyright-->

@@ -44,7 +44,6 @@ namespace HotelManagementAutomation.Forms.Product
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.BtnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.BtnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -189,15 +188,15 @@ namespace HotelManagementAutomation.Forms.Product
             // BtnCancel
             // 
             this.BtnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.ImageOptions.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(100, 6);
+            this.BtnCancel.Location = new System.Drawing.Point(217, 5);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(123, 39);
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // groupControl3
             // 
-            this.groupControl3.Controls.Add(this.BtnUpdate);
             this.groupControl3.Controls.Add(this.BtnCancel);
             this.groupControl3.Controls.Add(this.BtnSave);
             this.groupControl3.Location = new System.Drawing.Point(3, 210);
@@ -206,15 +205,6 @@ namespace HotelManagementAutomation.Forms.Product
             this.groupControl3.Size = new System.Drawing.Size(486, 50);
             this.groupControl3.TabIndex = 35;
             this.groupControl3.Text = "groupControl3";
-            // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUpdate.ImageOptions.Image")));
-            this.BtnUpdate.Location = new System.Drawing.Point(229, 6);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(123, 39);
-            this.BtnUpdate.TabIndex = 2;
-            this.BtnUpdate.Text = "Update";
             // 
             // BtnSave
             // 
@@ -305,7 +295,6 @@ namespace HotelManagementAutomation.Forms.Product
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.SimpleButton BtnCancel;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton BtnUpdate;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl2;

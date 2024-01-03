@@ -16,7 +16,6 @@ namespace HotelManagementMVC.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            
             return View();
         }
 
@@ -24,15 +23,16 @@ namespace HotelManagementMVC.Controllers
         public ActionResult Index(TblNewRegistry p)
         {
             var datas = db.TblNewRegistries.FirstOrDefault(x => x.Email == p.Email && x.Password == p.Password);
-            if(datas!=null)
+            if (datas != null)
             {
-                FormsAuthentication.SetAuthCookie(datas.Email,false);
+                FormsAuthentication.SetAuthCookie(datas.Email, false);
                 Session["Email"] = datas.Email.ToString();
-                return RedirectToAction("Index","Guest");
+                return RedirectToAction("Index", "Guest");
             }
             else
             {
-                return RedirectToAction("Index");
+                ViewBag.ErrorMessage = "You entered the wrong email or password!";
+                return View();
             }
         }
     }

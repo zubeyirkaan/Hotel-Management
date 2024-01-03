@@ -44,6 +44,7 @@ namespace HotelManagementAutomation.Forms.Product
         {
             FrmProcessDefinitions fr = new FrmProcessDefinitions();
             fr.id = int.Parse(gridView1.GetFocusedRowCellValue("ProcessID").ToString());
+            fr.BtnUpdate.Visible = true;
             fr.ShowDialog();
             loadReductionList();
         }
