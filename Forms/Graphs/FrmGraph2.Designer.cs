@@ -41,9 +41,9 @@ namespace HotelManagementAutomation.Forms.Graphs
             // 
             // chartControl1
             // 
-            simpleDiagram3D1.RotationMatrixSerializable = "-0.990748483566166;-0.133289147971973;-0.0255234273611986;0;0.0265389778118414;-0" +
-    ".374729650708311;0.926754213120578;0;-0.13309066446622;0.917502965615342;0.37480" +
-    "0190927122;0;0;0;0;1";
+            simpleDiagram3D1.RotationMatrixSerializable = "0.895100871731967;0.230330856109402;-0.381761870998932;0;0.445848360947823;-0.455" +
+    "288709945393;0.770669468472977;0;0.00369708869731668;-0.860034817504612;-0.51022" +
+    "1955833927;0;0;0;0;1";
             this.chartControl1.Diagram = simpleDiagram3D1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartControl1.Location = new System.Drawing.Point(0, 0);
